@@ -1,0 +1,2 @@
+#Ignore local volumes containing database info
+/data-db
