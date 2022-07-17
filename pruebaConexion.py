@@ -1,5 +1,8 @@
 from arango import ArangoClient
+from functions import readTxt
 
+print(readTxt('./books/loremIpsun.txt'))
+"""
 # Initialize the client for ArangoDB.
 client = ArangoClient(hosts="http://localhost:8529")
 
@@ -11,7 +14,7 @@ if not sys_db.has_database("test"):sys_db.create_database("test")
 
 # Connect to "test" database as root user.
 db = client.db("test", username="root", password="passwd")
-"""
+
 # Create a new collection named "students".
 students = db.create_collection("students")
 
@@ -26,6 +29,7 @@ students.insert({"name": "judy", "age": 21})
 # Execute an AQL query and iterate through the result cursor.
 cursor = db.aql.execute("FOR doc IN students RETURN doc")
 student_names = [document["name"] for document in cursosr]
-"""
+
 print(db.name)
 print(*(db.collections()))
+"""

@@ -1,2 +1,5 @@
 #Ignore local volumes containing database info
 /data-db
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
