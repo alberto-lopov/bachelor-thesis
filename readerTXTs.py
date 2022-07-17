@@ -11,7 +11,10 @@ for line in file:
 	#debug: print(re.findall(r'\b\S+\b', line))
 	array = re.findall(r'\b\S+\b', line)
 	for word in array:
-		wordMap[word] = (wordMap[word]= wordMap[word]+1 if wordMap[word] else 0)
+		if(wordMap.get(word) == None):
+			wordMap[word] = 1
+		else:
+			wordMap[word] = wordMap[word] + 1 
 
 print(wordMap)
 
