@@ -1,5 +1,4 @@
 from arango import ArangoClient
-#imports only works when using python -m ?
 from src.constants import URL_ARANGO_DB, DB_NAME, NODE_COLLECTION, EDGE_COLLECTION
 
 # Initialize the client for ArangoDB.
@@ -16,11 +15,11 @@ if not sys_db.has_database(DB_NAME):
     db = client.db(DB_NAME, username="root")
 
     # Create a new collections.
-    students = db.create_collection(NODE_COLLECTION)
+    words = db.create_collection(NODE_COLLECTION)
     db.create_collection(EDGE_COLLECTION, edge=True)
 
     # Add a hash index to the collection.
-    students.add_hash_index(fields=["name"], unique=True)
+    words.add_fulltext_index(fields=["name"])
 
     print("Finished creating database: " + DB_NAME)
 
