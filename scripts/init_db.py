@@ -1,4 +1,5 @@
-# This currently only works when executed with python -m scripts.init_db
+import os, sys
+sys.path.insert(0, os.getcwd())
 
 from arango import ArangoClient
 from src.constants import URL_ARANGO_DB, DB_NAME, NODE_COLLECTION, EDGE_COLLECTION
