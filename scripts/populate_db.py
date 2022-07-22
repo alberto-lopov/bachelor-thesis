@@ -33,5 +33,14 @@ for key, value in following_words.items():
             "_to": NODE_COLLECTION + '/' + sha256(key2.encode()).hexdigest(),
             "count": value2
         })
+
+# Create graph
+if db.has_graph('relatedWords'):
+    related_words_graph = db.graph('relatedWords')
+else:
+    related_words_graph = db.create_graph('relatedWords')
+
+if not related_words_graph.has_edge_definition(EDGE_COLLECTION):
+    related_words_graph.create_edge_definition(EDGE_COLLECTION, [NODE_COLLECTION], [NODE_COLLECTION])
         
 print("Finished populating database: " + DB_NAME)
