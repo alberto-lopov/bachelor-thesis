@@ -27,25 +27,6 @@ def recommend(self, text: str) -> List[dict]:
             for edge in edges], key = lambda x: x["value"], reverse = True))
         return []
 
-#2 modo de predicion query para devolver el camino más probable entre dos palabras (el camino de maxima probabilidad)
-query = """
-    FOR v, e IN OUTBOUND SHORTEST_PATH '{origin}' TO '{goal}' 
-        GRAPH 'graph' 
-        OPTIONS {
-            weightAttribute: 'inverse_count',
-            defaultWeight: 0
-        }
-        RETURN [v._key,v.lat,v.lon,e._key,e.inverse_count]
-"""
-
-#sustituyendolo
-"""FOR v, e IN OUTBOUND SHORTEST_PATH 'words/1b7f8466f087c27f24e1c90017b829cd8208969018a0bbe7d9c452fa224bc6cc' TO 'words/8e317f8df6bcc28e25cc1bf9aa449d68679ce17b53a0cb2b2cfce188031380dc' 
-        GRAPH 'relatedWords' 
-        OPTIONS {
-            weightAttribute: 'count',
-            defaultWeight: 0
-        }
-        RETURN [v._key,v.name,e._key,e.count]"""
     
 #3 modo de predicion
 #~hay que hacer algo donde se importe de scipy import stats

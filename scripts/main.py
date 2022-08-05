@@ -8,7 +8,7 @@ load_dotenv()
 LOREM_BOOK = os.getenv('LOREM_BOOK')
 
 from src.constants import EDGE_COLLECTION, URL_ARANGO_DB, DB_NAME, NODE_COLLECTION, SEPARATOR, WORDS_GRAPH
-from src.functions import readTxt
+from src.functions import most_likely_path, read_txt, find_word
 
 
 # Initialize the client for ArangoDB.
@@ -36,7 +36,7 @@ if not sys_db.has_database(DB_NAME):
     words = db.collection(NODE_COLLECTION)
     follows = db.collection(EDGE_COLLECTION)
 
-    counted_words, following_words = readTxt(LOREM_BOOK)
+    counted_words, following_words = read_txt(LOREM_BOOK)
 
     # Add nodes
     for key, value in counted_words.items():
@@ -72,6 +72,11 @@ else:
     db = client.db(DB_NAME, username="root")
     print("Database already exists: " + DB_NAME)
 
+lorem = find_word(db.aql, 'Lorem')
+consectetur = find_word(db.aql, 'consectetur')
+print('Probando: ' + lorem['_id'] + ' ' + consectetur['_id'])
+
+print(most_likely_path(db.aql, lorem['_id'], consectetur['_id']))
 client.close()
 
 
