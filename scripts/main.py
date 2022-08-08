@@ -8,13 +8,14 @@ load_dotenv()
 LOREM_BOOK = os.getenv('LOREM_BOOK')
 
 from src.constants import EDGE_COLLECTION, URL_ARANGO_DB, DB_NAME, NODE_COLLECTION, SEPARATOR, WORDS_GRAPH
-from src.functions import most_likely_path, read_txt, find_word
+from src.functions import most_likely_path, read_txt, find_word, recommend
 
 
 # Initialize the client for ArangoDB.
 client = ArangoClient(hosts=URL_ARANGO_DB)
 sys_db = client.db("_system", username="root")
 db = None
+related_words_graph = None
 
 #Initializate ArangoDB words_database if it doesn't exist
 if not sys_db.has_database(DB_NAME):
@@ -54,14 +55,12 @@ if not sys_db.has_database(DB_NAME):
                 "_from": NODE_COLLECTION + '/' + sha256(key.encode()).hexdigest(),
                 "_to": NODE_COLLECTION + '/' + sha256(key2.encode()).hexdigest(),
                 "count": value2,
+                "from_name": key,
+                "to_name": key2,
                 "inverse_count": 1/value2
             })
 
-    # Create graph
-    if db.has_graph(WORDS_GRAPH):
-        related_words_graph = db.graph(WORDS_GRAPH)
-    else:
-        related_words_graph = db.create_graph(WORDS_GRAPH)
+    related_words_graph = db.create_graph(WORDS_GRAPH)
 
     if not related_words_graph.has_edge_definition(EDGE_COLLECTION):
         related_words_graph.create_edge_definition(EDGE_COLLECTION, [NODE_COLLECTION], [NODE_COLLECTION])
@@ -70,13 +69,16 @@ if not sys_db.has_database(DB_NAME):
 
 else:
     db = client.db(DB_NAME, username="root")
+    related_words_graph = db.graph(WORDS_GRAPH)
     print("Database already exists: " + DB_NAME)
 
 lorem = find_word(db.aql, 'Lorem')
 consectetur = find_word(db.aql, 'consectetur')
-print('Probando: ' + lorem['_id'] + ' ' + consectetur['_id'])
+print('Probando: ' + lorem['name'] + ' ' + consectetur['name'])
 
 print(most_likely_path(db.aql, lorem['_id'], consectetur['_id']))
+
+lorem = find_word(db.aql, 'lorem')
+print('Probando: ' + lorem['name'])
+print(recommend(related_words_graph, lorem['_key']))
 client.close()
-
-

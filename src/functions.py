@@ -1,4 +1,7 @@
 import re #To split string by multiple delimiters
+from typing import List
+
+from src.constants import NODE_COLLECTION
 
 #Read txt files
 def read_txt(pathFile: str):
@@ -54,16 +57,30 @@ def most_likely_path(db_aql, origin, goal):
             weightAttribute: 'count', 
             defaultWeight: 0 
         }}
-        RETURN [v._key, v.name, e._key, e.count, e.inverse_count]"""
-
+        RETURN [v._key, v.name, e._key, e.from_name, e.to_name, e.count, e.inverse_count]"""
+	
 	cursor = db_aql.execute(query.format(origin, goal))
 	return [doc for doc in cursor]
 
-"""EJEMPLO DE QUERY FUNCIONAL:
-FOR v, e IN OUTBOUND SHORTEST_PATH 'words/1b7f8466f087c27f24e1c90017b829cd8208969018a0bbe7d9c452fa224bc6cc' TO 'words/8e317f8df6bcc28e25cc1bf9aa449d68679ce17b53a0cb2b2cfce188031380dc' 
-        GRAPH 'relatedWords' 
-        OPTIONS {
-            weightAttribute: 'count',
-            defaultWeight: 0
-        }
-        RETURN [v._key, v.name, e._key, e.count, e.inverse_count]"""
+
+
+# Give a ordered list of words that usually follow the given word
+def recommend(words_graph, word_hash: str) -> List[dict]:
+	paths = words_graph.traverse(
+		start_vertex = NODE_COLLECTION + "/" + word_hash,
+		direction = "outbound",
+		strategy = "bfs",
+		min_depth = 1,
+		max_depth = 1
+	)["paths"] # return lista de palabras conectadas, con longitud maxima de 1
+	
+	# ordenar los ejes porcampoinverso y sacar la mas frecuentes
+	edges = [path["edges"][0] for path in paths]  
+	return list(sorted([
+		{
+			"word_key": edge["_to"].split("/")[1],
+			"word_name": edge["to_name"],
+			"inverse_count": edge["inverse_count"],
+			"count": edge["count"]
+		} 
+	for edge in edges], key = lambda x: x["inverse_count"]))
