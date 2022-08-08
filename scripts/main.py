@@ -6,6 +6,9 @@ from hashlib import sha256
 from dotenv import load_dotenv
 load_dotenv()
 LOREM_BOOK = os.getenv('LOREM_BOOK')
+BOOK_1 = os.getenv('BOOK_1')
+BOOK_2 = os.getenv('BOOK_2')
+BOOK_3 = os.getenv('BOOK_3')
 
 from src.constants import EDGE_COLLECTION, URL_ARANGO_DB, DB_NAME, NODE_COLLECTION, SEPARATOR, WORDS_GRAPH
 from src.functions import most_likely_path, random_word_sample, read_txt, find_word, recommend
@@ -37,17 +40,22 @@ if not sys_db.has_database(DB_NAME):
     words = db.collection(NODE_COLLECTION)
     follows = db.collection(EDGE_COLLECTION)
 
-    counted_words, following_words = read_txt(LOREM_BOOK)
+    counted_words, following_words = read_txt([BOOK_1, BOOK_2, BOOK_3])
 
     # Add nodes
+    inserted_nodes = 0
     for key, value in counted_words.items():
         words.insert({
             "_key": sha256(key.encode()).hexdigest(),
             "name": key,
             "count": value
         })
+        inserted_nodes += 1
+        if(inserted_nodes % 10 == 0):
+            print("Inserted " + str(inserted_nodes) + " nodes")
 
     # Add edges
+    inserted_edges = 0
     for key, value in following_words.items():
         for key2, value2 in value.items():
             follows.insert({
@@ -59,7 +67,11 @@ if not sys_db.has_database(DB_NAME):
                 "to_name": key2,
                 "inverse_count": 1/value2
             })
+        inserted_edges += 1
+        if(inserted_edges % 10 == 0):
+            print("Inserted " + str(inserted_edges) + " edges")
 
+    print("Creando grafo de palabras relacionadas...")
     related_words_graph = db.create_graph(WORDS_GRAPH)
 
     if not related_words_graph.has_edge_definition(EDGE_COLLECTION):
@@ -72,17 +84,17 @@ else:
     related_words_graph = db.graph(WORDS_GRAPH)
     print("Database already exists: " + DB_NAME)
 
-lorem = find_word(db.aql, 'Lorem')
-consectetur = find_word(db.aql, 'consectetur')
+lorem = find_word(db.aql, 'hola')
+consectetur = find_word(db.aql, 'que')
 print('Probando 1: ' + lorem['name'] + ' ' + consectetur['name'])
 
 print(most_likely_path(db.aql, lorem['_id'], consectetur['_id']))
 
-lorem = find_word(db.aql, 'lorem')
+lorem = find_word(db.aql, 'buenas')
 print('Probando 2: ' + lorem['name'])
 print(recommend(related_words_graph, lorem['_key']))
 
-sit = find_word(db.aql, 'in')
+sit = find_word(db.aql, 'entonces')
 print('Probando 3: ' + sit['name'])
 print(random_word_sample(related_words_graph, sit['_key'])) 
 client.close()
