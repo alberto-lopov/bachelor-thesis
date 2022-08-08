@@ -8,7 +8,7 @@ load_dotenv()
 LOREM_BOOK = os.getenv('LOREM_BOOK')
 
 from src.constants import EDGE_COLLECTION, URL_ARANGO_DB, DB_NAME, NODE_COLLECTION, SEPARATOR, WORDS_GRAPH
-from src.functions import most_likely_path, read_txt, find_word, recommend
+from src.functions import most_likely_path, random_word_sample, read_txt, find_word, recommend
 
 
 # Initialize the client for ArangoDB.
@@ -74,11 +74,15 @@ else:
 
 lorem = find_word(db.aql, 'Lorem')
 consectetur = find_word(db.aql, 'consectetur')
-print('Probando: ' + lorem['name'] + ' ' + consectetur['name'])
+print('Probando 1: ' + lorem['name'] + ' ' + consectetur['name'])
 
 print(most_likely_path(db.aql, lorem['_id'], consectetur['_id']))
 
 lorem = find_word(db.aql, 'lorem')
-print('Probando: ' + lorem['name'])
+print('Probando 2: ' + lorem['name'])
 print(recommend(related_words_graph, lorem['_key']))
+
+sit = find_word(db.aql, 'in')
+print('Probando 3: ' + sit['name'])
+print(random_word_sample(related_words_graph, sit['_key'])) 
 client.close()
