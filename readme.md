@@ -14,10 +14,10 @@ Current libraries installed:
 use to train the model. Here is an example of how to do it, please take into account that the name of the env variables should remain the same as 
 specified or else you will have to change these names on main.py script.
 
-"""
+```
 BOOK_1 = C:\Users\username\Desktop\TFG\bachelor-thesis\books\al_primer_vuelo.txt
 ...
 BOOK_10 = C:\Users\username\Desktop\TFG\bachelor-thesis\books\amar_es_vencer.txt
-"""
+```
 
-4. Run main.py using python. 
+4. Run main.py using python.

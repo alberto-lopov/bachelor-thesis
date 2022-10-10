@@ -24,21 +24,22 @@ def read_txt(file_paths: list):
 			array = re.findall(r'\b\S+\b', line)
 			lastWord = None
 			for word in array:
+				lower_word = word.lower()
 				if lastWord != None:
 					if lastWord not in followingWords:
-						followingWords[lastWord] = {word: 1}
-					elif word in followingWords[lastWord]:
-						followingWords[lastWord][word] = followingWords[lastWord][word] + 1
+						followingWords[lastWord] = {lower_word: 1}
+					elif lower_word in followingWords[lastWord]:
+						followingWords[lastWord][lower_word] = followingWords[lastWord][lower_word] + 1
 					else:
-						followingWords[lastWord][word] = 1
+						followingWords[lastWord][lower_word] = 1
 
-				if word in wordMap:
-					wordMap[word] = wordMap[word] + 1
+				if lower_word in wordMap:
+					wordMap[lower_word] = wordMap[lower_word] + 1
 					
 				else:
-					wordMap[word] = 1
+					wordMap[lower_word] = 1
 
-				lastWord = word
+				lastWord = lower_word
 			
 			line_count += 1
 		print("Analizada lineas: " + str(line_count) + " de libro: " + str(book))

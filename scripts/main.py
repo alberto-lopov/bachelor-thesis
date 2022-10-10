@@ -9,6 +9,13 @@ load_dotenv()
 BOOK_1 = os.getenv('BOOK_1')
 BOOK_2 = os.getenv('BOOK_2')
 BOOK_3 = os.getenv('BOOK_3')
+BOOK_4 = os.getenv('BOOK_4')
+BOOK_5 = os.getenv('BOOK_5')
+BOOK_6 = os.getenv('BOOK_6')
+BOOK_7 = os.getenv('BOOK_7')
+BOOK_8 = os.getenv('BOOK_8')
+BOOK_9 = os.getenv('BOOK_9')
+BOOK_10 = os.getenv('BOOK_10')
 
 from src.constants import EDGE_COLLECTION, URL_ARANGO_DB, DB_NAME, NODE_COLLECTION, SEPARATOR, WORDS_GRAPH
 from src.functions import most_likely_path, random_word_sample, read_txt, find_word, recommend
@@ -40,7 +47,7 @@ if not sys_db.has_database(DB_NAME):
     words = db.collection(NODE_COLLECTION)
     follows = db.collection(EDGE_COLLECTION)
 
-    counted_words, following_words = read_txt([BOOK_1, BOOK_2, BOOK_3])
+    counted_words, following_words = read_txt([BOOK_1, BOOK_2, BOOK_3, BOOK_4, BOOK_5, BOOK_6, BOOK_7, BOOK_8, BOOK_9, BOOK_10])
 
     # Add nodes
     inserted_nodes = 0
