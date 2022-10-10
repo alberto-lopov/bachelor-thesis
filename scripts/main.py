@@ -5,7 +5,7 @@ from arango import ArangoClient
 from hashlib import sha256
 from dotenv import load_dotenv
 load_dotenv()
-LOREM_BOOK = os.getenv('LOREM_BOOK')
+
 BOOK_1 = os.getenv('BOOK_1')
 BOOK_2 = os.getenv('BOOK_2')
 BOOK_3 = os.getenv('BOOK_3')
