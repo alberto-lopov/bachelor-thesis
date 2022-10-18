@@ -65,7 +65,7 @@ def most_likely_path(db_aql, origin, goal):
 	query = """FOR v, e IN OUTBOUND SHORTEST_PATH '{}' TO '{}' 
         GRAPH 'relatedWords' 
         OPTIONS {{
-            weightAttribute: 'count', 
+            weightAttribute: 'inverse_count', 
             defaultWeight: 0 
         }}
         RETURN [v._key, v.name, e._key, e.from_name, e.to_name, e.count, e.inverse_count]"""

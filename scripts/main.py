@@ -91,15 +91,15 @@ else:
     related_words_graph = db.graph(WORDS_GRAPH)
     print("Database already exists: " + DB_NAME)
 
-lorem = find_word(db.aql, 'hola')
-consectetur = find_word(db.aql, 'que')
-print('Probando 1: ' + lorem['name'] + ' ' + consectetur['name'])
+finded_word = find_word(db.aql, 'hola')
+second_finded_word = find_word(db.aql, 'que')
+print('Probando 1: ' + finded_word['name'] + ' ' + second_finded_word['name'])
 
-print(most_likely_path(db.aql, lorem['_id'], consectetur['_id']))
+print(most_likely_path(db.aql, finded_word['_id'], second_finded_word['_id']))
 
-lorem = find_word(db.aql, 'buenas')
-print('Probando 2: ' + lorem['name'])
-print(recommend(related_words_graph, lorem['_key']))
+finded_word = find_word(db.aql, 'buenas')
+print('Probando 2: ' + finded_word['name'])
+print(recommend(related_words_graph, finded_word['_key']))
 
 sit = find_word(db.aql, 'entonces')
 print('Probando 3: ' + sit['name'])
