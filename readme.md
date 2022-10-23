@@ -1,5 +1,11 @@
 To run this project, it is mandatory to have installed docker and python on your system.
 
+Built-in python libraries used:
+- itertools
+- os
+- sys
+- hashlib
+
 To run this script on your computer here it is a step list:
 
 1. Build and run a docker container as specified on the dockerfile. This docker will contain a ArandoDB
