@@ -42,7 +42,7 @@ Lo que más se parece a la primavera, en mezquino y pobre trasunto, por
 artificio humano realizado, es un bonito baile. Pues declaro que yo no
 sé describirle. Los nombres de las señoras más lindas y elegantes se me
 borran de la memoria no bien tomo la pluma, y sólo sé decir que me
-gustan, lo cual es muy _sujetivo_, sin atinar a describir los trajes que
+gustan, lo cual es muy subjetivo, sin atinar a describir los trajes que
 llevan, los diamantes que fulguran en sus cabezas airosas, las perlas
 que ciñen lascivas sus desnudas gargantas, y todo aquello, en suma, que
 las determina y diferencia. Así es que, no pudiendo yo empezar por este
@@ -163,9 +163,9 @@ embriague con el zumo de mágicas hierbas o con el perfume de extrañas
 flores, las cuales mueven al amor, al deleite y al regocijo, induciendo
 a la vida para que se acreciente y se difunda y abra nuevos caminos de
 ser. Ciertas ficciones poéticas parece que tienen entonces realidad, y
-se cree en el _dudain_, que buscaba Raquel harta de ser estéril; en el
+se cree en el dudain, que buscaba Raquel harta de ser estéril; en el
 loto, que hacía olvidarse de todo a los compañeros de Ulises; y en el
-_nepentes_, que alegraba el alma, y que dio a Telémaco Elena.
+nepentes, que alegraba el alma, y que dio a Telémaco Elena.
 
 Claro está que al decir yo todo esto de los climas del Norte no niego
 igual o mayor belleza a la primavera del Sur: lo que insinúo es que
@@ -216,10 +216,10 @@ hemos hecho muy espirituales. Desdeñamos la naturaleza por amor del
 espíritu. ¿Qué vale la selva florida, qué vale el árbol más lozano y
 eminente, al lado del árbol místico, de quien dice el himno sagrado:
 
-    _Crux fidelis, inter omnes_
-    _Arbor una nobilis:_
-    _Silva talem nulla profert_
-    _Fronde, flore, germine?_
+    Crux fidelis, inter omnes
+    Arbor una nobilis:
+    Silva talem nulla profert
+    Fronde, flore, germine?
 
 No es en el florecimiento de la primavera, no es en el árbol más
 fecundo, no es en el huerto más feraz donde recordamos el perdido
@@ -227,10 +227,10 @@ Paraíso, donde más nos maravillamos, bendiciéndolas, de la potencia del
 Altísimo y de su bondad infinita, es en aquel árbol que sirve como de
 solio al mismo Dios:
 
-    _Arbor decora et fulgida,_
-    _Ornata, Regis purpura,_
-    _Electa digno stipite_
-    _Tam sacra membra tangere._
+    Arbor decora et fulgida,
+    Ornata, Regis purpura,
+    Electa digno stipite
+    Tam sacra membra tangere.
 
 Pero yo no me inclino a creer que sea el misticismo o el espiritualismo
 cristiano quien nos haga tan poco sensibles a la naturaleza y nos lleve
@@ -438,30 +438,30 @@ La primavera de este año máximo empezó, según sabios muy acreditados,
 hace veinte millones de años menores y usuales. Entonces apareció el
 primer ser organizado. Desde entonces trazan los sabios con la mayor
 escrupulosidad nuestro árbol genealógico. Empieza el árbol en un ser que
-llaman _monera_, término medio entre lo inorgánico y lo orgánico;
+llaman monera, término medio entre lo inorgánico y lo orgánico;
 germen, embrión, elemento primordial de la vida; dotado de una fuerza,
 de un prurito, de una propensión indistinta a ser vegetal o a ser
 animal. Va extendiéndose luego el árbol, y van las formas
 desenvolviéndose y diferenciándose, hasta que, al fin de la edad
-_paleolítica_, ya nuestros antepasados han conseguido elevarse a la
-categoría de lagartos o medios peces. Durante la edad _mesolítica_ o
+paleolítica, ya nuestros antepasados han conseguido elevarse a la
+categoría de lagartos o medios peces. Durante la edad mesolítica o
 secundaria, progresamos más. Al ir a llegar a su término, en el período
-_cretáceo_, somos _marsupiales_, esto es, tenemos, como los canguros y
+cretáceo, somos marsupiales, esto es, tenemos, como los canguros y
 los jerbos, una bolsa, donde nuestros hijitos se esconden. En el período
-_eoceno_ de la edad terciaria, logramos obtener la dignidad de monos;
-somos _catarrinios_, o dígase monos con las ventanillas de las narices
-hacia abajo y con cola. En el período _mioceno_, ya la cola se nos cae,
+eoceno de la edad terciaria, logramos obtener la dignidad de monos;
+somos catarrinios, o dígase monos con las ventanillas de las narices
+hacia abajo y con cola. En el período mioceno, ya la cola se nos cae,
 y nos asemejamos al gorrilla, al orangután y al chimpancé. En el período
-_plioceno_ somos casi hombres, aunque _pitecoides_ y _alalos_, o sea sin
+plioceno somos casi hombres, aunque pitecoides y alalos, o sea sin
 palabra y sin entendimiento, como cualquiera mico. Por último, en la
 edad cuaternaria, en el período llamado diluviano, se nos desata la
 lengua, empezamos a charlar y somos verdaderos hombres. Desde este
 momento, los sabios menos exagerados y más tímidos y económicos en sus
 cronologías, ponen hasta el día de hoy unos 25.000 años. La raza
-_alala_, los _antropiscos_, los casi hombres, como si dijéramos,
+alala, los antropiscos, los casi hombres, como si dijéramos,
 salieron del centro de Africa o de un continente austral llamado
 Lemuria, que ya se hundió en el mar como la Atlántida, y que estaba
-entre el Africa y el Asia. Estos _antropiscos_ eran negros como la
+entre el Africa y el Asia. Estos antropiscos eran negros como la
 tizne, y vivían en manadas o rebaños para defenderse de las fieras. Así
 fueron extendiéndose por el mundo. Durante la dispersión y emigración,
 inventaron los idiomas, y de aquí que no puedan reducirse todos a un
@@ -475,7 +475,7 @@ antigüedad de 8.000 años lo menos. A esta raza tenemos la honra de
 pertenecer, pero nadie nos asegura que no aparezca aún otra superior que
 nos deje postergados y tamañitos, lo cual será muy desagradable. Sea
 como sea, a pesar de los veinte millones de años que hace que apareció
-la _monera_, no se ha de negar que estamos aún en el período primaveral
+la monera, no se ha de negar que estamos aún en el período primaveral
 de este año máximo de que hemos hablado. ¿Qué progresos, qué maravillas,
 qué nuevas creaciones no deben esperarse aún? Apenas si la humanidad ha
 nacido. Yo he leído en un libro muy docto esta sentencia, que no
@@ -553,7 +553,7 @@ ellos viene a equivaler a un año para nosotros, puede afirmarse que
 ellos hacen subir la antigüedad de su civilización a más de 129.600
 años. Más allá, yendo contra la corriente de los tiempos, los silfos no
 ven claro; pero, si entre ellos hay un Darwin o un Haeckel, sin duda
-colocará la aparición de la primera _monera_ del mundo silfídico a una
+colocará la aparición de la primera monera del mundo silfídico a una
 distancia proporcionalmente mucho mayor.
 
 El concepto que forman del Universo es muy distinto del que formamos
@@ -655,7 +655,7 @@ sin que acierte a borrarlos o a confundirlos la continua convivencia y
 el íntimo comercio espiritual, en esta época en que tanto se escribe, se
 lee y se viaja, en este siglo del vapor y la electricidad, del
 ferro-carril y del telégrafo, todavía no logro persuadirme de que haya
-también un sello de _provincialidad_, como hay sello de nación, de tribu
+también un sello de provincialidad, como hay sello de nación, de tribu
 o de casta. Lo peculiar y lo castizo, en lo que tienen de exclusivas
 estas calidades, provienen de divisiones que hizo la naturaleza misma, y
 no de las divisiones administrativas o políticas, esto es, artificiales,
@@ -699,7 +699,7 @@ impresiones, y duro bronce para conservarlas sin que se desvanezcan?
 Más de cinco meses pasé en mi lugar, y en este tiempo mudé por completo
 de parecer, respecto al libro del Sr. Guijarro. No me quedaba excusa
 para no escribir el artículo. Estaba persuadido de que si la cordobesa
-que yo pintase no era un tipo _sui generis_, era porque yo no sabía
+que yo pintase no era un tipo sui generis, era porque yo no sabía
 pintar lo que estaba viendo de un modo claro. Me decidí, pues, desde
 entonces a hacer esta pintura, confesando con ingenuidad que, si no sale
 original y nueva, la culpa será mía y no del modelo.
@@ -717,9 +717,9 @@ esencias inmortales, permanece en su fundamento sustancial, si bien
 adquiere nuevas formas y nuevos accidentes. La cordobesa de este momento
 histórico no es la cordobesa del momento histórico anterior; pero es
 siempre la cordobesa, y siempre sigue realizando su esencia, como cada
-hija de vecina, _exteriorizando_ la idea típica suya propia, y
+hija de vecina, exteriorizando la idea típica suya propia, y
 presentando diverso aspecto, en cada una de las diversas evoluciones con
-que la _exterioriza_.
+que la exterioriza.
 
 Veo que me encumbro demasiado, y voy a descender y a hablar con más
 llaneza, dejando los raptos filosóficos para mejor ocasión.
@@ -784,7 +784,7 @@ picantes, las guindillas y cornetas y los ajos, cuelgan en ristras al
 lado del bacalao, en la parte menos pulcra. En la parte más pulcra suele
 haber azúcar, café, salvia, tila, manzanilla, y hasta té a veces, que
 antes sólo en la botica se hallaba. Del techo cuelgan egregios y
-gigantescos jamones; y, alternando con esta _bucólica_ manifestación del
+gigantescos jamones; y, alternando con esta bucólica manifestación del
 reino animal, dulces andregüelas invernizas, uvas, granadas y otras
 frutas. En hondas orzas vidriadas conserva la señora lomo de cerdo en
 adobo, cubierto de manteca; pajarillas, esto es, asaduras, riñones y
@@ -876,7 +876,7 @@ sopaipas, los almíbares y las perrunas, exquisitas, a pesar de lo poco
 simpático del nombre que llevan. Pero ¿cómo no detenerse en el debido
 encomio de ciertas empanadas, en mi sentir deliciosas, y tan propias y
 privativas de por allá, que la mujer que no haya nacido cordobesa no
-poseerá jamás el _quid divinum_ que para amasarlas se requiere, ni
+poseerá jamás el quid divinum que para amasarlas se requiere, ni
 acertará a darles el debido punto de cochura? Estas empanadas son, en
 dicho sentido, incomunicables. Aunque en mayor escala, acontece con
 ellas lo que con el turrón de Jijona, que al instante se conoce la
@@ -890,7 +890,7 @@ inverosímil.
 
 No es nuevo este arte de repostería y pastelería, ni su florecimiento
 entre las cordobesas. Según un escrito fehaciente, reimpreso y divulgado
-poco ha (la verdadera historia de la _Lozana Andaluza_), dicho arte
+poco ha (la verdadera historia de la Lozana Andaluza), dicho arte
 florecía ya a principios del siglo XVI. Aquella insigne mujer, que era
 cordobesa, hacía con admirable perfección casi todo cuanto aquí hemos
 mentado, si bien el autor lo refiere de corrida, sin detenerse tanto
@@ -900,7 +900,7 @@ madres a hijas ha venido trasmitiéndose hasta ahora por medio de la
 tradición. Así es que cualquiera cordobesa, si no es manca y tiene
 mediano caletre, podrá jactarse en el día, como ha más de tres siglos se
 jactaba la Lozana, si es que la modestia lo permite, de que sobrepuja a
-Platina _De voluptatibus_ y a Apicio Romano _De re coquinaria_.
+Platina De voluptatibus y a Apicio Romano De re coquinaria.
 
 Con todo, acerca de lo último (en lo tocante a cocina propiamente
 dicha), no hay, hablando con franqueza, tanto de que jactarse como en la
@@ -908,7 +908,7 @@ parte de repostería. Este arte, incluyendo en él, aunque parezca
 disparatado, todo lo relativo a la matanza, es, en la provincia de
 Córdoba, un arte más liberal, menos entregado a manos mercenarias.
 Apenas si hay hidalga, por encopetada y perezosa que sea, que, según ya
-hemos dicho, no trabaje en estos negocios _col seno e colla mano_. Ya
+hemos dicho, no trabaje en estos negocios col seno e colla mano. Ya
 sazona el adobo; ya hecha con su blanca diestra el aliño a las
 longanizas; ya rellena tal cual chorizo con un embudito de lata; ya
 pincha las morcillas para que se les salga el aire, valiéndose de una
@@ -922,7 +922,7 @@ Semana Santa, para solemnizarla con hojuelas, pestiños, gajorros y
 piñonate, alguna mujer perita, de tres o cuatro que hay siempre en cada
 lugar, la cual se pone al frente de todo; pero rarísima vez la señora
 abdica en esta mujer por completo y se sustrae a toda responsabilidad.
-Esta mujer no pasa de ser una ayudanta, una _altera ego_. Quien en
+Esta mujer no pasa de ser una ayudanta, una altera ego. Quien en
 realidad dirige es el ama. Y sólo cede el ama la dirección, o, para
 hablar con rigorosa exactitud, no la cede ni dimite, sino que comparte
 la responsabilidad y divide el imperio, cuando se da la feliz
@@ -961,7 +961,7 @@ tienen?
 
 Las habas, a pesar del anatema de Pitágoras, que tal vez las condenó
 como afrodisíacas, son el principal alimento de los campesinos de mi
-tierra. El guiso en que las preparan, llamado por excelencia _cocina_,
+tierra. El guiso en que las preparan, llamado por excelencia cocina,
 es riquísimo. Dudo yo que el más científico cocinero francés, sin más
 que habas, aceite turbio, vinagre archi-turbio, pimientos, sal y agua,
 pueda sacar cosa tan rica como dicha cocina de habas preparada por
@@ -982,7 +982,7 @@ clásico y de poético. No era más que gazpacho lo que, según Virgilio, en
 la segunda Égloga, preparaba Testilis para agasajo y refrigerio de los
 fatigados segadores:
 
-    _Allia, serpyllumque, herbas contundit olentes._
+    Allia, serpyllumque, herbas contundit olentes.
 
 Dejo de hablar de la olla, caldereta, cochifrito, ajo de pollo y otros
 guisados, por no tener diverso carácter en Córdoba que en las restantes
@@ -993,7 +993,7 @@ probar, o rastrear al menos, que la antigua cocina cordobesa fue una
 cocina aristocrática o casi regia, que ha venido degenerando. El sabio
 orientalista Dozy demuestra que la inventora de la alboronía, o quien le
 dio su nombre, fue nada menos que la Sultana Boran, hermosa, distinguida
-y _comm'il faut_ entre todas las Princesas del Oriente. Tal vez el
+y comm'il faut entre todas las Princesas del Oriente. Tal vez el
 creador de la alboronía dedicó su invención a esta Sultana, como hacen
 hoy los más famosos cocineros, dedicando sus guisos y señalándolos con
 el nombre de algún ilustre personaje. Así hay solomillo a la
@@ -1066,7 +1066,7 @@ que la deshollinen, cuando no la deshollina ella misma! ¡Cómo limpia el
 polvo de todos los muebles! ¡Con qué esmero alza en el armario o guarda
 en el arca o en la cómoda la limpia ropa de mesa y cama, sahumada con
 alhucema! Ella borda con primor, y no olvida jamás los mil pespuntes,
-calados, dobladillos y vainicas que en la _miga_ le enseñaban, y que
+calados, dobladillos y vainicas que en la miga le enseñaban, y que
 hizo y reunió en un rico dechado, que conserva como grato recuerdo. No
 queda camisa de hilo o de algodón que no marque, ni calceta cuyos puntos
 no encubra y junte, ni desgarrón que no zurza, ni rotura que no
@@ -1153,7 +1153,7 @@ chascarrillos picantes.
 Siendo yo pequeñuelo, no me hartaba nunca de oír cuentos que me contaban
 las criadas de casa. El más bonito, el que más me deleitaba era el de
 doña Guiomar, cuyo argumento, en lo esencial, es el mismo del drama
-indio de Kalidasa, titulado _Sacuntala_. Los árabes, sin duda, trajeron
+indio de Kalidasa, titulado Sacuntala. Los árabes, sin duda, trajeron
 este cuento y otros mil, en la Edad Media, desde el remoto Oriente.
 
 La criada que descuella por lo lista, amena y entretenida, se capta la
@@ -1166,13 +1166,13 @@ procura tenerla al corriente de cuanto pasa en el lugar.
 A esto de saber vidas ajenas y de murmurar, menester es confesarlo, hay
 una deplorable afición en las hidalgas y ricas labradoras de por allí.
 
-Por lo demás, si hay algo de cierto en el mordaz proverbio que dice: _Al
-andaluz hacedle la cruz, y al cordobés de manos y pies_, bien puede
+Por lo demás, si hay algo de cierto en el mordaz proverbio que dice: Al
+andaluz hacedle la cruz, y al cordobés de manos y pies, bien puede
 afirmarse que no reza con las mujeres; antes son víctimas las pobrecitas
 de lo levantiscos, alborotados y amigos de correrla que son generalmente
 los maridos. Ya dice uno que va al campo a ver las viñas o los olivares
 y a inspeccionar la poda, la cava u otra labor cualquiera; ya supone
-otro que va a cazar _sub Jove frígido, tenerae conjugis immemor_; ya
+otro que va a cazar sub Jove frígido, tenerae conjugis immemor; ya
 éste tiene que ir a negocios a la cabeza de partido, o a Córdoba, o a
 Madrid por motivos políticos; ya alega aquél que debe ir a Jerez a
 llevar muestras de vino, o a alguna feria, a ver si vende o compra
@@ -1204,9 +1204,9 @@ costoso, y remata en la perdición de pingües y desahogados caudales. No
 se origina el gasto, ni nace de las galas y dijes, coches y primores que
 hay que comprar a la muchacha, ni del boato y pompa con que es menester
 sostenerla; aunque todo es relativo y proporcional, y en algo de esto se
-gasta también. La _hetera_ de lugar es menos exigente, pedigüeña y
+gasta también. La hetera de lugar es menos exigente, pedigüeña y
 antojadiza que las Coras, las Baruccis, las Paivas y otras famosas
-_heteras_ parisinas: pero aquéllas son solas, se diría que nacieron como
+heteras parisinas: pero aquéllas son solas, se diría que nacieron como
 los hongos, y la lugareña tiene un diluvio de parientes, que se lanza y
 abate sobre la casa y la hacienda del mantenedor enamorado, como bandada
 de langostas hambrientas y voraces. Los primos, los sobrinos, los
@@ -1225,10 +1225,10 @@ dedican muchas mujeres a él y abaratan el mercado con la competencia. En
 todo el territorio de Córdoba ha vivido siempre gente muy hidalga y
 harto difícil en puntos de honra. Colonia en lo antiguo de verdaderos
 ciudadanos romanos, y no de libertos, como otras, mereció y obtuvo el
-título de _patricia_; cuando la invasión mahometana, no vinieron a
+título de patricia; cuando la invasión mahometana, no vinieron a
 poblarla rudos y plebeyos berberiscos, sino claros varones de pura
 sangre arábiga; los linajes más ilustres de Medina y de la Meca; los
-descendientes de los _ansáres_, _tabies_ y _muhadjires_. Y por último,
+descendientes de los ansáres, tabies y muhadjires. Y por último,
 habiendo sido mi provincia, durante dos siglos, fronteriza con el reino
 de Granada, ha debido tener y ha tenido para custodia y defensa de sus
 lugares fuertes, y para tomar el desquite de cualquier ataque, entrando
@@ -1242,7 +1242,7 @@ valerosos,
 como canta el viejo romance. Desde entonces no ha deslucido Córdoba su
 bien cimentada reputación: y no por vana jactancia, sino con sobra de
 motivo, lleva por mote, en torno de los rampantes leones de su limpio
-escudo: «_Corduba, militiae domus, inclyta fonsque sophiae._» Lucano,
+escudo: «Corduba, militiae domus, inclyta fonsque sophiae.» Lucano,
 Séneca, Averroes, Ambrosio de Morales, Góngora y mil otros dan
 testimonio de lo segundo. Acreditan lo primero, en multitud innumerable,
 los acérrimos y audaces guerreros que por todos estilos ha criado
@@ -1273,7 +1273,7 @@ almas en un lugar de mi provincia. Era gran teólogo, recto y virtuoso;
 pero bien hablado, elegantísimo, peripuesto y agradable; era hombre que
 en el siglo XVIII hubiera figurado, en una corte, como el más delicioso
 abate. Pues bien, en el pueblo la tomaron con él, y, como vulgarmente se
-dice, le _abroncaron_. El _brónquis_ que le dieron llegó hasta tirarle
+dice, le abroncaron. El brónquis que le dieron llegó hasta tirarle
 algunos tiros, pero con pólvora sólo, para asustarle. Él calculó que de
 la pólvora, si no surtía efecto, se podría con facilidad pasar a los
 perdigones, y se largó con la música y la teología a otra parte menos
@@ -1317,10 +1317,10 @@ estatua de Diana cazadora.
 Por desgracia, las damas del lugar han adoptado, en cuanto cabe, casi
 todas las modas francesas, y van perdiendo el estilo propio de vestirse
 y peinarse. Todas usaron ingentes miriñaques totales, y ahora usan el
-miriñaque parcial y _pseudo-calípigo_ que priva. El día menos pensado
+miriñaque parcial y pseudo-calípigo que priva. El día menos pensado
 abandonarán la mantilla y se pondrán el sombrerito. Todas se peinan,
 tomando por modelo el figurín, y suelen llamar a este peinado de
-_cucuné_ o de _remangué_, a fin de darle, hasta en el nombre, cierto
+cucuné o de remangué, a fin de darle, hasta en el nombre, cierto
 carácter extranjero. Las faldas, en vez de llevarlas cortas, las llevan
 largas, y van barriendo con la cola el polvo de los caminos. En
 resolución, es una pena este abandono del traje propio y adecuado.
@@ -1335,12 +1335,12 @@ desenfado, y repiquetean con brío las castañuelas. Mujeres hay del
 pueblo que, en esto de bailar y tocar las castañuelas, vencen a la
 Teletusa, celebrada por Marcial, en aquel epigrama que principia:
 
-    _Edere lascivos ad Bætica crusmata gestus._
+    Edere lascivos ad Bætica crusmata gestus.
 
 Si la mujer casada, como ya queda expuesto, es un modelo de paciencia
 conyugal, la soltera es casi siempre un modelo de novias. Puntualmente
 baja a la reja todas las noches a hablar con el enamorado, a lo que se
-llama _pelar la pava_. En cada calle de cualquier lugar de Andalucía se
+llama pelar la pava. En cada calle de cualquier lugar de Andalucía se
 ven, de diez a una de la noche, sendos embozados, como cosidos a casi
 todas las rejas. Tal vez suspira él y exclama:
 
@@ -1379,7 +1379,7 @@ epígrafe a la novela, Carmen sabe morir y amar; es admirable cuando se
 entrega por amor y cuando por amor muere; tiene dos horas divinas: una
 en la muerte; otra en el tálamo.
 
-_De atrás le viene al garbanzo el pico_, según el decir vulgar. Desde
+De atrás le viene al garbanzo el pico, según el decir vulgar. Desde
 muy antiguo es la cordobesa espejo, luz y norte de enamoradas. Sus ojos,
 como los de Laura, inspiran platónicos y casi místicos afectos, y hacen
 que un moro, como Ibn Zeidun, escriba canciones más finas que las del
@@ -1409,7 +1409,7 @@ Imposible parece que, siendo tan buenas, las descuiden y abandonen los
 pícaros hombres. Además de las peregrinaciones de que ya hemos hablado,
 las dejan para irse al casino, donde se pasan las horas muertas. Razón
 le sobraba al gran Donoso al tronar tanto contra el casino, en su
-elocuente libro _sobre el Catolicismo_. Es verdad que siempre ha habido
+elocuente libro sobre el Catolicismo. Es verdad que siempre ha habido
 casino, sólo que antes, para los ricos, se llamaba la casilla, y estaba
 en la botica, y para los pobres, el casino estaba en la taberna. Pero,
 en el día, ni las boticas ni las tabernas han acabado, y todo lugar, por
@@ -1432,7 +1432,7 @@ disgustos: este manantial es la religión cristiana. No hay cordobesa que
 no sea profundamente religiosa.
 
 Entre los hombres ha cundido la impiedad. El soldado licenciado, de
-retorno a su casa, ha solido traer algún ejemplar del _Citador_; los
+retorno a su casa, ha solido traer algún ejemplar del Citador; los
 periódicos se leen, y no todos son piadosos; y por último, no falta
 estudiante que vuelve de la universidad inficionado de Krause y hasta de
 Hegel, y que echa discursos a los rústicos, a ver si los hace panteistas
@@ -1450,7 +1450,7 @@ pasatiempo se funda en la religión. Si no fuese por ella, ¿habría
 romerías tan alegres como la de la Virgen de Araceli y la de la Virgen
 de la Sierra de Cabra? ¿Habría Niño Jesús que vestir? ¿Habría procesión
 que ver? ¿Habría paso de Abraham, Descendimiento, judíos y romanos,
-apóstoles y profetas, _encolchados_, _ensabanados_ y _jumeones_,
+apóstoles y profetas, encolchados, ensabanados y jumeones,
 hermanos de cruz, y demás figuras que salen por las calles, en la Semana
 Santa? Nada de esto habría. No tendría la mujer jubileos ni novenas, ni
 oiría sermones, ni adornaría con flores ningún altar, ni engalanaría
@@ -1477,30 +1477,30 @@ antes de terminar el artículo. Este punto es el filológico: el lenguaje
 y el estilo de la cordobesa.
 
 La cordobesa, por lo común (y entiéndase que hablo de la jornalera o de
-la criada, y no de la dama elegante e instruida), aspira la _hache_.
+la criada, y no de la dama elegante e instruida), aspira la hache.
 Tiene además notable propensión a corroborar las palabras con sílabas
 fuertes antepuestas. Cuando no se satisface con llamar tunante a
-cualquiera, le llama _retunante_; y no bastándole con Dios, exclama:
-_¡Redios!_ En varios pueblos de mi provincia, así como en muchos de los
+cualquiera, le llama retunante; y no bastándole con Dios, exclama:
+¡Redios! En varios pueblos de mi provincia, así como en muchos de los
 pueblos de la de Jaén, es frecuentísima cierta interjección inarticulada
 que se confunde con un ronquido. La cordobesa, por último, adorna su
 discurso con mil figuras e imágenes, le salpimenta de donaires y
 chistes, y le anima con el gesto y el manoteo.
 
-El adverbio _a manta_ se emplea a cada instante para ponderar o
-encarecer la abundancia de algo. Las voces _mantés_, _manteson_,
-_mantesada_ y _mantesonada_, _mantesería_ y _mantesonería_, salpican o
-llenan tanto todo coloquio como en Málaga la de _charran_ y sus
+El adverbio a manta se emplea a cada instante para ponderar o
+encarecer la abundancia de algo. Las voces mantés, manteson,
+mantesada y mantesonada, mantesería y mantesonería, salpican o
+llenan tanto todo coloquio como en Málaga la de charran y sus
 derivados. Más singular es aún el uso del gerundio en diminutivo, para
 expresar que se hace algo con suavidad y blandura. Así, pues, se dice:
-«Don Fulano se está _muriendito_. La niña está _deseandito_ casarse, o
-_rabiandito_ por novio.»
+«Don Fulano se está muriendito. La niña está deseandito casarse, o
+rabiandito por novio.»
 
-En la pronunciación dejan un poco que desear las cordobesas. La _zeda_ y
-la _ese_ se confunden y unimisman en sus bocas, así como la _ele_, la
-_ere_ y la _pe_. ¿Quién sabe si sería alguna maestra de _miga_ cordobesa
-la que dijo a sus discípulas: «Niñas, _sordado_ se escribe con _ele_ y
-_precerto_ con _pe_»? Pero si en la pronunciación hay esta anarquía, en
+En la pronunciación dejan un poco que desear las cordobesas. La zeda y
+la ese se confunden y unimisman en sus bocas, así como la ele, la
+ere y la pe. ¿Quién sabe si sería alguna maestra de miga cordobesa
+la que dijo a sus discípulas: «Niñas, sordado se escribe con ele y
+precerto con pe»? Pero si en la pronunciación hay esta anarquía, en
 la sintaxis y en la parte léxica, así las cordobesas como los
 cordobeses, son abundantes y elegantísimos en ocasiones, y siempre
 castizos, fáciles y graciosos. No poca gente de Castilla pudiera ir por
@@ -1516,9 +1516,9 @@ pullas afiladas y punzantes, pero jamás se encarniza.
 ¿Qué otra cosa he de añadir? Una cordobesa es avara y otra pródiga, pero
 todas son generosas y caritativas. Cordobesa hay que lee todavía libros
 antiguos, devotos los más, que pertenecieron a su bisabuela, y que están
-como vinculados en la casa; v. gr.: _La Perfecta Casada_, del maestro
-Leon; _El menosprecio de la corte y alabanza de la aldea_, y el _Monte
-Calvario_, de fray Antonio de Guevara, y hasta las _Obras completas_
+como vinculados en la casa; v. gr.: La Perfecta Casada, del maestro
+Leon; El menosprecio de la corte y alabanza de la aldea, y el Monte
+Calvario, de fray Antonio de Guevara, y hasta las Obras completas
 (cerca de veinte volúmenes en fólio) del venerable Palafox. No lo digo
 fantaseando: he conocido lugareña cordobesa que tenía y leía estos y
 otros libros por el estilo. Otras leen novelas modernas de las peores.
@@ -1557,11 +1557,11 @@ esperanza general entre todas las gentes de que había de venir un
 Salvador, y tal vez por alguna noticia que tuvo de los profetas hebreos,
 vaticinó con más o menos vaguedad, en su famosa égloga IV, la redención
 del mundo, todavía le pareció que esta redención no había de ser
-instantánea, por muy milagrosa que fuese, y así es que dijo: _suberunt
-priscae vestigia fraudis_: quedarán no pocos restos de las pasadas
+instantánea, por muy milagrosa que fuese, y así es que dijo: suberunt
+priscae vestigia fraudis: quedarán no pocos restos de las pasadas
 tunanterías y miserias.
 
-(a) Publicada en _La Revista de España_, en el año de 1870.
+(a) Publicada en La Revista de España, en el año de 1870.
 
 Si esto pudo decir el Cisne de Mantua, tratándose de un milagro tan
 grande, de un caso sobrenatural que lo renovaba todo y que todo lo
@@ -1591,13 +1591,13 @@ No es esto afirmar que el estado de nuestro país sea delicioso,
 envidiable y floreciente. Nada menos que eso. En nuestro país hay mucho
 desabrimiento, muchísimo mal humor, y un disgusto enorme. Y no hay que
 rastrear demasiado, ni que sumirse en oscuras profundidades para
-desentrañar la causa. La causa es que _donde no hay harina, todo es
-mohína_. El mal, fundamento de todos los males, es entre nosotros la
+desentrañar la causa. La causa es que donde no hay harina, todo es
+mohína. El mal, fundamento de todos los males, es entre nosotros la
 escasez de dinero, o para valernos de término más comprensivo, la
 penuria o la inopia. En nuestra época nos dolemos más de este mal,
 porque la aspiración y el conocimiento del bien contrario están más
-difundidos, no porque el mal sea nuevo. _De atrás le viene el pico al
-garbanzo_, como dice el refrán. Sería, pues, una insolencia exigir de la
+difundidos, no porque el mal sea nuevo. De atrás le viene el pico al
+garbanzo, como dice el refrán. Sería, pues, una insolencia exigir de la
 revolución que renovara el milagro de pan y peces, o que convirtiera las
 piedras en hogazas. ¿Qué ha de hacer la revolución sino lo que siempre
 se ha hecho? Esto me retrae a la memoria el modo de saludar que suelen
@@ -1650,7 +1650,7 @@ humilde y cristianamente con el poeta:
     Con su poder infinito.
 
 Vivo yo tan seguro de esta verdad, que nunca he querido engolfarme en el
-_mare-magnum_ de la Economía Política, teniendo por tan complicada toda
+mare-magnum de la Economía Política, teniendo por tan complicada toda
 esta maquinaria de las sociedades, que ni remotamente he caído en la
 tentación de querer averiguar cuáles son los resortes que la mueven y
 cuáles las bases sobre que se sustenta. Siempre he tenido miedo de que
@@ -1744,7 +1744,7 @@ moneda no rece con los acreedores del Estado, y les sigamos pagando los
 intereses con arreglo a la ley antigua.
 
 Pero dejando a un lado esta cuestión, conste que, si bien aquí usamos de
-la palabra _dinero_ en la acepción de _capital_ o de _riqueza_, hacemos
+la palabra dinero en la acepción de capital o de riqueza, hacemos
 perfectamente la distinción de estas cosas, como la han hecho todos los
 hombres de todos los siglos, sin necesidad de que los economistas los
 adoctrinen. La razón que nos lleva a llamar dinero a toda riqueza, es
@@ -1764,8 +1764,8 @@ reemplazable por el crédito, es una parte de la riqueza, y así por esto
 como por ser la parte más viva, más enérgica y más circulante, es un
 dolor que se pierda. La sociedad que no tiene dinero, o el individuo que
 no tiene dinero, ya están aviados. Después de largos estudios han
-deducido, pues, los economistas que el _dinero es indispensable al
-hombre desde el momento que el hombre vive en sociedad_; aguda
+deducido, pues, los economistas que el dinero es indispensable al
+hombre desde el momento que el hombre vive en sociedad; aguda
 sentencia, cuya verdad resplandece más que la luz del mediodía.
 
 
@@ -1792,27 +1792,27 @@ Los poetas satíricos, los novelistas, los autores de comedias de todos
 los pasados siglos, han dado muestras de que en la época en que vivían
 se estimaba más el dinero que en la presente. Aun los mismos refranes,
 antiquísimos vestigios de lo que se llama sabiduría popular, vienen en
-apoyo de lo que digo.--_Por dinero baila el perro._--_Cobra y no pagues,
-que somos mortales._--_Dádivas ablandan peñas._--_Ten dinero, tuyo o
-ajeno._--_Quien tiene dineros, pinta panderos._--Y así pudiera yo seguir
+apoyo de lo que digo.--Por dinero baila el perro.--Cobra y no pagues,
+que somos mortales.--Dádivas ablandan peñas.--Ten dinero, tuyo o
+ajeno.--Quien tiene dineros, pinta panderos.--Y así pudiera yo seguir
 citando hasta llenar un pliego de impresión. Pero aún citaré otro refrán
 que, por ser España un país tan católico, debe considerarse como la
 hipérbole más subida de que todo se logra con dinero; de que todo se
-compra y se vende, hasta lo más venerable y santo. El refrán dice: _Por
-mi dinero, Papa le quiero_.
+compra y se vende, hasta lo más venerable y santo. El refrán dice: Por
+mi dinero, Papa le quiero.
 
 En los países de una cultura atrasada, se advierte un fenómeno, que,
 conforme nos vamos civilizando y puliendo un poco más, mengua, ya que no
 desaparece del todo. Es este fenómeno la deshonra, el descrédito, la
 vehemente sospecha, y aun el horror que rodea al que es pobre, el cual
 es aborrecido, cuando no es despreciado. El refrán antiguo español
-declara que _El dinero hace al hombre entero_: esto es, que el dinero es
+declara que El dinero hace al hombre entero: esto es, que el dinero es
 garantía de rectitud, de probidad y de entereza en quien le tiene. Más
-lejos va aún otro refrán que dice: _La pobreza no es deshonra, pero es
-ramo de picardía_. Nuestro inmortal Cervantes, haciéndose eco de este
-sentimiento general, afirma, no una sola vez, que es dificilísimo _que
-un pobre pueda ser honrado_. El reverendo Fray José de Valdivielso, en
-su _Poema de San José_, no acierta a concebir que el Santo, padre
+lejos va aún otro refrán que dice: La pobreza no es deshonra, pero es
+ramo de picardía. Nuestro inmortal Cervantes, haciéndose eco de este
+sentimiento general, afirma, no una sola vez, que es dificilísimo que
+un pobre pueda ser honrado. El reverendo Fray José de Valdivielso, en
+su Poema de San José, no acierta a concebir que el Santo, padre
 putativo de Nuestro Divino Redentor, y descendiente de reyes, pudiese
 ser pobre y vivir de un oficio mecánico: así es que asegura que San José
 era carpintero por distracción, y no para ganarse la vida:
@@ -1825,8 +1825,8 @@ disculpar a San José de haber sido carpintero, y suponer que tenía
 Treses o Billetes hipotecarios.
 
 Ni por la nobleza de sangre se disculpaba la pobreza; antes el tener
-dinero ha sido en todos los siglos origen de hidalguía. _Dineros son
-calidad_, _Más vale el din que el don_, son refranes que corroboran mi
+dinero ha sido en todos los siglos origen de hidalguía. Dineros son
+calidad, Más vale el din que el don, son refranes que corroboran mi
 aserto.
 
 La profunda veneración que inspiran el dinero y quien le posee ha sido
@@ -1843,7 +1843,7 @@ cultos nos parece tan necia y tan absurda, de que lo que había que
 desear era una medianía de fortuna, a fin de vivir feliz y tranquilo, ni
 envidioso ni envidiado. Porque, a la verdad, si el dinero es un bien,
 mientras mayor sea el bien, debe ser más apetecible, y no se concibe la
-_áurea mediocritas_, celebrada por Horacio y por todos los poetas de
+áurea mediocritas, celebrada por Horacio y por todos los poetas de
 otros tiempos, sino recordando que el hombre acaudalado estaba de
 continuo expuesto a que le matasen o maltratasen para robarle, ya el
 emperador o el príncipe bajo cuyo imperio vivía, ya la plebe codiciosa.
@@ -1916,7 +1916,7 @@ tonto, el cual, si hubiera vivido dos o tres siglos ha, no hubiera
 gozado más que en comer, que no goce ahora, o por lo menos que no diga
 que goza, oyendo la música más sabia y alambicada. Juan Ruiz, Arcipreste
 de Hita, afirma que sólo hay dos cosas esenciales que mueven al hombre:
-a saber: _mantenencia_, y otra que no me atreveré a mentar, aunque el
+a saber: mantenencia, y otra que no me atreveré a mentar, aunque el
 Arcipreste la mienta, escudado con Aristóteles:
 
     Si lo dixiese de mió, sería de culpar;
@@ -1945,11 +1945,11 @@ adelantados, lavarse ya todos los días, costumbre rara, cuando no
 desconocida de la cristiandad, ciento o doscientos años hace, y contra
 la cual aún fulminan sus anatemas el piadoso señor Veuillot y otros
 santos padres. Por eso no se comprendía bien la significación del
-principio de aquella oda de Píndaro: _Alto don es el agua_. Antes al
+principio de aquella oda de Píndaro: Alto don es el agua. Antes al
 contrario, el agua era mirada con horror y con miedo, como causa de los
 mayores males, sobre todo para las personas de cierta edad. De aquí el
-refrán hidrofóbico tan acreditado: _De cuarenta para arriba, ni te
-cases, ni te embarques, ni te mojes la barriga_. Un hombre de setenta
+refrán hidrofóbico tan acreditado: De cuarenta para arriba, ni te
+cases, ni te embarques, ni te mojes la barriga. Un hombre de setenta
 años, cuándo o dónde no había, o no ha caído en desuso este refrán,
 debe, o debía de tener su piel cubierta de más estratificaciones que
 nuestro globo. Si en este descuido de la materia, que hubo en los siglos
@@ -1973,7 +1973,7 @@ Ello es lo cierto que la concupiscencia no es tan feroz en el día como
 en tiempos pasados. ¿Cuánto no sorprenden aquellos penitentes
 solitarios, que después de crueles y largos ayunos aun no podían domar y
 poner freno a ciertas malas pasiones, que representaban en su lenguaje
-místico llamándolas _el asnillo_? ¿Cuánto no espanta, por ejemplo, aquel
+místico llamándolas el asnillo? ¿Cuánto no espanta, por ejemplo, aquel
 San Hilarión, que no comía más que una docena de higos secos al día, y
 tuvo que acortarse la ración en más de la mitad, porque se sentía muy
 bravo y emberrenchinado? En este sentido somos también más
@@ -1990,7 +1990,7 @@ otro objeto del mismo orden, que allá en lo antiguo ni se sospechaba
 siquiera que pudiese ser blanco de tantos disparos poéticos y de raptos
 líricos tan maravillosos.
 
-Estos síntomas de _espiritualización_ se notan hoy por donde quiera. Ya
+Estos síntomas de espiritualización se notan hoy por donde quiera. Ya
 con la homeopatía, hasta los achaques de la materia se curan casi
 espiritualmente. No se toman remedios, sino se toman, por decirlo así,
 las virtualidades, el espíritu, la sombra vaporosa de los remedios.
@@ -2005,7 +2005,7 @@ que la naturaleza procede hasta hoy en esto de la nutrición. Asegúrase,
 como verdad evidente, que en menos de un mes mudamos por completo todos
 los átomos o moléculas de nuestro organismo y tomamos otros. El alma, el
 principio oculto de la vida, la virtud plasmante, la energía informante,
-_la forma óntica_, como la llama un sabio amigo mío, es sólo lo que
+la forma óntica, como la llama un sabio amigo mío, es sólo lo que
 permanece. Lo demás cambia sin cesar. La vida es, pues, no por estilo
 poético y figurado, sino con toda realidad, un rió, un torbellino, un
 torrente impetuoso. Un caballero, de regular corpulencia, que llegue a
@@ -2037,7 +2037,7 @@ hasta diáfanos y luminosos.
 
 Por todas estas consideraciones y por otras que callo, a fin de no hacer
 muy prolija la digresión, tengo por cierto que nuestra edad, si peca por
-algo, es por _pneumatosis_ o sobra de espiritualismo.
+algo, es por pneumatosis o sobra de espiritualismo.
 
 Y sin embargo, se me dirá, en este siglo tan espiritualista, se ama el
 dinero poco menos que sobre todo. Convengo en que hay este amor, pero no
@@ -2073,9 +2073,9 @@ fama y el respeto de los hombres, porque es difícil de averiguar si el
 virtuoso lo es por firmeza y rectitud de alma o por apocamiento, necedad
 o cobardía; y los hombres, como no sea la virtud muy manifiesta,
 procuramos siempre atribuirla a dichas calidades negativas. Así es que,
-en casi todos los idiomas antiguos y modernos, la palabra _bondad_,
-apartada de su sentido recto, significa simpleza, como _dabbenaggine_ en
-italiano, _euetheia_ en griego, _bonhomie_ en francés, etc., etc. Pero
+en casi todos los idiomas antiguos y modernos, la palabra bondad,
+apartada de su sentido recto, significa simpleza, como dabbenaggine en
+italiano, euetheia en griego, bonhomie en francés, etc., etc. Pero
 como la virtud es y debe ser también superior a la vanagloria, el
 virtuoso, no sólo debe serlo aún a trueque de ser pobre, sino a trueque
 de pasar por un solemne majadero.
@@ -2090,7 +2090,7 @@ sedas, encajes y joyas, en un soberbio coche; cuando esto se dice,
 repito, yo no puedo menos de reírme en vez de conmoverme. Pues qué, ¿se
 quiere que la probidad se pague con palacios, y la castidad con
 diamantes y trenes? Entonces los mayores galopines se harían probos para
-vivir a lo príncipe, y las _suripantas_ echarían la zancadilla a
+vivir a lo príncipe, y las suripantas echarían la zancadilla a
 Lucrecia y a Susana, a fin de conseguir por ese medio lo que por el
 opuesto logran ahora. La verdad es que el mundo anda menos mal de lo que
 se cree.
@@ -2150,7 +2150,7 @@ capaces de comprenderla.
 
 Entiéndase, con todo, que, salvo las mencionadas archi-sublimes
 excepciones, nada es más falso en cierto sentido que aquello de que
-_honra y provecho no caben en un saco_. Al contrario, cuando el público
+honra y provecho no caben en un saco. Al contrario, cuando el público
 no honra es cuando no enriquece, y siempre enriquece cuando honra. El
 más o el menos de enriquecer depende de circunstancias que nada tienen
 que ver con la honra. En los países ricos y prósperos, el buen poeta
@@ -2209,7 +2209,7 @@ desinteresadas.
 
 El dinero da asimismo mérito intrínseco, y el no tenerle le quita, le
 merma o le anubla. El dinero da buen humor, urbanidad, buena crianza, y,
-como diría cierto diplomático, _soltura fina_. Nada, por el contrario,
+como diría cierto diplomático, soltura fina. Nada, por el contrario,
 ata y embastece más que la pobreza. El pobre es tímido y encogido, o
 anda siempre hecho una fiera. Toda palabra en boca del rico es una
 gracia, por donde, la misma confianza que tiene de que sus gracias van a
@@ -2230,22 +2230,22 @@ No se debe extrañar, pues, que las personas ricas sean amadas y
 admiradas. En el día las amamos con más desinterés que antes. Nunca, por
 ejemplo, ha habido menos hombres mantenidos por mujeres que en esta
 época, si se exceptúa bajo la forma legítima, aunque desairada, del
-_coburguismo_. En otras edades era frecuente, casi general, y no estaba
-mal mirado el _coburguismo_ ilegítimo masculino, desde Ciro el Menor con
+coburguismo. En otras edades era frecuente, casi general, y no estaba
+mal mirado el coburguismo ilegítimo masculino, desde Ciro el Menor con
 Epiaxa, reina de Cilicia, señora es de creer que ya jamona, a quien
 aquel héroe sacaba mucha moneda, hasta los galanes caballeros de la
 corte de Luis XIV y Luis XV.
 
-Lo que es el _coburguismo_ femenino, legitimo, o ilegítimo, sigue hoy
+Lo que es el coburguismo femenino, legitimo, o ilegítimo, sigue hoy
 como en las primeras edades del mundo, desde Raab y Dalila hasta la
-gallarda y elegante Cora. Este _coburguismo_ es más disculpable que el
+gallarda y elegante Cora. Este coburguismo es más disculpable que el
 masculino. Lope de Vega le disculpaba diciendo:
 
       No estaba pobre la feroz Lucrecia,
     Que, a darle Don Tarquino mil reales,
     Ella fuera más blanda y menos necia.
 
-Y Ariosto, con la leyenda _El Perro precioso_, inserta en el _Orlando_,
+Y Ariosto, con la leyenda El Perro precioso, inserta en el Orlando,
 le disculpa mucho más. Yo no le disculpo, pero le excuso, aunque no sea
 más que por el desinteresado amor y la admiración sincera que infunde el
 hombre rico, como no sea una bestia, aun en las almas más escogidas y
@@ -2270,8 +2270,8 @@ motriz del progreso humano, la palanca de Arquímedes que mueve el mundo
 moral, el fundamento de casi toda la poesía, y hasta el crisol de las
 virtudes más raras. La mayor parte de los hombres que desprecian o
 aparentan despreciar el dinero, lo hacen por despecho y envidia; imitan
-a la zorra, diciendo: _no están maduras_. Los que aman con sinceridad la
-pobreza, los que la creen y llaman _dádiva santa desagradecida_, o son
+a la zorra, diciendo: no están maduras. Los que aman con sinceridad la
+pobreza, los que la creen y llaman dádiva santa desagradecida, o son
 locos, o son santos: son Diógenes o San Francisco de Asís; a no ser que
 entiendan por pobreza cierta virtud magnánima que consiste en poseer y
 gozar todas las cosas con desdén y desprendimiento, como si no se
@@ -2355,7 +2355,7 @@ Gioja, Mac-Culloch y otras eminencias. No han adelantado más
 posteriormente otros sabios en dar estas definiciones. Stuard Mill
 desiste de definir lo que es riqueza, y dice que basta que en la
 práctica lo entendamos, con lo cual sigue adelante. Bastiat se enreda en
-sus _Armonías_ con otros economistas rivales, y trata de probarles que
+sus Armonías con otros economistas rivales, y trata de probarles que
 son unos ignorantes o unos necios que desconocen lo que es el valor.
 
 En efecto, uno de estos economistas se empeña en demostrar que el valor
@@ -2384,7 +2384,7 @@ matando quizás de hambre a sus mujeres y a sus hijos? ¿Gana el marido,
 débil o vano, que se empeña para que su mujer tenga palco en la Opera?
 ¿Gana, en suma, el que no ahorra, el que consume más de lo que produce,
 el que sobre sus rentas gasta su capital, el que tiene habilidad para
-adquirir diez y tiene _necesidad_ de consumir treinta o ciento? Claro
+adquirir diez y tiene necesidad de consumir treinta o ciento? Claro
 está que no gana, sino que pierde, y al fin se arruina. Y lo que sucede
 con los individuos, ¿no puede suceder, y no sucede también con las
 naciones?¿Así como hay individuos poco hábiles para producir y muy
@@ -2438,9 +2438,9 @@ adquirir riqueza el despojar a los vecinos por medio de la guerra. En el
 día de hoy, si bien estos despojos, estos robos violentos siguen
 haciéndose, no se hacen en tan grande escala. Las costumbres más suaves
 no lo consienten. La guerra, además, este modo de despojar violentamente
-una nación a otra, se ha hecho harto costosa. Los _gastos de producción_
-suelen en la guerra moderna ser mucho mayores que lo _producido_, si
-_producido_ puede llamarse lo que se toma contra la voluntad de su
+una nación a otra, se ha hecho harto costosa. Los gastos de producción
+suelen en la guerra moderna ser mucho mayores que lo producido, si
+producido puede llamarse lo que se toma contra la voluntad de su
 dueño. De aquí, en primer lugar, que apenas se emprenda ya guerra alguna
 con el propósito de enriquecerse; y en segundo lugar, que los pueblos
 enriquecidos sean los que tienen más medio de hacer la guerra y más
@@ -2461,8 +2461,8 @@ Buckle, Adam Smith ha hecho más por la humanidad que todos los sabios,
 que todos los profetas y que todos los genios inmortales que han nacido
 de madre y que han revestido carne humana en este pícaro mundo. Ni las
 leyes de Solon, de Numa y de Manú, ni todos los libros de filosofía, ni
-los mismos Evangelios, importan un pito comparados con la _Riqueza de
-las Naciones_. Según Buckle, la _Riqueza de las Naciones_ es «el libro
+los mismos Evangelios, importan un pito comparados con la Riqueza de
+las Naciones. Según Buckle, la Riqueza de las Naciones es «el libro
 más importante que se ha escrito jamás; su publicación ha contribuido en
 mayor grado a la dicha del humano linaje que el talento reunido de todos
 los hombres de Estado y de todos los legisladores, de quienes nos
@@ -2525,7 +2525,7 @@ entre los que subsisten y los medios de subsistencia.
 Además de la guerra material y sangrienta, ha tomado en nuestros días
 más auge que nunca otra guerra que trae a la humanidad infinitos bienes,
 y que la lleva en volandas, no ya por el camino real del progreso, sino
-por una trocha o atajo. Pero, como _no hay atajo sin trabajo_, de esta
+por una trocha o atajo. Pero, como no hay atajo sin trabajo, de esta
 otra guerra, que es la industrial y comercial, nacen temerosas
 perturbaciones, duros padecimientos, horribles desengaños y
 desconsoladoras ruinas. No me incumbe explicar esto ni hacer aquí la
@@ -2534,7 +2534,7 @@ los socialistas, hijos legítimos de los economistas y sus más crueles y
 acérrimos adversarios. Aun que la Economía Política no tuviese más
 pecado que el haber criado a sus pechos al socialismo, no podría ser
 absuelta del todo. Por lo demás, el socialismo, salvo que hasta hoy no
-es más que un conato, un _desideratum_, una aspiración, es, según
+es más que un conato, un desideratum, una aspiración, es, según
 algunos, esto es, será con respecto a la empírica y pedestre Economía
 Política, lo que son las matemáticas sublimes con respecto a las cuatro
 reglas de la Aritmética. La ciencia social o dígase la Sociología
@@ -2554,7 +2554,7 @@ ha venido a empeorarlo.
 
 No crea el discreto lector que no conozco lo que podrá decir de mis
 divagaciones en este escrito. Sírvame de excusa el haberle llamado
-_meditación_, y el ser la meditación sobre un asunto tan vasto y tan en
+meditación, y el ser la meditación sobre un asunto tan vasto y tan en
 relación con todos los asuntos como es el dinero. Para tratarle a fondo,
 y con la claridad, el orden y el método convenientes, me hubiera sido
 necesario escribir un grueso volumen. ¿Pero por qué, se me dirá, has
@@ -2670,7 +2670,7 @@ bienestar y al lujo; a que nos contentamos y conformamos con vivir mal,
 y, no sintiendo el aguijón del deseo de goces, no nos movemos al
 trabajo. Este raciocinio es absurdo por la falsedad de la premisa en que
 se funda. Todos los hombres, y peculiarmente los españoles, salvo algún
-extravagante, prefieren comer _foie-gras_ y pavo trufado a comer
+extravagante, prefieren comer foie-gras y pavo trufado a comer
 chanfaina y revoltillos; vestir ricos paños y terciopelos, a vestir
 bayeta; vivir en un palacio, a vivir en una choza; y andar en coche, a
 andar a pie. No es una ciencia oculta el saber que hay coches, buena
@@ -2695,10 +2695,10 @@ cuando dominábamos y despojábamos tantas regiones, cuando
     Sus perlas y coral el Océano;
 
 Campanella se pasma de que tanta riqueza se disipe sin saber cómo, y de
-que siempre estemos sin un real y pidiendo prestado. «_Est_, dice,
-_admiratione dignum, quomodo consumatur tanta divitiarum vis, sine ullo
+que siempre estemos sin un real y pidiendo prestado. «Est, dice,
+admiratione dignum, quomodo consumatur tanta divitiarum vis, sine ullo
 emolumento; cum videamus Regem fere perpetua inopia laborare, atque
-etiam ab aliis mutuo accipere._» Lo mismo ocurría entonces entre los
+etiam ab aliis mutuo accipere.» Lo mismo ocurría entonces entre los
 particulares que en el Estado. En ningún país se puede decir con más
 verdad que en España, que no se sabe dónde se va el dinero. Al caer la
 dinastía austriaca, que se había enseñoreado de lo mejor del mundo,
@@ -2713,7 +2713,7 @@ nos humilló y nos hizo bajar de la altura en que nos habíamos puesto.
 En el día de hoy, el movimiento ascendente de la civilización europea
 nos lleva en pos sí, y no puede negarse que en medio de mil disgustos,
 de mil apuros y de doscientas mil mortificaciones de amor propio
-nacional, España progresa y se mejora; pero _buenos azotes le cuesta_.
+nacional, España progresa y se mejora; pero buenos azotes le cuesta.
 La torpeza en el producir y la mayor torpeza en el gastar tienen la
 culpa de estos azotes.
 
@@ -2742,12 +2742,12 @@ cuanto había de bueno y exquisito en Otahiti. Algo de esto, aunque en
 menor proporción, ocurre siempre en los cambios entre un pueblo
 adelantado y otro más atrasado. A menudo se dan objetos que tienen un
 verdadero valor, por otros que no tienen ninguno, sino el de la moda o
-el capricho. La sola palabra _chic_, abreviatura del nombre de un
+el capricho. La sola palabra chic, abreviatura del nombre de un
 menestral borracho que bailaba el can-can primorosamente, ha producido a
 todas las industrias parisienses, legítimas e ilegítimas, un número
 considerable de millones.
 
-Se dirá que éstos no son argumentos serios; que si la palabra _chic_ es
+Se dirá que éstos no son argumentos serios; que si la palabra chic es
 tan productiva, debemos inventar nosotros otra palabra que lo sea más;
 que en nuestras manos está echarle al vino, desde luego, todos los
 polvos y drogas que le echan en Francia, o descubrir, fabricar o
@@ -2774,8 +2774,8 @@ un abaniquero como M. Alexandre: en suma, no sabemos hacer nada o casi
 nada primoroso. Nuestro orgullo, además, nos impide buscar salida para
 nuestras mercancías, encomiándolas, presentándolas y ofreciéndolas con
 insistencia. Casi todos los españoles tenemos por artículo de fe y por
-norma de nuestra conducta mercantil aquello de que _el buen paño en el
-arca se vende_, y cuanto paño fabricamos nos parece bueno.
+norma de nuestra conducta mercantil aquello de que el buen paño en el
+arca se vende, y cuanto paño fabricamos nos parece bueno.
 
 Deduzco yo de todo lo dicho que en España pudieran por ahora salir
 fallidas las leyes del libre cambio, porque al fin no hay ley ni regla
@@ -2807,8 +2807,8 @@ haciendo, para obtener dinero, disimulará tal vez el sacrificio a los
 ojos profanos; pero no le mitigará. Es seguro que el dinero que tomemos,
 por enrevesado que sea el método de tomarle, nos ha de costar lo mismo o
 más que por el método sencillo y expeditivo de emitir Treses. Trasmitida
-la operación al idioma pintoresco del vulgo, será siempre _tirar de los
-pies a un ahorcado_.
+la operación al idioma pintoresco del vulgo, será siempre tirar de los
+pies a un ahorcado.
 
 Dicen los que entienden de Hacienda, que es menester proporcionarse
 recursos y que no nos los podemos proporcionar con menos sacrificios. Si
@@ -2819,7 +2819,7 @@ que, si la ciencia de la Hacienda consiste en eso sólo, se puede suponer
 que no hay tal ciencia de la Hacienda, y que el último patán puede hacer
 lo mismo que el profesor más hábil.
 
-He vacilado y vacilo aún en publicar esta _Meditación_, harto rara;
+He vacilado y vacilo aún en publicar esta Meditación, harto rara;
 estos desordenados pensamientos míos, que la angustia en que vivimos y
 el terror que infunde en algunos corazones la ciencia económica
 española, me han inspirado, sin poderlo yo remediar.
@@ -2829,7 +2829,7 @@ sentido común más rastrero; y que desde la bajeza de este sentido común
 a la altura de la ciencia ha de haber una distancia infinita.
 
 Todo esto lo reconozco y lo proclamo. Sin embargo, tal es el amor que
-tenemos a nuestros hijos, y la presente _Meditación_ es hija mía, que
+tenemos a nuestros hijos, y la presente Meditación es hija mía, que
 aunque haya nacido enclenque y ruin; no he de atreverme a matarla. Más
 bien me atreveré a darle vida, aunque sea vida efímera y trabajosa,
 publicándola en un periódico, y exponiéndome por amor paternal a las
@@ -2844,17 +2844,17 @@ Moisés no costaban nada, y los millones que nos da nuestro Moisés
 cuestan mucho.
 
 En fin, sea como sea, yo me atrevo a publicar esta endiablada
-_Meditación_. Al cabo, no soy esparciata para dar muerte a mis hijos
+Meditación. Al cabo, no soy esparciata para dar muerte a mis hijos
 enfermizos, aunque tenga que ser esparciata y tengamos que ser
 esparciatas todos los españoles para tragar la salsa negra, si siguen
 las cosas así.
 
-Considere el pío lector que esta _Meditación_ es como un entretenimiento
+Considere el pío lector que esta Meditación es como un entretenimiento
 y nada más, y sea verdaderamente pío, que harto lo exige el caso. Lea mi
-_Meditación_ sobre el dinero como quien lee un libro de cocina cuando
-tiene hambre, y hallará en mi _Meditación_ algún consuelo y alivio.
+Meditación sobre el dinero como quien lee un libro de cocina cuando
+tiene hambre, y hallará en mi Meditación algún consuelo y alivio.
 
-Si por dicha, que no es de esperar, mi _Meditación_ no pareciese muy
+Si por dicha, que no es de esperar, mi Meditación no pareciese muy
 mala, tal vez me animaría yo a escribir otra sobre las contribuciones y
 los empréstitos de España, diciendo siempre lo que dice el vulgo y nada
 más que lo que dice el vulgo, sin meterme en honduras.
@@ -2916,7 +2916,7 @@ la vida. Y libre mi criterio de esta seducción, diré en breves frases lo
 que en pro de ambos pareceres se presenta a mi espíritu.
 
 Cuando era yo mozo, me encantaba la lectura de un tratado del célebre
-Alfieri, cuyo título es _Del Príncipe y de las letras_. Nada me parecía
+Alfieri, cuyo título es Del Príncipe y de las letras. Nada me parecía
 más razonable que lo que allí se afirma. Todavía, en tiempo del autor,
 los poetas, los filósofos, los que componían historias, todos los
 escritores, en suma, contaban poco con el vulgo, y esperaban o gozaban
@@ -3079,8 +3079,8 @@ novedades y lindezas que decir, para llenar tantos volúmenes, o habrá
 harto de repeticiones y de palabrería? Lo confieso: al ver esta viciosa
 lozanía, esta intrincada selva o matorral de libros, que nacen donde se
 pagan, casi me avengo a que no se paguen aquí o se paguen mal, a fin de
-que sólo escriban los que por ilusión sandía se creen _genios_, o los
-que tienen algo de _genios_ y no pueden menos de escribir. Los libros de
+que sólo escriban los que por ilusión sandía se creen genios, o los
+que tienen algo de genios y no pueden menos de escribir. Los libros de
 aquéllos pasarán y los pocos de éstos quedarán, como conviene que
 queden, sin confundirse en el fárrago insulso de tanto como por oficio
 se escribe.
@@ -3158,7 +3158,7 @@ fácil rastrear y columbrar cuánto hubieran acertado al hacerlo, si con
 afán hubiesen dedicado a tales tareas las altas prendas de escritores
 que los adornaban. Valga como muestra la bellísima cita, hecha por el
 Conde de Casa-Valencia en el discurso a que contesto, de un artículo del
-Sr. Ríos Rosas, _La mujer de Canarias_, única producción en prosa, que a
+Sr. Ríos Rosas, La mujer de Canarias, única producción en prosa, que a
 más del discurso de recepción aquí, confieso conocer, como trabajo
 meramente literario, de tan eminente republico y tribuno.
 
@@ -3177,7 +3177,7 @@ tan bien con la índole del hombre de Estado.
 Pero el nuevo Académico no ha lucido sólo en las Asambleas políticas las
 dotes que como orador le distinguen, sino que, durante tres años, ante
 numeroso y complacido concurso, ha dado en el Ateneo interesantes
-lecciones sobre _La libertad política en Inglaterra_, las cuales, con
+lecciones sobre La libertad política en Inglaterra, las cuales, con
 aplauso general y no escaso fruto de los que estudian seriamente la
 política, corren impresas en tres volúmenes. En ellos, a más de campear
 las excelencias que ya he encomiado, se atesoran no pocas noticias
@@ -3186,8 +3186,8 @@ muchas advertencias y máximas, sacadas con tino y agudeza de los mismos
 hechos que se refieren.
 
 Entre otros trabajos del Conde, es muy de alabar además uno bastante
-extenso, publicado en la _Revista de España_, con el título de _La
-embajada de Don Jorge Juan en Marruecos_, en el cual, no sólo se
+extenso, publicado en la Revista de España, con el título de La
+embajada de Don Jorge Juan en Marruecos, en el cual, no sólo se
 descubren excelentes condiciones del estilo propio para la narración
 histórica, sino la aptitud didáctica, sesuda y reflexiva de que el autor
 da tantas señales en las precitadas lecciones.
@@ -3234,7 +3234,7 @@ atrofiado o inerte por la parálisis.
 Si el alma de la mujer es diferente de la nuestra, hasta en la operación
 más inmaterial debe notarse. Y yo creo justo y consolador sostener esta
 diferencia. Si yo cayese en la tentación de hacerme espiritista y de dar
-fe a la _palingenesia_, _metempsícosis_, o como quiera llamarse,
+fe a la palingenesia, metempsícosis, o como quiera llamarse,
 imaginando que renacemos en otros astros y mundos de los que pueblan el
 éter insondable, entendería que la mujer siempre quedaba mujer; pues
 tendría yo una desazón grandísima si me volviese a hallar, en Urano o en
@@ -3255,16 +3255,16 @@ no una, sino varias veces, pone en boca de sus galanes:
       Que si el hombre es breve mundo,
     la mujer es breve cielo.
 
-Recuerdo que Juan de Espinosa, en cierto _diálogo_ que escribió _en
-laude de las mujeres_, titulado _Ginaecepaenos_, se extrema en ponderar
+Recuerdo que Juan de Espinosa, en cierto diálogo que escribió en
+laude de las mujeres, titulado Ginaecepaenos, se extrema en ponderar
 lo superiores que son en todo las mujeres, valiéndose para ello de las
 doctrinas escolásticas, de la historia, de la teología y de los
-argumentos más raros y sutiles. Dice, por ejemplo, con _darwinismo_
+argumentos más raros y sutiles. Dice, por ejemplo, con darwinismo
 profético y piadoso, que Dios sacó de lo menos acabado y perfecto lo más
 perfecto y acabado. Del hombre sacó a la mujer, no sin menoscabo y
 detrimento, pues que le sacó una costilla; y de la mujer, sin detrimento
 ni menoscabo alguno, sacó un perfectísimo bacón, en quien quiso
-humanarse. Otra observación no menos curiosa del _Ginaecepaenos_ es que
+humanarse. Otra observación no menos curiosa del Ginaecepaenos es que
 el hombre fue creado por Dios en cualquiera parte, mientras que a la
 mujer la creó Dios en el Paraíso.
 
@@ -3362,11 +3362,11 @@ en todos sentidos.
 Mis palabras no serán más que una excitación para que alguien, con la
 ciencia y el reposo de que carezco, no en breve disertación sino en
 libro, exponga por el método que hoy priva aquella doctrina suya, que
-Fray Luis de Leon llamaba _la más alta y más generosa filosofía que
-jamás los hombres imaginaron_.
+Fray Luis de Leon llamaba la más alta y más generosa filosofía que
+jamás los hombres imaginaron.
 
 Algo de esto ha hecho, para vergüenza nuestra, un escritor francés,
-Pablo Rousselot, en libro que titula _Los místicos españoles_, donde, si
+Pablo Rousselot, en libro que titula Los místicos españoles, donde, si
 deja mucho que desear, aún nos da más que agradecer, ya que ha sido el
 primero en tratar el asunto como filósofo, moviendo a algunos españoles,
 a par que a impugnarle y completarle, a imitarle y a seguir sus huellas.
@@ -3377,16 +3377,16 @@ cuya buena amistad me honro.
 
 La dificultad de decir algo nuevo y atinado de Santa Teresa crece al
 considerar lo fecundo y vario de su ingenio y la multitud de sus
-escritos; y más aún si tenemos en cuenta que su filosofía; _la más alta
-y más generosa_, no es mera especulación, sino que se trasforma en
+escritos; y más aún si tenemos en cuenta que su filosofía; la más alta
+y más generosa, no es mera especulación, sino que se trasforma en
 hechos y toda se ejecuta. No es misticismo inerte, egoísta y solitario
 el suyo, sino que desde el centro del alma, la cual no se pierde y
 aniquila abrazada con lo infinito, sino que cobra mayor aliento y poder
 en aquel abrazo; desde el éxtasis y el arrobo; desde la cámara del vino
 donde ha estado ella regalándose con el Esposo, sale, porque él le
-_ordena la caridad_, y es Marta y María juntamente; y embriagada con el
+ordena la caridad, y es Marta y María juntamente; y embriagada con el
 vino suavísimo del amor de Dios, arde en amor del prójimo y se afana por
-su bien, y ya no _muere porque no muere_, sino que anhela vivir para
+su bien, y ya no muere porque no muere, sino que anhela vivir para
 serle útil, y padecer por él, y consagrarle toda la actividad de su
 briosa y rica existencia.
 
@@ -3423,11 +3423,11 @@ ser.
 Su estilo, su lenguaje, sin necesidad del testimonio de las hermanas, a
 los ojos desapasionados de la crítica más fría, es un milagro perpetuo y
 ascendente. Es un milagro que crece y llega a su colmo en su último
-libro; en la más perfecta de sus obras: en _El Castillo interior o las
-Moradas_.
+libro; en la más perfecta de sus obras: en El Castillo interior o las
+Moradas.
 
-La misma Santa lo dice: _El platero que ha fabricado esta joya sabe
-ahora más de su arte_. ¡En el oro fino y aquilatado de su pensamiento,
+La misma Santa lo dice: El platero que ha fabricado esta joya sabe
+ahora más de su arte. ¡En el oro fino y aquilatado de su pensamiento,
 cuán diestramente engarza los diamantes y las perlas de las revelaciones
 divinas! Y este diestro artífice era entonces, como dice el Sr. La
 Fuente, «una anciana de sesenta y dos años, maltratada por las
@@ -3447,8 +3447,8 @@ Su confesor el Padre Gracian y otros teólogos, con sana intención sin
 duda, tacharon frases y palabras de la Santa y pusieron glosas y otras
 palabras; pero el gran maestro en teología, en poesía y en habla
 castellana, Fray Luis de Leon, vino a tiempo para decir que se podrían
-excusar las glosas y las enmiendas, y para avisar a quien leyere _El
-Castillo interior_ «que lea como escribió la Santa Madre, que lo
+excusar las glosas y las enmiendas, y para avisar a quien leyere El
+Castillo interior «que lea como escribió la Santa Madre, que lo
 entendía y decía mejor, y deje todo lo añadido; y lo borrado de la letra
 de la Santa delo por no borrado, si no fuere cuando estuviere enmendado
 o borrado de su misma mano, que es pocas veces.» Y en otro lugar dice el
@@ -3464,7 +3464,7 @@ diestramente y hace con tan buena gracia la mezcla, que ese mismo vicio
 le acarrea hermosura.»
 
 Entiendo yo, señores, por todo lo expuesto, y por la atenta lectura de
-los libros de la Santa, y singularmente de _El Castillo interior_, que
+los libros de la Santa, y singularmente de El Castillo interior, que
 el hechizo de su estilo es pasmoso, y que sus obras, aun miradas sólo
 como dechado y modelo de lengua castellana, de naturalidad y gracia en
 el decir, debieran andar en manos de todos y ser más leídas de lo que
@@ -3490,9 +3490,9 @@ en todas las civilizaciones, mientras nuestro ser y condición natural
 duren y persistan.
 
 Pasando de lo general de esta sentencia a su aplicación a las obras de
-la Santa, ¿qué duda tiene que hay en todas ellas, en la _Vida_, en _El
-Camino de perfección_, en los _Conceptos de amor divino_ y en las
-_Cartas_ y en _Las Moradas_, un interés inmortal, un valer imperecedero,
+la Santa, ¿qué duda tiene que hay en todas ellas, en la Vida, en El
+Camino de perfección, en los Conceptos de amor divino y en las
+Cartas y en Las Moradas, un interés inmortal, un valer imperecedero,
 y verdades que no se negarán nunca, y bellezas de fondo, que las
 bellezas de la forma no mejoran sino hacen patentes y visibles?
 
@@ -3517,7 +3517,7 @@ Puntos son estos tan difíciles, que ni son para tratados de ligera, ni
 por pluma tan mal cortada e inteligencia tan baja como la mía.
 
 Me limitaré sólo a decir, no que sé y demuestro, sino que creo y
-columbro en _Las Moradas_, la más penetrante intuición de la ciencia
+columbro en Las Moradas, la más penetrante intuición de la ciencia
 fundamental y trascendente; y que la Santa, por el camino del
 conocimiento propio, ha llegado a la cumbre de la metafísica, y tiene la
 visión intelectual y pura de lo absoluto. No es el estilo, no es la
@@ -3566,7 +3566,7 @@ gallarda muestra.
 
 SOBRE EL FAUSTO DE GOETHE
 
-_Den lieb' ich, der Unmögliches begehrt._
+Den lieb' ich, der Unmögliches begehrt.
 
 (FAUSTO, segunda parte, acto II.)
 
@@ -3673,7 +3673,7 @@ primor de forma y nitidez y flexibilidad de expresión, es indispensable
 también, la rarísima coincidencia de que, en ese momento inicial, en ese
 florecer intuitivo de la inteligencia y de la fantasía de la
 muchedumbre, posea ésta un idioma formado, rico y hermoso, como
-aconteció en Grecia, cuando surgió por vez primera la _Ilíada_ o fueron
+aconteció en Grecia, cuando surgió por vez primera la Ilíada o fueron
 apareciendo los diversos cantos de que más tarde hubo de tejerse toda
 ella.
 
@@ -3703,7 +3703,7 @@ salió grande y armada, del cerebro de Homero; esto es, que filosofía,
 historia, ideas religiosas y políticas, artes de la guerra y de la paz,
 teatro, todo, en una palabra, se muestra, no ya sólo como germen
 fecundo, sino como flor que va a abrir el cáliz y a dar fruto sabroso y
-semilla abundante, en los versos divinos, de la _Ilíada_ y la _Odisea_.
+semilla abundante, en los versos divinos, de la Ilíada y la Odisea.
 
 Cuando un crítico italiano, a fin de ensalzar a Dante, igualándole a
 Homero, dice que la Minerva italiana salió del mismo modo de la cabeza
@@ -3735,7 +3735,7 @@ En la edad primitiva, el poeta es profeta, sacerdote, legislador,
 teólogo, astrónomo, moralista, geógrafo, y todo a la vez; o más bien no
 es nada de esto; apenas si es persona; su personalidad se exfuma y
 desvanece en la penumbra crepuscular de la historia. Homero, Viasa y
-Valmiki casi son _mitos_; son como los patriarcas, no ya de la sustancia
+Valmiki casi son mitos; son como los patriarcas, no ya de la sustancia
 corpórea, sino del espíritu de las naciones; son como los héroes
 epónimos, no de la asociación política, sino de la comunidad mental;
 son, en suma, el eco inmortal y sonoro del verbo creador y del espíritu
@@ -3747,8 +3747,8 @@ Por espacio de muchos siglos no se entendió así la epopeya, antes bien,
 con crítica más exterior que íntima, y fijándose en el asunto o trama, y
 más que en la sustancia en la forma, se creó la epopeya artificial,
 según ciertas reglas, y cantando las hazañas de algún héroe o de varios.
-Así Virgilio escribió _La Eneida_, Camoëns _Los Luisiadas_, y _La
-Jerusalen_ Tasso.
+Así Virgilio escribió La Eneida, Camoëns Los Luisiadas, y La
+Jerusalen Tasso.
 
 Cierto que se han dado algunas epopeyas espontáneas, en épocas, no de
 primera juventud para un pueblo o raza, sino hallándose ésta, por siglos
@@ -3760,7 +3760,7 @@ opresores son a su vez vencidos y oprimidos por otros.
 
 Así brotó, transfigurado y esplendente todo el ciclo del rey Arturo y de
 la Tabla-redonda, cuando los normandos, venciendo a los anglos, vengaron
-a los bretones; el _Shah-Nameh_ de Firdusi, cuando los turcos, venciendo
+a los bretones; el Shah-Nameh de Firdusi, cuando los turcos, venciendo
 a los árabes, vengaron a los pueblos del Irán; y hasta el Kalewala,
 aunque más por esfuerzo de mera erudición que por flamante inspiración
 poética, cuando Finlandia pasó al dominio de Rusia, vencidos los suecos,
@@ -3771,31 +3771,31 @@ que el tiempo de la gran epopeya había pasado ya, y viendo que hay
 tesoros de materia épica, difusa e informe, quisieron reunirlos en
 armónico conjunto; pero, careciendo ya de fe en aquello que cantaban,
 pusieron en el canto cierta discreta ironía y burla y risa más o menos
-disimulada. Así, por ejemplo, Ariosto escribió _El Orlando_, y Wieland
-_El Oberon_, ya casi en nuestros días.
+disimulada. Así, por ejemplo, Ariosto escribió El Orlando, y Wieland
+El Oberon, ya casi en nuestros días.
 
 Consideraron otros que, si bien la epopeya heroica, tiene hoy que ser
 anacrónica, no debe serlo la religiosa; y con esta idea más equivocada
 aún, porque lo épico a lo divino implica mucho de infantil en el
 concepto de la divinidad, o bien algo de tan metafísico y desnudo de
 imágenes que no es poesía o es poesía narcótica, escribieron poemas
-épicos religiosos, como Milton _El Paraíso perdido_, y Klosptock _La
-Mesiada_.
+épicos religiosos, como Milton El Paraíso perdido, y Klosptock La
+Mesiada.
 
 Los más acertados, en nuestro sentir, fueron aquellos que, prescindiendo
 de la epopeya grande y completa, donde todo se quiere explicar o
 representar, redujeron la poesía épica a menores proporciones, y
 eligieron por héroes y asuntos de la narración, no lo fundamental, sino
 lo derivado del fundamento; no el misterio religioso y dogmático, sino
-algún prodigio que realza el misterio; no la religión o el _mito_, sino
+algún prodigio que realza el misterio; no la religión o el mito, sino
 la leyenda o el cuento. En este género, acudiendo siempre a la
 tradición, se han escrito obras muy bellas, y quizá una de las mejores,
-sea de un español: _El Estudiante de Salamanca_. Otros poetas hasta de
+sea de un español: El Estudiante de Salamanca. Otros poetas hasta de
 la tradición han prescindido, desechando la colaboración del pueblo en
 su obra, y han escrito cuentos, o bien tomando el argumento de la
 historia más o menos anecdótica, o bien creándolo todo en la fantasía:
-así Byron, en _El Corsario_, _Parisina_, _Lara_, _El Giaour_ y _La Novia
-de Abidos_.
+así Byron, en El Corsario, Parisina, Lara, El Giaour y La Novia
+de Abidos.
 
 De todos modos, desde el renacimiento hasta más de mediado el siglo
 XVIII, prevaleciendo el gusto llamado clásico, que se fundaba en
@@ -3803,7 +3803,7 @@ preceptos juiciosos, por más que en algunos puntos fuesen superficiales,
 y hasta rayasen en arbitrarios (preceptos que Vida y Boileau habían
 sacado de la interpretación de Aristóteles y de Horacio), la epopeya, en
 la práctica al menos, no se aspiró a que fuese trascendental,
-enciclopédica ni muy _docente_, y se redujo a narrar una acción gloriosa
+enciclopédica ni muy docente, y se redujo a narrar una acción gloriosa
 de algún héroe nacional, o de toda Europa, o de todo el humano linaje,
 agrupando en torno, como ornamento y con simétrica economía, varios
 episodios bien traídos y no impertinentes, que no rompiesen la unidad
@@ -3811,7 +3811,7 @@ del poema, ni embarazasen demasiado la marcha de la acción, la cual
 había de ir con el debido crecimiento de celeridad hacia su término y
 final desenlace.
 
-Lo _docente_ en grado superlativo quedó desechado y aun fue objeto de
+Lo docente en grado superlativo quedó desechado y aun fue objeto de
 burlas. Parecía en efecto que, dado el desarrollo actual de la ciencia,
 quien tratase de enseñar mucho en su poema había de ser un delirante.
 Todavía Moratin, al dar consejos burlescos a un poeta ridículo, le dice
@@ -3822,11 +3822,11 @@ que ponga en cifra en su epopeya todos los conocimientos humanos.
     Cuanto pueda hacinar tu fantasía
     En concebir delirios eminente.
 
-Sin embargo, aun antes que se rompiera el yugo _clasicista_, el
+Sin embargo, aun antes que se rompiera el yugo clasicista, el
 filosofismo francés del siglo pasado había movido a los poetas de más
 alientos a crear el poema que todo lo enseñase; pero los más desecharon
 la acción, se limitaron al género didáctico, y trataron de escribir el
-nuevo poema _De la naturaleza de las cosas_. En este sentido hubo
+nuevo poema De la naturaleza de las cosas. En este sentido hubo
 tentativas de Le Brun, Fontanes, Andrés Chénier y muchos otros.
 
 Se hacían por entonces estudios más completos sobre el arte en general;
@@ -3952,8 +3952,8 @@ creyente, sino de apóstol conviene calificarle.
 
 Añádase a lo dicho otra condición esencial de su mente, que Emerson
 señala muy bien, y que el mismo Goethe patentiza con complacencia en
-_Poesía y Verdad_, que es su autobiografía. Para Goethe la vida vale más
-como _teoría_ que como _práctica_. La especulación es más noble y alto
+Poesía y Verdad, que es su autobiografía. Para Goethe la vida vale más
+como teoría que como práctica. La especulación es más noble y alto
 fin que la acción. Hasta la acción, por lo que más significa y vale es
 porque la especulación vuelve sobre ella y la toma por objeto. ¿De qué
 serviría, de qué valdría todo este Universo; a qué la pompa de los
@@ -3967,7 +3967,7 @@ de por sí?
 
 Esto pensaba Goethe, escritor por todos los poros, y en este pensar,
 hasta nuestros propios actos, faltas, extravíos, dolores y miserias, son
-objetos de la _teoría_.
+objetos de la teoría.
 
 Proceden del mencionado concepto, que la gente, por lo común, forma de
 Goethe, raras acusaciones y defensas no menos raras.
@@ -4005,7 +4005,7 @@ acusación.
 Por otra parte, aunque la bondad o maldad moral sea independiente de los
 escritos, esto es sólo en cierto grado y de cierta manera. La
 diferencia, por ejemplo, entre el héroe o el mártir y el poeta que le
-canta, está en que el uno tiene _constante_ y _perpetua voluntad_, y el
+canta, está en que el uno tiene constante y perpetua voluntad, y el
 otro quizás no la tiene.
 
 Figurémonos que tal poeta se echa a temblar si ve una espada desnuda y
@@ -4025,7 +4025,7 @@ Para quien esto escribe, la prueba crítica del valer estético de una
 obra de poesía, implica un certificado de valer moral para el autor. O
 la poesía es mala o no es malo el autor de la poesía. Lo que dijo del
 orador el preceptista hispano-latino, un autor griego lo dijo del poeta:
-que había de ser ante todo _bacón bueno_.
+que había de ser ante todo bacón bueno.
 
 Pero no todos ponen por condición indispensable en el buen poeta la
 bondad moral; y así, cuando no acusan a Goethe de duro y sin entrañas,
@@ -4038,7 +4038,7 @@ La defensa que hacen algunos de Goethe en este punto, es peor que la
 acusación. Presupone una doctrina más absurda que la de aquellos que
 creen que para adelantar en ciertos oficios se necesitan terribles
 experimentos. Es doctrina semejante a otra que está en moda, y que
-consiste en afirmar que esto que llamamos _genio_ es una enfermedad que
+consiste en afirmar que esto que llamamos genio es una enfermedad que
 proviene del mal de alguna entraña, o de la atrofia de todo un aparato,
 a espensas del cual se desarrolla el cerebro, o de alguna perturbación
 de todo o parte de nuestro organismo. Afirman, pues, que el genio es
@@ -4047,24 +4047,24 @@ culto y manifestación debe el poseedor consagrar su vida y sacrificarlo
 todo: amistad y amor de las mujeres, patriotismo y ley moral. Así los
 singulares defensores de Goethe a quien aludimos, suponen que el poeta
 sacrificó nobles afecciones y hasta sagrados deberes; pero, lejos de
-condenarle, le encomian por ello. Su _genio_ lo exigía, de suerte, que
+condenarle, le encomian por ello. Su genio lo exigía, de suerte, que
 todos los egoísmos, frialdad de corazón e ingratitudes, que atribuyen al
 poeta, se convierten en un remedo del sacrificio de Abraham, si bien
-hecho al _genio_, Dios implacable y que no ceja como Jehová, salvando a
+hecho al genio, Dios implacable y que no ceja como Jehová, salvando a
 Isaac y contentándose con un cordero.
 
 Lo cómico de esta apología no la salva de lo peligroso. ¡Pues no faltaba
-más sino que bastase ser _genio_, o creérselo, para no cumplir con las
+más sino que bastase ser genio, o creérselo, para no cumplir con las
 obligaciones, ponerse por cima de todo precepto y de toda Ley, desechar
 del corazón todo santo y puro entusiasmo, y hacerse un egoísta frío y
 repugnante, añadiendo a todo ello la insolencia de asegurar que se es
-así por devoción y sacrificio costoso al _genio_ mismo, y que más bien
+así por devoción y sacrificio costoso al genio mismo, y que más bien
 que censura, se merece admiración, alabanza y pasmo!
 
-Lo juicioso es creer lo contrario: que lo que el _genio_ pide para su
+Lo juicioso es creer lo contrario: que lo que el genio pide para su
 culto, educación y manifestación, es la virtud y las bellas pasiones y
 el verdadero sacrificio. Y esto no es afirmar que hayan sido santos
-todos los hombres calificados de _genios_, sino que fueron _genios_, no
+todos los hombres calificados de genios, sino que fueron genios, no
 a causa de sus egoísmos, mezquindades y miserias, y sí, a pesar de todos
 estos vicios, porque si no los hubieran tenido, no sólo hubieran valido
 más como personas morales, sino como genios.
@@ -4072,13 +4072,13 @@ más como personas morales, sino como genios.
 Por último, la defensa, a más de ser sofística, es inútil para Goethe,
 en quien no vemos esas malas cualidades que le suponen, convirtiéndolas
 en buenas o cohonestándolas por la inmoral doctrina del culto del
-_genio_.
+genio.
 
 Goethe nada hizo para lograr su elevación y su privanza con el duque
 Carlos Augusto de Gemirá, quien le amó tanto como Goethe pudo amarle, y
 le admiró y le lisonjeó más de lo que el gran poeta le lisonjeaba. En la
 corte de aquel amable príncipe, Goethe, más que cortesano, parecía el
-príncipe, el _genio_ a quien todos servían y adoraban. Tan alta posición
+príncipe, el genio a quien todos servían y adoraban. Tan alta posición
 no le ensoberbeció nunca, y se valió de ella para hacer bien a no pocas
 personas, y singularmente a otros sabios, literatos y poetas, con noble
 emulación a veces, con envidia nunca. La misma amistad profunda y
@@ -4093,16 +4093,16 @@ testimonio los escritos privados y los documentos oficiales en que dicho
 príncipe habla de él. El amor fraternal con que Goethe se unió a
 Schiller; el influjo benéfico que ejerció en él; el mayor y más alto
 influjo que Schiller, por repetidas confesiones de Goethe mismo, ejerció
-en su alma; las _Xenias_, que escribieron juntos; las más bellas obras
+en su alma; las Xenias, que escribieron juntos; las más bellas obras
 del uno y del otro, que mutuamente se consultaban, se corregían y hasta
 se inspiraban, prueban que Goethe no era egoísta, o al menos, que si lo
 era, era el más amable y excelente de los egoístas.
 
 En sus amores, hay que atender a la nada severa moralidad de la época en
 que vivía. Y aun así, lo único censurable es el abandono de Federica
-Brion, cuya apoteosis hizo luego el poeta en la Clara de _Egmont_, en
-ambas Marías de _Clavijo_ y de _Goetz_, en la Mignon de _Wilchem
-Meister_, y en la Margarita de _Fausto_. Pero la verdadera apoteosis de
+Brion, cuya apoteosis hizo luego el poeta en la Clara de Egmont, en
+ambas Marías de Clavijo y de Goetz, en la Mignon de Wilchem
+Meister, y en la Margarita de Fausto. Pero la verdadera apoteosis de
 Federica y la defensa de Goethe las hizo ella misma, cuando rehusó la
 mano de Reinhold Lenz, diciendo que «La que había sido amada por Goethe
 no podía pertenecer a otro hombre»; y cuando, más tarde, estando ya
@@ -4117,9 +4117,9 @@ tan dulce recuerdo.
 Contra la soñada impasibilidad de Goethe protestan otros amores, y
 singularmente los que le inspiró Carlota Buff.
 
-No se mató por ella; pero _Werther_ fue el precio de su rescate y de su
+No se mató por ella; pero Werther fue el precio de su rescate y de su
 vida. La poesía le libró. Aquella tremenda y apasionada novela, por más
-que en Goethe esté siempre el poeta _objetivo_, que se pone fuera de su
+que en Goethe esté siempre el poeta objetivo, que se pone fuera de su
 obra, que juzga y sentencia a sus personajes sin compartir sus
 extravíos, que los mueve quedando él inmóvil, como el primer Cielo mueve
 las otras esferas, contiene también en su protagonista al otro Goethe,
@@ -4134,7 +4134,7 @@ malas y hacía que él las quemase. ¿Qué poder y que autoridad no debe
 ejercer una mujer sobre un poeta para obligarle a tamaño sacrificio?
 Catalina Schönkopf rompió con Goethe, no por la frialdad sino porque la
 atormentaba con celos. Ana Isabel Sohönmann inspira a Goethe las lindas
-composiciones _A Lilí_ y tal vez es ella quien le deja. A la Baronesa de
+composiciones A Lilí y tal vez es ella quien le deja. A la Baronesa de
 Stein rindió Goethe un culto espiritual de amistad y de estimación, y,
 ya en todo el goce de su celebridad la hizo juez del mérito de sus obras
 e inspiradora de algunas. Por último, si Goethe se apasionó de Cristiana
@@ -4142,7 +4142,7 @@ Volpius, y vivió con ella en unión inmoral y escandalosa, enmendó al
 cabo la falta, casándose. Su idea del amor, unido al deber, de la vida
 santa y respetable del hogar, y de todo lo bello que pueda encerrarse en
 dos existencias humildes y honradas, queda para siempre en el más puro
-de los idilios, en su poema _Hermann_ y _Dorotea_, donde nos dejó
+de los idilios, en su poema Hermann y Dorotea, donde nos dejó
 asimismo la expresión sincera de su amor a la patria alemana, duramente
 humillada entonces por las conquistas napoleónicas.
 
@@ -4181,7 +4181,7 @@ se adaptaban más a la índole de su pensamiento, pero coordinándolas en
 
 Sobre el deslumbrante hechizo de todo nuevo sistema, desde Kant hasta
 Hegel, puso Goethe su alto espíritu crítico, su juicioso escepticismo un
-mal llamado _sentido común_, porque más bien era raro y exquisito,
+mal llamado sentido común, porque más bien era raro y exquisito,
 ciertas teorías leibnizianas, y un arraigado sentimiento religioso que
 jamás lo abandonó en época de tanta incredulidad, y de tanta
 fermentación y florecimiento de metafísicas nuevas.
@@ -4227,7 +4227,7 @@ Su sed de religión es grande y perpetua. Se crea una religión natural y
 no le basta. Sin fe en el Cristianismo, sueña con nueva religión
 positiva. Tal vez se finge monadas intermedias entre las que son almas
 humanas y la que es Dios; y en estas monadas ve genios, espíritus
-elementales, _demiurgos_, inteligencias misteriosas ya ocultas, que
+elementales, demiurgos, inteligencias misteriosas ya ocultas, que
 mueven los astros, que dan vida a las plantas, que son la naturaleza
 misma con personalidad y conciencia. A veces se inclina Goethe por esta
 senda a un neo-platonismo flamante y a un paganismo espiritualizado; a
@@ -4247,10 +4247,10 @@ desde su viaje a Italia, por la inteligente y fervorosa contemplación de
 los tesoros artísticos que en aquel hermoso y privilegiado país se
 conservan.
 
-Goethe, que en un principio había sido _romántico_, como el romanticismo
+Goethe, que en un principio había sido romántico, como el romanticismo
 se entendía entonces en su nación, y como lo muestran sus dos obras
-capitales escritas antes de ir a Italia, el _Werther_ y el _Goetz de
-Berlichingen_, volvió de allí completamente _clásico_, aunque clásico a
+capitales escritas antes de ir a Italia, el Werther y el Goetz de
+Berlichingen, volvió de allí completamente clásico, aunque clásico a
 su manera, y no con el clasicismo sensualista de los franceses. Su
 clasicismo es un término medio entre el de moda en Francia, y el nuevo
 romanticismo alemán, si bien informado por más altas ideas, que no le
@@ -4258,10 +4258,10 @@ hacen transacción, sino síntesis.
 
 No quiere Goethe la mera imitación, ni tampoco la fantasía pura y libre,
 sino ambas facultades enlazadas, de cada uno de cuyos ejercicios nace
-una _manera_, mientras que de la unión de ambos procede el _estilo_. Al
-que imita solo, le llama _imitador_, al que inventa sin imitar,
-_fantasmista_. El artista y el poeta verdaderos, son los que inventan
-imitando. Lo _característico_, que debe entrar en toda obra de arte, lo
+una manera, mientras que de la unión de ambos procede el estilo. Al
+que imita solo, le llama imitador, al que inventa sin imitar,
+fantasmista. El artista y el poeta verdaderos, son los que inventan
+imitando. Lo característico, que debe entrar en toda obra de arte, lo
 da la imitación: es como el esqueleto, la trama o el cañamazo de la
 obra; y la vida, los músculos, la sangre, el color, el bordado, vienen
 luego por la fantasía. De la combinación de estas cosas nace la belleza.
@@ -4297,13 +4297,13 @@ y social, utilísimo y benéfico: lo que llamó Aristóteles la purificación
 de las pasiones: lo que Goethe llama el rescate, la redención o la
 libertad.
 
-Es evidente que lo _característico_, lo que se toma por imitación de la
+Es evidente que lo característico, lo que se toma por imitación de la
 naturaleza, puede y suele ser pasión dolorosa, acción llena de tumulto y
 de pena, algo que en la realidad lastima, hiere, mata o aflige, en vez
 de causar deleite. El arte, al reproducirlo y trasformarlo, cambia en
 contentamiento la amargura, y encalma la desesperación. Así el terror y
 la piedad se vuelven gustosos sentimientos, llenos de inefable dulzura.
-Este cambio se debe al principio _suavizante_ de la belleza; a la
+Este cambio se debe al principio suavizante de la belleza; a la
 gracia, a la simetría, orden y medida de la forma. De aquí que, para
 Goethe, el tipo ideal del arte en estatuaría, no fuese el Apolo, sino el
 Laoconte, donde el dolor, la compasión, y el espanto, están suavizados
@@ -4314,17 +4314,17 @@ Con arreglo a este principio, Goethe se libertaba de sus pasiones
 desgraciadas, de los recuerdos que más pesar le traían, de los deseos
 que más le atormentaban y hasta de sus remordimientos, tomándolos por
 objeto de su observación, haciéndolos asunto de su imitación, buscando
-en ellos lo _característico_, y acudiendo luego con la poderosa fantasía
+en ellos lo característico, y acudiendo luego con la poderosa fantasía
 a bordar sobre aquella traza primera un poema, una leyenda o un drama;
 una obra de poesía, que le dejaba consolado y libre, y que debía ejercer
 sobre los demás hombres el mismo benéfico influjo que sobre él ejercía.
 
 En este sentido bien pudo asegurar y aseguró Goethe que todas sus obras
 de imaginación eran como fragmentos de sus confesiones. Fue, pues, poeta
-_subjetivo_, si se atiende a que, por declaración propia, no hay una
+subjetivo, si se atiende a que, por declaración propia, no hay una
 sola de sus fábulas que no forme parte de su autobiografía; y objetivo,
 por que él mismo se ponía como objeto de su observación, y, con otro
-_yó_ independiente, creaba la obra, juzgaba y condenaba a sus héroes, y
+yó independiente, creaba la obra, juzgaba y condenaba a sus héroes, y
 absolvía al cabo o consolaba al menos con el bálsamo celestial, con el
 calmante maravilloso de la beldad poética. Esta virtud consoladora y
 purificadora del arte se logra hermoseando o sublimando, cuando el
@@ -4352,13 +4352,13 @@ La idea de FAUSTO le acompañó siempre: fue la mayor preocupación de su
 vida. Su realización completa comprende también su vida toda. En su
 primera mocedad Goethe empieza a escribir el FAUSTO; en su extrema
 vejez, ya de ochenta años, es cuando le termina, o mejor dicho, no le
-termina: aun después de su muerte deja pedazos, _paralipomenos_, que al
+termina: aun después de su muerte deja pedazos, paralipomenos, que al
 FAUSTO pertenecen, que son la parte póstuma del gran poema.
 
 La misma energía de Goethe para desprenderse de sus personajes, aunque
 los saque de su propio ser y para apasionarlos y moverlos, permaneciendo
 él impasible y sereno, le hizo preferir al poema narrativo, una forma
-más _objetiva_, perfecta e impersonal aún: el drama. En el drama el
+más objetiva, perfecta e impersonal aún: el drama. En el drama el
 poeta desvanece por completo su personalidad. Los personajes sólo
 sienten, padecen, se mueven y llevan a término la acción.
 
@@ -4405,11 +4405,11 @@ mientras que algunos críticos e historiadores alemanes de la literatura
 alemana, de gran nota, como por ejemplo Gervinus y Kurz, no estiman la
 segunda parte; llegan hasta una injusta severidad con ella; y aun ven en
 ella una caída. Comparando a Goethe con Milton, afirman que el primer
-FAUSTO es al segundo FAUSTO lo que es el _Paraíso perdido_ al _Paraíso
-reconquistado_.
+FAUSTO es al segundo FAUSTO lo que es el Paraíso perdido al Paraíso
+reconquistado.
 
-Adoptando, por lo pronto, la comparación, empecemos por el _Paraíso
-perdido_.
+Adoptando, por lo pronto, la comparación, empecemos por el Paraíso
+perdido.
 
 Goethe tuvo el tino de no inventar asunto y protagonista para su drama:
 el pueblo se los dio creados. La leyenda de FAUSTO era popular no sólo
@@ -4432,9 +4432,9 @@ infiernos. El sabio, en efecto, se divierte merced al diablo que le
 sirve bien: y, por último, por intercesión de algún santo, o por bondad
 de la Virgen María, o por la infinita misericordia de Dios, suele dejar
 burlado al enemigo malo, y logra irse al cielo. En nuestra literatura
-tenemos esta leyenda en _Las Cantigas del Rey Don Alonso_, y en _Gonzalo
-Berceo_; y algo semejante da asunto a Calderon para su famosa comedia
-_El mágico prodigioso_.
+tenemos esta leyenda en Las Cantigas del Rey Don Alonso, y en Gonzalo
+Berceo; y algo semejante da asunto a Calderon para su famosa comedia
+El mágico prodigioso.
 
 El asunto estaba muy bien elegido y no podía ser más adecuado para
 Goethe, que era un sabio como FAUSTO, y que si bien más dichoso, habría
@@ -4469,7 +4469,7 @@ Personajes, pues, por el estilo de FAUSTO, como en nuestra España, v.
 gr., Don Juan Tenorio y Lisardo el Estudiante, están llamados a ser
 joyas preciosas de todas las literaturas, y a inspirar los mejores
 dramas, óperas, novelas y poemas, que pueden componerse. Para recorrer
-el mundo en triunfo, sólo esperan que llegue en _genio_ que de ellos se
+el mundo en triunfo, sólo esperan que llegue en genio que de ellos se
 apodere, y, de materia épica algo informe que son todavía, los convierta
 en seres artísticos, con más realidad y significación y brío, para vivir
 en el alma y en la memoria de los hombres, que los héroes más reales y
@@ -4487,10 +4487,10 @@ su primera juventud, y no le dejase durante más de 50 años, hasta
 cumplir 82. ¿Cuánto no escribió Goethe en este medio siglo largo? ¿Qué
 asuntos no trató? ¿Qué género de literatura no cultivó con éxito?
 Limitándonos sólo al teatro, Goethe compuso dramas históricos como
-_Egmont_, _Goetz_ y _Tasso_, comedias sentimentales, como _Clavijo_;
-comedias aristofánicas; tragedias a la griega como _Ifigenia_; farsas;
+Egmont, Goetz y Tasso, comedias sentimentales, como Clavijo;
+comedias aristofánicas; tragedias a la griega como Ifigenia; farsas;
 algo semejante a lo que llamamos por aquí zarzuelas; comedias
-satírico-literarias, por el orden de _El Café_, de Moratin, etc., etc.;
+satírico-literarias, por el orden de El Café, de Moratin, etc., etc.;
 pero todo esto lo pensaba, lo escribía, lo abandonaba y quizá lo
 olvidaba luego, mientras que en el FAUSTO estuvo trabajando toda la
 vida. Concretémonos ahora, como hemos dicho, y con las restricciones que
@@ -4607,7 +4607,7 @@ el suplicio de Margarita, cuya bondad queda a salvo merced al delirio.
 Loca, arroja a su hijo a un estanque, donde se ahoga; mientras que a su
 madre le da el narcótico deliberadamente, en todo el despejo de su
 juicio, y sin que el narcótico quite ni ponga al argumento o desarrollo
-de la acción. Es un refinamiento de _diablura_ y de realismo pecaminoso,
+de la acción. Es un refinamiento de diablura y de realismo pecaminoso,
 enteramente inútil y que está de sobra.
 
 Crimen espantoso es también la muerte de Valentín dada a mansalva por
@@ -4630,18 +4630,18 @@ indecente jaleo y cantando coplas picarescas y lascivas, después de
 haber muerto traidoramente al hermano de su querida y hallándose ésta en
 el mayor peligro, desconsuelo y abandono.
 
-El intermedio que lleva por título _Las bodas de oro de Oberon y
-Titania_, es más extraño al drama, y estamos por decir que a todo el
-poema trascendental, que _El curioso impertinente_ al _Quijote_, y que
-el _Canto a Teresa_ al _Diablo Mundo_; con la diferencia de que _El
-curioso impertinente_ y el _Canto a Teresa_ son dos obras de gran valer,
-y que las tales _Bodas de oro_ valen poquísimo. Son unos epigramas
+El intermedio que lleva por título Las bodas de oro de Oberon y
+Titania, es más extraño al drama, y estamos por decir que a todo el
+poema trascendental, que El curioso impertinente al Quijote, y que
+el Canto a Teresa al Diablo Mundo; con la diferencia de que El
+curioso impertinente y el Canto a Teresa son dos obras de gran valer,
+y que las tales Bodas de oro valen poquísimo. Son unos epigramas
 alusivos a cuestiones literarias y científicas de entonces, que
 sospechamos no perderían su frialdad aunque se conociesen hasta los
 ápices de las circunstancias y razones que movieron a Goethe a
 escribirlos.
 
-Después de este mal traído _intermedio_, la acción se acelera y
+Después de este mal traído intermedio, la acción se acelera y
 precipita, como debe, llegando a su término en la escena más patética,
 sublime, apasionada, llena de verdad y de poesía, y más hondamente
 conmovedora que jamás escribió poeta dramático en el mundo: la escena
@@ -4675,7 +4675,7 @@ estaba tan extendida como ahora la cultura.
 La sencillez y naturalidad de ambos hace más distinta, viva, honda y
 persistente la impresión que dejan.
 
-Fausto es ya _criatura_ harto más complicada. Lo sobrenatural y lo
+Fausto es ya criatura harto más complicada. Lo sobrenatural y lo
 trascendental influyen en la formación de su carácter, y entran en él
 como elementos lo alegórico y lo simbólico, pero despojándole
 imaginariamente de estas condiciones, queda un ser verdadero, noble,
@@ -4698,10 +4698,10 @@ movimiento. Así, pues, al terminar la, primera parte, se ve que no
 termina más que un episodio. El drama queda aún a gran distancia del
 desenlace.
 
-Mefistófeles, por último, es un personaje _extra-natural_. Goethe no
+Mefistófeles, por último, es un personaje extra-natural. Goethe no
 creemos que tuviese tratos con él, pero le pinta tan a lo vivo, que
 cualquiera diría que le conoció de cerca. La índole de este diablo y su
-consecuencia en palabras y en acciones, desde el _Prólogo en el Cielo_
+consecuencia en palabras y en acciones, desde el Prólogo en el Cielo
 hasta el fin de la segunda parte, acreditan la firmeza con que Goethe
 trazó su imagen y atinó a prestarle vida. Mefistófeles tiene además el
 mérito de ser el diablo fino de nuestra edad, el diablo que corresponde
@@ -4748,7 +4748,7 @@ trata ya de infinitas aspiraciones, de sentir y de comprender en
 ambiciosa mente humana a la naturaleza, a sus genios y a Dios, si no se
 trata de algo más práctico y terreno.
 
-Mefistófeles no es sobrenatural; es, según hemos dicho, _extra-natural_.
+Mefistófeles no es sobrenatural; es, según hemos dicho, extra-natural.
 No es un espíritu dominador, creador y superior a todo o parte de la
 naturaleza, sino un espíritu, semejante al humano, en lo que tiene de
 más vulgar; astuto, travieso, grosero, cuya misma grosería no le distrae
@@ -4759,8 +4759,8 @@ elevan, jamás los domina, aunque los sirva, deseosos de dominarlos.
 En vez de anonadar a Fausto, como le anonadó con el Espíritu de la
 tierra, Mefistófeles le hace reír con su aparición, al salir del cuerpo
 del perro, rendido a los conjuros y amenazas. Cuando Fausto le obliga a
-que él mismo se defina, Mefistófeles se define _una parte de aquella
-fuerza que siempre quiere el mal y que hace el bien siempre_.
+que él mismo se defina, Mefistófeles se define una parte de aquella
+fuerza que siempre quiere el mal y que hace el bien siempre.
 
 Mefistófeles quiere destruir, viciar y corromper; mas como sólo puede
 hacer esto al por menor, concurre al bien general y a la creación entera
@@ -4836,16 +4836,16 @@ y a fin de no extralimitarnos y dar a este trabajo una extensión
 impropia del objeto a que se destina, algo debemos decir de la segunda
 parte del FAUSTO.
 
-Varias personas han llamado al FAUSTO completo la _Biblia del
-panteísmo_. Nada nos parece más injusto. Goethe no era resuelto
+Varias personas han llamado al FAUSTO completo la Biblia del
+panteísmo. Nada nos parece más injusto. Goethe no era resuelto
 panteísta; pero, si en alguna obra suya se inclina al panteísmo, no es
 por cierto en el FAUSTO, donde más bien le contradice.
 
 Es verdad que para afirmar esto debemos dar por sentado que entendemos
 la segunda parte, y es opinión muy común que nadie la entiende. Tal vez,
-los mismos que la llaman _Biblia del panteísmo_, lo cual, en buena
-lógica, presupone que la entienden, la apellidan _libro de los siete
-sellos_, delirio, laberinto, enigma perpetuo. Nosotros, aunque parezca
+los mismos que la llaman Biblia del panteísmo, lo cual, en buena
+lógica, presupone que la entienden, la apellidan libro de los siete
+sellos, delirio, laberinto, enigma perpetuo. Nosotros, aunque parezca
 paradoja, y se nos impute a arrogancia, afirmamos lo contrario: que todo
 está clarísimo en la segunda parte.
 
@@ -4859,7 +4859,7 @@ lo escribió? Esto no puede ser.
 
 La supuesta no inteligencia de la segunda parte, sólo puede explicarse
 por dos maneras. Y por ambas, no ya el FAUSTO, sino la obra más clara y
-más llana vendrá a ser ininteligible. El _Quijote_, pongamos por caso.
+más llana vendrá a ser ininteligible. El Quijote, pongamos por caso.
 
 Aunque no creemos en la epopeya trascendental, comprensiva y
 omni-docente, creemos que el poeta canta a veces lo que no se dice; va
@@ -4883,24 +4883,24 @@ todo se ve claro. Si no lo son, podrán escribirse mil y mil comentos, y
 cada comentador imaginar que el poeta quiso decir esto, aquello, lo de
 más allá, y aun cosas que al pobre poeta no se le ocurrieron en la vida.
 
-Comentos tales se han hecho ya del _Quijote_. ¿Por qué extrañar que se
+Comentos tales se han hecho ya del Quijote. ¿Por qué extrañar que se
 hagan del FAUSTO? Y si al FAUSTO se le culpa por esto de ininteligible,
-¿por qué al _Quijote_ no se le pone defecto igual?
+¿por qué al Quijote no se le pone defecto igual?
 
 No está, pues, lo ininteligible de una obra en lo misterioso,
-_exotérico_ o recóndito que se aspire a hallar en ella. Basta con que lo
-_exotérico_, el sentido directo, tenga un valor y un significado. Y la
+exotérico o recóndito que se aspire a hallar en ella. Basta con que lo
+exotérico, el sentido directo, tenga un valor y un significado. Y la
 segunda parte del FAUSTO le tiene. ¿Es ininteligible, es oscuro, es
-tenebroso el _Cantar de los Cantares_? Para un profano cualquiera nada
-hay más inteligible. El _Cantar de los Cantares_ es un idilio, una
+tenebroso el Cantar de los Cantares? Para un profano cualquiera nada
+hay más inteligible. El Cantar de los Cantares es un idilio, una
 égloga, un poema de amor, donde el amado y la amada se requiebran de lo
 lindo, se dicen mil ternuras, se hacen mil finezas, se ensalzan y
 describen menudamente y con morosa delectación los primores y gracias
 corporales de él y de ella, y se pintan los goces que han de lograr o ya
 logran ambos, besándose, abrazándose y queriéndose mucho. Pero, si esto
 es tan claro, entendido así, búsquese el sentido místico que dan al
-_Cantar de los Cantares_ exegetas y teólogos y el _Cantar de los
-Cantares_ habrá menester de comento, y aun con el comento nos quedaremos
+Cantar de los Cantares exegetas y teólogos y el Cantar de los
+Cantares habrá menester de comento, y aun con el comento nos quedaremos
 a oscuras, y apenas habrá quien entienda una palabra. ¿Por qué no
 afirmar lo mismo de la segunda parte del FAUSTO, si es lícito equiparar
 en algo lo sagrado con lo profano?
@@ -4918,9 +4918,9 @@ dice por entero, y no es menester acudir a otros libros para
 explicarlos, a no ser que se desee saber de quién lo tomó o por qué lo
 dijo. En este caso es dable decir del comento erudito lo mismo que del
 filosófico: a saber, que dicho comento cabe tanto como en el FAUSTO en
-el _Quijote_. También en el _Quijote_ hay quien investigue si tal pasaje
-se tomó del _Amadís_ o del _Orlando_, si tal cuento o sentencia proviene
-de Conon sofista o de la _Leyenda áurea_.
+el Quijote. También en el Quijote hay quien investigue si tal pasaje
+se tomó del Amadís o del Orlando, si tal cuento o sentencia proviene
+de Conon sofista o de la Leyenda áurea.
 
 Veamos, pues, sencillamente, no lo que se supone o columbra en el
 FAUSTO, sino lo que se dice, y esto en resumen y cifra brevísima, porque
@@ -5047,7 +5047,7 @@ Goethe; Goethe, disfrazado de Fausto, y empeñado en algo de monstruoso,
 descomunal e imposible. Saludemos, pues, al altísimo poeta con las
 mismas palabras con que saludaba a Fausto la profetisa Manto:
 
-    _Den lieb' ich, der Unmögliches begchrt!_
+    Den lieb' ich, der Unmögliches begchrt!
 
 Yo amo a aquel que desea lo imposible.
 
@@ -5072,7 +5072,7 @@ solamente.
 Para explicar la doctrina de este segundo acto sería menester escribir
 tanto al menos como el acto contiene. Goethe es conciso y por
 consiguiente difícil de extractar. Baste saber que ya el diablo, según
-hemos dicho, hace aquí muy triste papel. Hasta _Homúnculus_, el engendro
+hemos dicho, hace aquí muy triste papel. Hasta Homúnculus, el engendro
 raquítico de la ciencia pedantesca de Wagner, sabe más que él y le sirve
 de guía.
 
@@ -5161,7 +5161,7 @@ donde los Padres del yermo, la Magdalena, la Samaritana, Santa María
 Egipciaca, la misma Margarita, y los doctores extáticos, seráficos y
 profundos, cantan dignamente de la caridad, de la redención, de la
 gloria y del amor divino, mientras el alma de Fausto sube al cielo en
-virtud de lo _femenino eterno_: expresión filosófica con que Goethe
+virtud de lo femenino eterno: expresión filosófica con que Goethe
 designa a la Madre de Dios o al concepto de que procede, y con que pone
 fea discordancia en los dichos cantares religiosos.
 
@@ -5185,7 +5185,7 @@ facultades.
 genio, la ciencia, la habilidad y la perspicacia crítica del poeta
 alemán, se atreva a seguirle al seno de las Madres y quiera traernos de
 allí a otro Fausto y a otra Elena! Lo más que nos traerá, con menos arte
-y paciencia que Paracelzo o que Wagner, será un _Homúnculus_ ridículo,
+y paciencia que Paracelzo o que Wagner, será un Homúnculus ridículo,
 que jamás saldrá de su redoma, cuya luz no guiará a nadie por los
 caminos de lo ideal, y cuyo fuego amoroso, excitado por Galatea, no
 derretirá y fundirá el vidrio, derramándose en el seno del Océano.
@@ -5312,7 +5312,7 @@ la parodia.
 Mi vacilación y mi duda están en otra cosa. ¿Hasta qué punto eran
 requisito indispensable, condición precisa de todo lo que hay de
 profundo y de íntimamente verdadero en el Hamlet, las rarezas de estilo,
-las _excentricidades_ de que se muestra acompañado? ¿Serán defectos,
+las excentricidades de que se muestra acompañado? ¿Serán defectos,
 reales defectos los que Voltaire y Moratin señalan como tales,
 consistiendo sólo la falta de estos críticos en no ver y reconocer en
 todo su brillo y hermosura los numerosos aciertos que hacen que toda
