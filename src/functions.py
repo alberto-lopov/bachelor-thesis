@@ -165,138 +165,155 @@ def tri_reader(book_text: str, tri_words: dict, tri_follows: dict):
 
 # ---------------------------------------------------------- DATA INSERTION FUNCTIONS ----------------------------------------------------------
 
-def unigram_insertion(db, uni_words, uni_follows): 
-	words = db.collection(UNI_NODE_COLLECTION)
-	follows = db.collection(UNI_EDGE_COLLECTION)
+def unigram_initialization(db, uni_words, uni_follows):
+	
+	# Add nodes
+	if not db.has_collection(UNI_NODE_COLLECTION):
+		words = db.create_collection(UNI_NODE_COLLECTION)
+		words.add_fulltext_index(fields=["name"])
+		
+		inserted_nodes = 0
+		for key, value in uni_words.items():
+			words.insert({
+				"_key": sha256(key.encode()).hexdigest(),
+				"name": key,
+				"count": value
+			})
+			inserted_nodes += 1
+			if(inserted_nodes % 1000 == 0):
+				print("Insertados " + str(inserted_nodes) + " nodos de UNIGRAMAS")
+
+	# Add edges
+	if not db.has_collection(UNI_EDGE_COLLECTION):
+		follows = db.create_collection(UNI_EDGE_COLLECTION, edge=True)
+		
+		inserted_edges = 0
+		for key, value in uni_follows.items():
+			for key2, value2 in value.items():
+				follows.insert({
+					"_key": sha256((key + EDGE_SEPARATOR + key2).encode()).hexdigest(),
+					"_from": UNI_NODE_COLLECTION + '/' + sha256(key.encode()).hexdigest(),
+					"_to": UNI_NODE_COLLECTION + '/' + sha256(key2.encode()).hexdigest(),
+					"count": value2,
+					"from_name": key,
+					"to_name": key2,
+					"inverse_count": 1/value2
+				})
+			inserted_edges += 1
+			if(inserted_edges % 10 == 0):
+				print("Insertados " + str(inserted_edges) + " arcos de UNIGRAMAS")
 
 	# --- Create graphs
+	if not db.has_graph(UNI_WORDS_GRAPH):
+		related_words_graph = db.create_graph(UNI_WORDS_GRAPH)
+		print("Creado grafo de UNIGRAMAS")
+
+		if not related_words_graph.has_edge_definition(UNI_EDGE_COLLECTION):
+			related_words_graph.create_edge_definition(UNI_EDGE_COLLECTION, [UNI_NODE_COLLECTION], [UNI_NODE_COLLECTION])
+
+def bigram_initialization(db, bi_words, bi_follows):
+	
 	# Add nodes
-	inserted_nodes = 0
-	for key, value in uni_words.items():
-		words.insert({
-			"_key": sha256(key.encode()).hexdigest(),
-			"name": key,
-			"count": value
-		})
-		inserted_nodes += 1
-		if(inserted_nodes % 1000 == 0):
-			print("Inserted " + str(inserted_nodes) + " UNIGRAM nodes")
+	if not db.has_collection(BI_NODE_COLLECTION):
+		bi_node = db.create_collection(BI_NODE_COLLECTION)
+		bi_node.add_fulltext_index(fields=["name"])
+
+		inserted_nodes = 0
+		for key, value in bi_words.items():
+			bi_node.insert({
+				"_key": sha256(key.encode()).hexdigest(),
+				"name": key.replace(WORD_SEPARATOR, " "),
+				"first": key.split(WORD_SEPARATOR)[0],
+				"second": key.split(WORD_SEPARATOR)[1],
+				"count": value
+			})
+			inserted_nodes += 1
+			if(inserted_nodes % 1000 == 0):
+				print("Insertados " + str(inserted_nodes) + " nodos de BIGRAMAS")
 
 	# Add edges
-	inserted_edges = 0
-	for key, value in uni_follows.items():
-		for key2, value2 in value.items():
-			follows.insert({
-				"_key": sha256((key + EDGE_SEPARATOR + key2).encode()).hexdigest(),
-				"_from": UNI_NODE_COLLECTION + '/' + sha256(key.encode()).hexdigest(),
-				"_to": UNI_NODE_COLLECTION + '/' + sha256(key2.encode()).hexdigest(),
-				"count": value2,
-				"from_name": key,
-				"to_name": key2,
-				"inverse_count": 1/value2
-			})
-		inserted_edges += 1
-		if(inserted_edges % 10 == 0):
-			print("Inserted " + str(inserted_edges) + " UNIGRAM edges")
+	if not db.has_collection(BI_EDGE_COLLECTION):
+		bi_edge = db.create_collection(BI_EDGE_COLLECTION, edge=True)
+		
+		inserted_edges = 0
+		for key, value in bi_follows.items():
+			for key2, value2 in value.items():
+				bi_edge.insert({
+					"_key": sha256((key + EDGE_SEPARATOR + key2).encode()).hexdigest(),
+					"_from": BI_NODE_COLLECTION + '/' + sha256(key.encode()).hexdigest(),
+					"_to": BI_NODE_COLLECTION + '/' + sha256(key2.encode()).hexdigest(),
+					"count": value2,
+					"from_name": key.replace(WORD_SEPARATOR, " "),
+					"to_name": key2.replace(WORD_SEPARATOR, " "),
+					"inverse_count": 1/value2
+				})
+			inserted_edges += 1
+			if(inserted_edges % 10 == 0):
+				print("Insertados " + str(inserted_edges) + " arcos de BIGRAMAS")
 
-	print("Creado grafo de UNIGRAMAS")
-	related_words_graph = db.create_graph(UNI_WORDS_GRAPH)
+	if not db.has_graph(BI_WORDS_GRAPH):
+		bi_words_graph = db.create_graph(BI_WORDS_GRAPH)
+		print("Creado grafo de BIGRAMAS.")
 
-	if not related_words_graph.has_edge_definition(UNI_EDGE_COLLECTION):
-		related_words_graph.create_edge_definition(UNI_EDGE_COLLECTION, [UNI_NODE_COLLECTION], [UNI_NODE_COLLECTION])
+		if not bi_words_graph.has_edge_definition(BI_EDGE_COLLECTION):
+			bi_words_graph.create_edge_definition(BI_EDGE_COLLECTION, [BI_NODE_COLLECTION], [BI_NODE_COLLECTION])
 
-def bigram_insertion(db, bi_words, bi_follows):
-	bi_node = db.collection(BI_NODE_COLLECTION)
-	bi_edge = db.collection(BI_EDGE_COLLECTION)
-
+def trigram_initialization(db, tri_words, tri_follows):
+	
 	# Add nodes
-	inserted_nodes = 0
-	for key, value in bi_words.items():
-		bi_node.insert({
-			"_key": sha256(key.encode()).hexdigest(),
-			"name": key.replace(WORD_SEPARATOR, " "),
-			"first": key.split(WORD_SEPARATOR)[0],
-			"second": key.split(WORD_SEPARATOR)[1],
-			"count": value
-		})
-		inserted_nodes += 1
-		if(inserted_nodes % 1000 == 0):
-			print("Inserted " + str(inserted_nodes) + " BIGRAM nodes")
+	if not db.has_collection(TRI_NODE_COLLECTION):
+		tri_node = db.create_collection(TRI_NODE_COLLECTION)
+		tri_node.add_fulltext_index(fields=["name"])
+
+		inserted_nodes = 0
+		for key, value in tri_words.items():
+			tri_node.insert({
+				"_key": sha256(key.encode()).hexdigest(),
+				"name": key.replace(WORD_SEPARATOR, " "),
+				"first": key.split(WORD_SEPARATOR)[0],
+				"second": key.split(WORD_SEPARATOR)[1],
+				"third": key.split(WORD_SEPARATOR)[2],
+				"count": value
+			})
+			inserted_nodes += 1
+			if(inserted_nodes % 1000 == 0):
+				print("Insertados " + str(inserted_nodes) + " nodos de TRIGRAMAS")
 
 	# Add edges
-	inserted_edges = 0
-	for key, value in bi_follows.items():
-		for key2, value2 in value.items():
-			bi_edge.insert({
-				"_key": sha256((key + EDGE_SEPARATOR + key2).encode()).hexdigest(),
-				"_from": BI_NODE_COLLECTION + '/' + sha256(key.encode()).hexdigest(),
-				"_to": BI_NODE_COLLECTION + '/' + sha256(key2.encode()).hexdigest(),
-				"count": value2,
-				"from_name": key.replace(WORD_SEPARATOR, " "),
-				"to_name": key2.replace(WORD_SEPARATOR, " "),
-				"inverse_count": 1/value2
-			})
-		inserted_edges += 1
-		if(inserted_edges % 10 == 0):
-			print("Inserted " + str(inserted_edges) + " BIGRAM edges")
+	if not db.has_collection(TRI_EDGE_COLLECTION):
+		tri_edge = db.create_collection(TRI_EDGE_COLLECTION, edge=True)
+		inserted_edges = 0
+		for key, value in tri_follows.items():
+			for key2, value2 in value.items():
+				tri_edge.insert({
+					"_key": sha256((key + EDGE_SEPARATOR + key2).encode()).hexdigest(),
+					"_from": TRI_NODE_COLLECTION + '/' + sha256(key.encode()).hexdigest(),
+					"_to": TRI_NODE_COLLECTION + '/' + sha256(key2.encode()).hexdigest(),
+					"count": value2,
+					"from_name": key.replace(WORD_SEPARATOR, " "),
+					"to_name": key2.replace(WORD_SEPARATOR, " "),
+					"inverse_count": 1/value2
+				})
+			inserted_edges += 1
+			if(inserted_edges % 10 == 0):
+				print("Insertados " + str(inserted_edges) + " arcos de TRIGRAMAS")
 
-	print("Creando grafo de BIGRAMAS.")
-	bi_words_graph = db.create_graph(BI_WORDS_GRAPH)
+	if not db.has_graph(TRI_WORDS_GRAPH):
+		tri_words_graph = db.create_graph(TRI_WORDS_GRAPH)
+		print("Creado grafo de TRIGRAMAS")
 
-	if not bi_words_graph.has_edge_definition(BI_EDGE_COLLECTION):
-		bi_words_graph.create_edge_definition(BI_EDGE_COLLECTION, [BI_NODE_COLLECTION], [BI_NODE_COLLECTION])
+		if not tri_words_graph.has_edge_definition(TRI_EDGE_COLLECTION):
+			tri_words_graph.create_edge_definition(TRI_EDGE_COLLECTION, [TRI_NODE_COLLECTION], [TRI_NODE_COLLECTION])
 
-def trigram_insertion(db, tri_words, tri_follows):
-	tri_node = db.collection(TRI_NODE_COLLECTION)
-	tri_edge = db.collection(TRI_EDGE_COLLECTION)
+# ---------------------------------------------------------- QUERIES DB RELATED FUNCTIONS ----------------------------------------------------------
+def find_word(db, word: str):
+	words_collection = db.collection(UNI_NODE_COLLECTION)
+	finded_word = None
+	cursor = words_collection.find({'name': word})
+	if not cursor.empty():
+		finded_word = cursor.next()
 
-	# Add nodes
-	inserted_nodes = 0
-	for key, value in tri_words.items():
-		tri_node.insert({
-			"_key": sha256(key.encode()).hexdigest(),
-			"name": key.replace(WORD_SEPARATOR, " "),
-			"first": key.split(WORD_SEPARATOR)[0],
-			"second": key.split(WORD_SEPARATOR)[1],
-			"third": key.split(WORD_SEPARATOR)[2],
-			"count": value
-		})
-		inserted_nodes += 1
-		if(inserted_nodes % 1000 == 0):
-			print("Inserted " + str(inserted_nodes) + " TRIGRAM nodes")
-
-	# Add edges
-	inserted_edges = 0
-	for key, value in tri_follows.items():
-		for key2, value2 in value.items():
-			tri_edge.insert({
-				"_key": sha256((key + EDGE_SEPARATOR + key2).encode()).hexdigest(),
-				"_from": TRI_NODE_COLLECTION + '/' + sha256(key.encode()).hexdigest(),
-				"_to": TRI_NODE_COLLECTION + '/' + sha256(key2.encode()).hexdigest(),
-				"count": value2,
-				"from_name": key.replace(WORD_SEPARATOR, " "),
-				"to_name": key2.replace(WORD_SEPARATOR, " "),
-				"inverse_count": 1/value2
-			})
-		inserted_edges += 1
-		if(inserted_edges % 10 == 0):
-			print("Inserted " + str(inserted_edges) + " TRIGRAM edges")
-
-	print("Creando grafo de TRIGRAMAS")
-	tri_words_graph = db.create_graph(TRI_WORDS_GRAPH)
-
-	if not tri_words_graph.has_edge_definition(TRI_EDGE_COLLECTION):
-		tri_words_graph.create_edge_definition(TRI_EDGE_COLLECTION, [TRI_NODE_COLLECTION], [TRI_NODE_COLLECTION])
-
-# ---------------------------------------------------------- PREDICTION FUNCTIONS ----------------------------------------------------------
-def find_word(db_aql, word: str):
-	query = """FOR word IN words 
-		FILTER word.name == '{}' 
-		RETURN word
-	"""
-
-	cursor = db_aql.execute(query.format(word))
-	return cursor.next()
+	return finded_word
 
 # Give most likely path between two given words
 # origin and goal are _id fields of the respective words
@@ -362,3 +379,41 @@ def random_word_sample(words_graph, word_hash: str) -> dict:
 	
 	following_words_sample = rv_discrete(name='following_words', values=(int_words, word_chances))
 	return int_to_words[following_words_sample.rvs(size=1)[0]]
+
+# ---------------------------------------------------------- MENU RELATED FUNCTIONS ----------------------------------------------------------
+def option_display(options: list) -> int:
+	count = 1
+	for option in options:
+		print(str(count) + " - " + option)
+		count += 1
+	
+	return int(input('Indique el modo: '))
+
+def main_menu():
+	print("Bienvenido a GPG, porfavor selecciona con que n-gramas quieres trabajar: ")
+	chosen = option_display(["Funcionalidades con Unigramas", "Funcionalidades con Bigramas", "Funcionalidades con Trigramas", "Salir"])
+	match chosen:
+		case 1:
+			unigram_menu()
+		case 2:
+			bigram_menu()
+		case 3:
+			trigram_menu()
+		case 4:
+			exit()
+		case _:
+			print("Entrada no reconocida. Introduzca un valor del 1-4")
+
+def unigram_menu():
+	print("---- Elige una de las funcionalidades disponibles con UNIGRAMAS ----")
+	chosen = option_display(["Lista por probabilidades de aparición","Sugiere una palabra","Camino más probable entre dos palabras","Volver atrás"])
+	match chosen:
+		case 1:
+			int(input())
+			recommend
+
+def bigram_menu():
+	""
+
+def trigram_menu():
+	""

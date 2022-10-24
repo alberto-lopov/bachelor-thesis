@@ -11,3 +11,4 @@ BI_WORDS_GRAPH = "relatedBiWords"
 TRI_WORDS_GRAPH = "relatedTriWords"
 EDGE_SEPARATOR = ";¬"
 WORD_SEPARATOR = ":¬"
+TOTAL_COLLECTIONS = 15
