@@ -20,8 +20,8 @@ BOOK_12 = os.getenv('BOOK_12')
 BOOK_13 = os.getenv('BOOK_13')
 BOOK_14 = os.getenv('BOOK_14')
 
-from src.constants import TOTAL_COLLECTIONS, URL_ARANGO_DB, DB_NAME, UNI_WORDS_GRAPH
-from src.functions import bigram_initialization, most_likely_path, random_word_sample, read_txt, find_word, recommend, trigram_initialization, unigram_initialization
+from src.constants import TOTAL_COLLECTIONS, URL_ARANGO_DB, DB_NAME
+from src.functions import bigram_initialization, main_menu, read_txt, trigram_initialization, unigram_initialization
 
 # Initialize the client for ArangoDB.
 client = ArangoClient(hosts=URL_ARANGO_DB)
@@ -47,14 +47,16 @@ if len(db.collections()) < TOTAL_COLLECTIONS:
     bigram_initialization(db, bi_words, bi_follows)
     trigram_initialization(db, tri_words, tri_follows)
     
-related_words_graph = db.graph(UNI_WORDS_GRAPH)
 
+main_menu(db)
+"""
+related_words_graph = db.graph(UNI_WORDS_GRAPH)
 finded_word = find_word(db, 'hola')
 print(finded_word)
 second_finded_word = find_word(db, 'tal')
 print('Probando 1: ' + finded_word['name'] + ' ' + second_finded_word['name'])
 
-print(most_likely_path(db.aql, finded_word['_id'], second_finded_word['_id']))
+print(path_given_two_words(db.aql, finded_word['_id'], second_finded_word['_id']))
 
 finded_word = find_word(db, 'buenas')
 print('Probando 2: ' + finded_word['name'])
@@ -62,5 +64,6 @@ print(recommend(related_words_graph, finded_word['_key']))
 
 sit = find_word(db, 'entonces')
 print('Probando 3: ' + sit['name'])
-print(random_word_sample(related_words_graph, sit['_key'])) 
+print(random_word_sample(related_words_graph, sit['_key']))"""
+
 client.close()

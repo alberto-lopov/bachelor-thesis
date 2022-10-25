@@ -136,7 +136,7 @@ def tri_reader(book_text: str, tri_words: dict, tri_follows: dict):
 
 	for sentence in book_text.split("."):
 		#Give me an array containing each word in that sentence
-		array = re.findall(r'\b\S+\b', sentence)
+		array = re.findall(r'\b\w+\b', sentence)
 		last_trigram = None
 		for first_word, second_word, third_word in triwise(array):
 			trigram = (first_word + WORD_SEPARATOR + second_word + WORD_SEPARATOR + third_word).lower()
@@ -317,7 +317,7 @@ def find_word(db, word: str):
 
 # Give most likely path between two given words
 # origin and goal are _id fields of the respective words
-def most_likely_path(db_aql, origin, goal):
+def path_given_two_words(db_aql, origin, goal):
 	query = """FOR v, e IN OUTBOUND SHORTEST_PATH '{}' TO '{}' 
         GRAPH 'relatedWords' 
         OPTIONS {{
@@ -328,8 +328,6 @@ def most_likely_path(db_aql, origin, goal):
 	
 	cursor = db_aql.execute(query.format(origin, goal))
 	return [doc for doc in cursor]
-
-
 
 # Give a ordered list of words that usually follow the given word
 def recommend(words_graph, word_hash: str) -> List[dict]:
@@ -380,6 +378,75 @@ def random_word_sample(words_graph, word_hash: str) -> dict:
 	following_words_sample = rv_discrete(name='following_words', values=(int_words, word_chances))
 	return int_to_words[following_words_sample.rvs(size=1)[0]]
 
+# ---------------------------------------------------------- FEATURE RELATED FUNCTIONS ----------------------------------------------------------
+def unigram_recommend(db):
+	word = input("Introduce una palabra: ")
+	max_tam = int(input("Especifica el tamaño máximo de la lista a devolver: "))
+
+	finded = find_word(db, word)
+	if finded is None:
+		print(word + " no se encuentra en el modelo")
+	
+	else:
+		uni_graph = db.graph(UNI_WORDS_GRAPH)
+		suggestion_list = recommend(uni_graph, finded['_key'])
+
+		return_list = []
+		for suggestion in suggestion_list:
+			return_list.append((suggestion['word_name'], suggestion['count']))
+			if len(return_list) >= max_tam:
+				break
+		
+		print(return_list)
+
+def unigram_suggestion(db):
+	word = input("Introduce una palabra: ")
+	finded = find_word(db, word)
+	if finded is None:
+		print(word + " no se encuentra en el modelo")
+
+	else:
+		uni_graph = db.graph(UNI_WORDS_GRAPH)
+		suggestion = random_word_sample(uni_graph, finded['_key'])
+		print("Te sugiero ante " + word + " la palabra " + suggestion)
+
+def unigram_most_likey_path(db):
+	word = input("Introduce una palabra que inicie la frase: ")
+	max_tam = int(input("Especifica el tamaño máximo de la frase a devolver: "))
+
+	finded = find_word(db, word)
+	if finded is None:
+		print(word + " no se encuentra en el modelo")
+	
+	else:
+		uni_graph = db.graph(UNI_WORDS_GRAPH)
+		for i in range(max_tam - 1):
+			next_word = recommend(uni_graph, finded['_key']).pop(1)
+			word = word + " " + next_word['word_name']
+			finded = find_word(db, next_word['word_name'])
+
+		print(word)
+
+def unigram_path_two_words(db):
+	print("Dame dos palabras y te dire el camino más probable entre las dos: ")
+	word1 = input("Primera: ")
+	origin = find_word(db, word1)
+	word2 = input("Segunda: ")
+	goal = find_word(db, word2)
+	if origin is None:
+		print(word1 + " no se encuentra en el modelo")
+
+	elif goal is None:
+		print(word2 + " no se encuentra en el modelo")
+
+	else:
+		path = path_given_two_words(db.aql, origin['_id'], goal['_id'])
+		phrase = ''
+		for doc in path:
+			phrase = phrase + " " + doc[1]
+		print(phrase)
+
+
 # ---------------------------------------------------------- MENU RELATED FUNCTIONS ----------------------------------------------------------
 def option_display(options: list) -> int:
 	count = 1
@@ -389,28 +456,42 @@ def option_display(options: list) -> int:
 	
 	return int(input('Indique el modo: '))
 
-def main_menu():
+def main_menu(db):
 	print("Bienvenido a GPG, porfavor selecciona con que n-gramas quieres trabajar: ")
 	chosen = option_display(["Funcionalidades con Unigramas", "Funcionalidades con Bigramas", "Funcionalidades con Trigramas", "Salir"])
 	match chosen:
 		case 1:
-			unigram_menu()
+			unigram_menu(db)
 		case 2:
-			bigram_menu()
+			bigram_menu(db)
 		case 3:
-			trigram_menu()
+			trigram_menu(db)
 		case 4:
 			exit()
 		case _:
 			print("Entrada no reconocida. Introduzca un valor del 1-4")
 
-def unigram_menu():
+def unigram_menu(db):
 	print("---- Elige una de las funcionalidades disponibles con UNIGRAMAS ----")
-	chosen = option_display(["Lista por probabilidades de aparición","Sugiere una palabra","Camino más probable entre dos palabras","Volver atrás"])
+	chosen = option_display(["Lista por probabilidades de aparición","Sugiere una palabra","Camino más probable entre dos palabras", "Camino más probable dado tamaño maximo", "Volver atrás", "Salir"])
 	match chosen:
 		case 1:
-			int(input())
-			recommend
+			unigram_recommend(db)
+		case 2:
+			unigram_suggestion(db)
+		case 3:
+			unigram_path_two_words(db)
+		case 4:
+			unigram_most_likey_path(db)
+		case 5:
+			""
+		case 6:
+			exit()
+		case _:
+			print("Entrada no reconocida de entres las posibles volviendo al menu principal...")
+	
+	main_menu(db)
+			
 
 def bigram_menu():
 	""
