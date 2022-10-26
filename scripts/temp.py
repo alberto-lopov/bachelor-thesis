@@ -1,5 +1,5 @@
 # 1 modo de predicion: Funcion para recomendar siguiente palabra dada una palabra
-def recommend(self, text: str) -> List[dict]:
+def recommend_ngram_list(self, text: str) -> List[dict]:
         tokenList = self.getTokenList(text)
         tokenList = self.standardize(tokenList)
         if len(tokenList) >= self.ngramFrom:

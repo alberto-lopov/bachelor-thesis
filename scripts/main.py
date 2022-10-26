@@ -21,7 +21,7 @@ BOOK_13 = os.getenv('BOOK_13')
 BOOK_14 = os.getenv('BOOK_14')
 
 from src.constants import TOTAL_COLLECTIONS, URL_ARANGO_DB, DB_NAME
-from src.functions import bigram_initialization, main_menu, read_txt, trigram_initialization, unigram_initialization
+from src.functions import bigram_initialization, find_ngram, main_menu, read_txt, trigram_initialization, unigram_initialization
 
 # Initialize the client for ArangoDB.
 client = ArangoClient(hosts=URL_ARANGO_DB)
@@ -46,23 +46,22 @@ if len(db.collections()) < TOTAL_COLLECTIONS:
     unigram_initialization(db, uni_words, uni_follows)
     bigram_initialization(db, bi_words, bi_follows)
     trigram_initialization(db, tri_words, tri_follows)
-    
 
 main_menu(db)
 """
 related_words_graph = db.graph(UNI_WORDS_GRAPH)
-finded_word = find_word(db, 'hola')
+finded_word = find_ngram(db, 'hola')
 print(finded_word)
-second_finded_word = find_word(db, 'tal')
+second_finded_word = find_ngram(db, 'tal')
 print('Probando 1: ' + finded_word['name'] + ' ' + second_finded_word['name'])
 
 print(path_given_two_words(db.aql, finded_word['_id'], second_finded_word['_id']))
 
-finded_word = find_word(db, 'buenas')
+finded_word = find_ngram(db, 'buenas')
 print('Probando 2: ' + finded_word['name'])
-print(recommend(related_words_graph, finded_word['_key']))
+print(recommend_ngram_list(related_words_graph, finded_word['_key']))
 
-sit = find_word(db, 'entonces')
+sit = find_ngram(db, 'entonces')
 print('Probando 3: ' + sit['name'])
 print(random_word_sample(related_words_graph, sit['_key']))"""
 
