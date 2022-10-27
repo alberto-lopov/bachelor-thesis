@@ -489,6 +489,14 @@ def trigram_suggestion(db):
 		suggestion = random_word_sample(tri_graph, finded['_key'], 3)
 		print("Te sugiero ante el trigrama: '" + trigram + "' la palabra: '" + suggestion.split(" ")[2] + "' porque el siguiente trigrama sugerido es: '" + suggestion + "'")
 
+#Aux function to most_likey_path functions
+def give_new_first_ngram(list, used_ngrams):
+	for possible_ngram in list:
+		if possible_ngram['word_name'] not in used_ngrams:
+			return possible_ngram
+
+	return None
+
 def unigram_most_likey_path(db):
 	word = input("Introduce una palabra que inicie la frase: ")
 	max_tam = int(input("Especifica el tamaño máximo de la frase que quieres formar: "))
@@ -498,13 +506,15 @@ def unigram_most_likey_path(db):
 		print(word + " no se encuentra en el modelo de unigramas")
 	
 	else:
+		used_words = [word]
 		uni_graph = db.graph(UNI_WORDS_GRAPH)
 		for i in range(max_tam - 1):
 			list = recommend_ngram_list(uni_graph, finded['_key'], 1)
-			if len(list) <= 0:
+			next_word = give_new_first_ngram(list, used_words)
+			if next_word is None:
 				break
-			next_word = list.pop(0)
 			word = word + " " + next_word['word_name']
+			used_words.append(next_word['word_name'])
 			finded = find_ngram(db, next_word['word_name'], 1)
 
 		print(word)
@@ -519,12 +529,14 @@ def bigram_most_likely_path(db):
 	
 	else:
 		bi_graph = db.graph(BI_WORDS_GRAPH)
+		used_bigram = [bigram]
 		for i in range(max_tam - 2):
 			list = recommend_ngram_list(bi_graph, finded['_key'], 2)
-			if len(list) <= 0:
+			next_word = give_new_first_ngram(list, used_bigram)
+			if next_word is None:
 				break
-			next_word = list.pop(0)
 			bigram = bigram + " " + next_word['word_name'].split(" ")[1]
+			used_bigram.append(next_word['word_name'])
 			finded = find_ngram(db, next_word['word_name'], 2)
 
 		print(bigram)
@@ -539,12 +551,14 @@ def trigram_most_likely_path(db):
 	
 	else:
 		tri_graph = db.graph(TRI_WORDS_GRAPH)
+		used_trigram = [trigram]
 		for i in range(max_tam - 3):
 			list = recommend_ngram_list(tri_graph, finded['_key'], 3)
-			if len(list) <= 0:
+			next_word = give_new_first_ngram(list, used_trigram)
+			if next_word is None:
 				break
-			next_word = list.pop(0)
 			trigram = trigram + " " + next_word['word_name'].split(" ")[2]
+			used_trigram.append(next_word['word_name'])
 			finded = find_ngram(db, next_word['word_name'], 3)
 
 		print(trigram)
