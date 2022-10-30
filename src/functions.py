@@ -464,7 +464,7 @@ def unigram_suggestion(db):
 
 	else:
 		uni_graph = db.graph(UNI_WORDS_GRAPH)
-		suggestion = random_word_sample(uni_graph, finded['_key'])
+		suggestion = random_word_sample(uni_graph, finded['_key'],1)
 		print("Te sugiero ante " + word + " la palabra " + suggestion)
 
 def bigram_suggestion(db):
