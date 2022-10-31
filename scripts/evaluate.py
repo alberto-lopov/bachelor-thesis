@@ -24,6 +24,9 @@ BOOK_11 = os.getenv('BOOK_11')
 BOOK_12 = os.getenv('BOOK_12')
 BOOK_13 = os.getenv('BOOK_13')
 BOOK_14 = os.getenv('BOOK_14')
+TEST_1 = os.getenv('TEST_1')
+TEST_2 = os.getenv('TEST_2')
+TEST_3 = os.getenv('TEST_3')
 
 from src.functions import clean_word
 nltk.download('punkt')
@@ -110,11 +113,11 @@ def laplace_ngram_evaluation(n, train_sentences, test_sentences):
   print("LAPLACE Perplexity " + str(n) + "-gram: " + str(sum_perplexity / count_not_inf) )
 
 train_sentences = read_datasets([BOOK_1, BOOK_2, BOOK_3, BOOK_4, BOOK_5, BOOK_6, BOOK_7, BOOK_8, BOOK_9, BOOK_10, BOOK_11, BOOK_12, BOOK_13, BOOK_14])
-test_sentences = read_datasets([BOOK_3])
+test_sentences = read_datasets([TEST_1, TEST_2, TEST_3])
 
-ngram_evaluation(1,train_sentences, test_sentences)
-ngram_evaluation(2,train_sentences, test_sentences)
-ngram_evaluation(3,train_sentences, test_sentences)
+ngram_evaluation(1, train_sentences, test_sentences)
+ngram_evaluation(2, train_sentences, test_sentences)
+ngram_evaluation(3, train_sentences, test_sentences)
 laplace_ngram_evaluation(1, train_sentences, test_sentences)
 laplace_ngram_evaluation(2, train_sentences, test_sentences)
 laplace_ngram_evaluation(3, train_sentences, test_sentences)
