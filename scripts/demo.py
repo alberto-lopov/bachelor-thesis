@@ -14,11 +14,7 @@ sys_db = client.db("_system", username="root")
 db = client.db(DB_NAME, username="root")
 option_dict = {}
 
-root = Tk()
-root.title("Demo GPG")
-root.geometry("800x600")
-
-#Decorator that will debounce a function so that it is called after wait_time seconds
+#Decorator that will debounce a function so that it is called after "wait" seconds
 #If it is called multiple times, will wait for the last call to be debounced and run only this one.
 def debounce(wait):
 
@@ -50,7 +46,7 @@ def update(new_options):
 
     used_options = []
     for option in new_options.values():
-        if option not in used_options:
+        if option not in used_options and option != '':
             option_frame.insert(END, option)
             used_options.append(option)
 
@@ -59,9 +55,14 @@ def fillout(e):
     last_sentence = input_box.get()
     input_box.delete(0, END)
 
-    input_box.insert(0, last_sentence + ' ' + option_frame.get(ANCHOR))
+    #Add space if needed for next word
+    delimiter = ''
+    if last_sentence[-1] != ' ':
+        delimiter = ' '
+        
+    input_box.insert(0, last_sentence + delimiter + option_frame.get(ANCHOR))
 
-#Event handler debounced that queries the DB.
+#Event handler debounced 0.8 seconds that queries the DB.
 @debounce(0.8)
 def check(e):
     typed = input_box.get()
@@ -73,6 +74,11 @@ def check(e):
         new_options = phrase_suggestions(db, typed)
 
     update(new_options)
+
+# ---------------------------- Tkinter Widgets ----------------------------
+root = Tk()
+root.title("Demo GPG")
+root.geometry("800x600")
 
 input_title = Label(root, text = "Empieza a escribir... ", font=("Roboto", 12), fg = "grey")
 input_title.pack(pady=20)

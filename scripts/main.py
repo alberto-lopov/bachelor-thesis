@@ -49,21 +49,5 @@ if len(db.collections()) < TOTAL_COLLECTIONS:
 
 #main_menu(db)
 print(phrase_suggestions(db))
-"""
-related_words_graph = db.graph(UNI_WORDS_GRAPH)
-finded_word = find_ngram(db, 'hola')
-print(finded_word)
-second_finded_word = find_ngram(db, 'tal')
-print('Probando 1: ' + finded_word['name'] + ' ' + second_finded_word['name'])
-
-print(path_given_two_words(db.aql, finded_word['_id'], second_finded_word['_id']))
-
-finded_word = find_ngram(db, 'buenas')
-print('Probando 2: ' + finded_word['name'])
-print(recommend_ngram_list(related_words_graph, finded_word['_key']))
-
-sit = find_ngram(db, 'entonces')
-print('Probando 3: ' + sit['name'])
-print(random_word_sample(related_words_graph, sit['_key']))"""
 
 client.close()
