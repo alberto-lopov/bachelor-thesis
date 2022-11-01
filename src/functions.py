@@ -585,6 +585,42 @@ def unigram_path_two_words(db):
 			phrase = phrase + " " + doc[1]
 		print(phrase)
 
+def phrase_suggestions(db, phrase = None):
+	suggestions_dict = {
+		"unigram": "",
+		"bigram": "",
+		"trigram": ""
+	}
+	
+	if phrase is None:
+		phrase = input("Frase: ")
+
+	word_array = re.findall(r'\b\w+\b', phrase)
+	phrase_len = len(word_array)
+
+	if phrase_len >= 1:
+		finded = find_ngram(db, word_array[-1], 1)
+		if finded is not None:
+			list = recommend_ngram_list(db.graph(UNI_WORDS_GRAPH), finded['_key'], 1)
+			if list:
+				suggestions_dict["unigram"] = list[0]['word_name']
+
+	if phrase_len >= 2:
+		finded = find_ngram(db, word_array[-2] + ' ' + word_array[-1], 2)
+		if finded is not None:
+			list = recommend_ngram_list(db.graph(BI_WORDS_GRAPH), finded['_key'], 2)
+			if list:
+				suggestions_dict["bigram"] = list[0]['word_name'].split(' ')[-1]
+
+	if phrase_len >= 3:
+		finded = find_ngram(db, word_array[-3] + ' ' + word_array[-2] + ' ' + word_array[-1], 3)
+		if finded is not None:
+			list = recommend_ngram_list(db.graph(TRI_WORDS_GRAPH), finded['_key'], 3)
+			if list:
+				suggestions_dict["trigram"] = list[0]['word_name'].split(' ')[-1]
+
+	return suggestions_dict
+
 # ---------------------------------------------------------- MENU RELATED FUNCTIONS ----------------------------------------------------------
 def option_display(options: list) -> int:
 	count = 1
