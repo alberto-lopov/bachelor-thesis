@@ -62,15 +62,13 @@ def fillout(e):
         
     input_box.insert(0, last_sentence + delimiter + option_frame.get(ANCHOR))
 
-#Event handler debounced 0.8 seconds that queries the DB.
-@debounce(0.8)
+#Event handler debounced 1 seconds that queries the DB.
+@debounce(1)
 def check(e):
     typed = input_box.get()
-    new_options = []
+    new_options = {}
 
-    if typed == '':
-        new_options = option_dict
-    else:
+    if typed != '':
         new_options = phrase_suggestions(db, typed)
 
     update(new_options)
@@ -90,6 +88,9 @@ option_frame = Listbox(root, width=50, height=4)
 option_frame.pack(pady=40)
 
 option_frame.bind("<<ListboxSelect>>", fillout)
-input_box.bind("<Key>", check)
+input_box.bind("<KeyRelease>", check)
 
 root.mainloop()
+
+# Close connection with Database
+client.close()
