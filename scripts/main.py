@@ -20,8 +20,8 @@ BOOK_12 = os.getenv('BOOK_12')
 BOOK_13 = os.getenv('BOOK_13')
 BOOK_14 = os.getenv('BOOK_14')
 
-from src.constants import TOTAL_COLLECTIONS, URL_ARANGO_DB, DB_NAME
-from src.functions import bigram_word_init, phrase_suggestions, read_txt, trigram_word_init, unigram_word_init
+from src.constants import TOTAL_COLLECTIONS, UNI_WORDS_GRAPH, URL_ARANGO_DB, DB_NAME
+from src.functions import autocomplete, bigram_char_init, bigram_word_init, phrase_suggestions, read_txt, trigram_char_init, trigram_word_init, unigram_char_init, unigram_word_init
 
 # Initialize the client for ArangoDB.
 client = ArangoClient(hosts=URL_ARANGO_DB)
@@ -39,15 +39,19 @@ print("Conectado a la base de datos: " + DB_NAME)
 
 # -- Populate database / Training of model in case it hasn't been done --
 if len(db.collections()) < TOTAL_COLLECTIONS:
-    uni_words, uni_follows, bi_words, bi_follows, tri_words, tri_follows = read_txt(
+    uni_words, uni_follows, bi_words, bi_follows, tri_words, tri_follows, uni_chars, uni_char_follows, bi_chars, bi_char_follows, tri_chars, tri_char_follows = read_txt(
         [BOOK_1, BOOK_2, BOOK_3, BOOK_4, BOOK_5, BOOK_6, BOOK_7, BOOK_8, BOOK_9, BOOK_10, BOOK_11, BOOK_12, BOOK_13, BOOK_14]
     )
 
     unigram_word_init(db, uni_words, uni_follows)
+    unigram_char_init(db, uni_chars, uni_char_follows)
     bigram_word_init(db, bi_words, bi_follows)
+    bigram_char_init(db, bi_chars, bi_char_follows)
     trigram_word_init(db, tri_words, tri_follows)
+    trigram_char_init(db, tri_chars, tri_char_follows)
 
 #main_menu(db)
-print(phrase_suggestions(db))
+#print(phrase_suggestions(db))
+print(autocomplete(db, "hac", 3))
 
 client.close()

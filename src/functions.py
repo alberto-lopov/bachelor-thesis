@@ -3,9 +3,10 @@ import itertools
 import re #To split string by multiple delimiters
 from typing import List
 from scipy.stats import rv_discrete
-from src.constants import BI_CHAR_EDGE, BI_CHAR_NODE, BI_CHARS_GRAPH, BI_WORD_EDGE, BI_WORD_NODE, BI_WORDS_GRAPH, EDGE_SEPARATOR, TRI_CHAR_EDGE, TRI_CHAR_NODE, TRI_CHARS_GRAPH, TRI_WORD_EDGE, TRI_WORD_NODE, TRI_WORDS_GRAPH, UNI_CHAR_EDGE, UNI_CHAR_NODE, UNI_CHARS_GRAPH, UNI_WORD_EDGE, UNI_WORD_NODE, UNI_WORDS_GRAPH, NODE_SEPARATOR, WORD_FINAL_SYMBOL, WORD_START_SYMBOL
+from src.constants import BI_CHAR_EDGE, BI_CHAR_NODE, BI_CHARS_GRAPH, BI_SIZE, BI_WORD_EDGE, BI_WORD_NODE, BI_WORDS_GRAPH, EDGE_SEPARATOR, TRI_CHAR_EDGE, TRI_CHAR_NODE, TRI_CHARS_GRAPH, TRI_SIZE, TRI_WORD_EDGE, TRI_WORD_NODE, TRI_WORDS_GRAPH, UNI_CHAR_EDGE, UNI_CHAR_NODE, UNI_CHARS_GRAPH, UNI_WORD_EDGE, UNI_WORD_NODE, UNI_WORDS_GRAPH, NODE_SEPARATOR, WORD_FINAL_SYMBOL, WORD_START_SYMBOL
 
-size_to_collection = {1: UNI_WORD_NODE, 2: BI_WORD_NODE, 3: TRI_WORD_NODE}
+graph_to_collection = {UNI_WORDS_GRAPH: UNI_WORD_NODE, BI_WORDS_GRAPH: BI_WORD_NODE, TRI_WORDS_GRAPH: TRI_WORD_NODE, UNI_CHARS_GRAPH: UNI_CHAR_NODE, BI_CHARS_GRAPH: BI_CHAR_NODE, TRI_CHARS_GRAPH: TRI_CHAR_NODE}
+graph_to_option = {UNI_WORDS_GRAPH: 1, BI_WORDS_GRAPH: 2, TRI_WORDS_GRAPH: 3, UNI_CHARS_GRAPH: 4, BI_CHARS_GRAPH: 5, TRI_CHARS_GRAPH: 6}
 # ---------------------------------------------------------- DATA READ FUNCTIONS ----------------------------------------------------------
 #Read txt files
 def read_txt(file_paths: list):
@@ -34,7 +35,7 @@ def read_txt(file_paths: list):
 		file = open(path)
 		book_text = file.read()
 
-		uni_reader(book_text, uni_words, uni_follows)
+		uni_reader(book_text, uni_words, uni_follows, uni_chars, uni_char_follows, bi_chars, bi_char_follows, tri_chars, tri_char_follows)
 		bi_reader(book_text, bi_words, bi_follows)
 		tri_reader(book_text, tri_words, tri_follows)
 
@@ -44,7 +45,7 @@ def read_txt(file_paths: list):
 	
 		book += 1
 
-	return uni_words, uni_follows, bi_words, bi_follows, tri_words, tri_follows
+	return uni_words, uni_follows, bi_words, bi_follows, tri_words, tri_follows, uni_chars, uni_char_follows, bi_chars, bi_char_follows, tri_chars, tri_char_follows
 
 def clean_word(word: str):
 	#Delete the only spelling mark left by regex matching and lower the word
@@ -85,9 +86,55 @@ def uni_char_reader(word: str, uni_chars: dict, uni_char_follows: dict):
 
 		last_char = char
 
+def bi_char_reader(word: str, bi_chars: dict, bi_char_follows: dict):
+	
+	last_bigram = None
+	word_array = add_boundary_symbols(word)
+
+	for first_char, second_char in pairwise(word_array):
+		bigram = first_char + NODE_SEPARATOR + second_char
+		if last_bigram != None:
+			if last_bigram not in bi_char_follows:
+				bi_char_follows[last_bigram] = {bigram: 1}
+			elif bigram in bi_char_follows[last_bigram]:
+				bi_char_follows[last_bigram][bigram] = bi_char_follows[last_bigram][bigram] + 1
+			else:
+				bi_char_follows[last_bigram][bigram] = 1
+
+		if bigram in bi_chars:
+			bi_chars[bigram] = bi_chars[bigram] + 1
+			
+		else:
+			bi_chars[bigram] = 1
+
+		last_bigram = bigram
+
+def tri_char_reader(word: str, tri_chars: dict, tri_char_follows: dict):
+	
+	last_trigram = None
+	word_array = add_boundary_symbols(word)
+
+	for first_char, second_char, third_char in triwise(word_array):
+		trigram = first_char + NODE_SEPARATOR + second_char + NODE_SEPARATOR + third_char
+		if last_trigram != None:
+			if last_trigram not in tri_char_follows:
+				tri_char_follows[last_trigram] = {trigram: 1}
+			elif trigram in tri_char_follows[last_trigram]:
+				tri_char_follows[last_trigram][trigram] = tri_char_follows[last_trigram][trigram] + 1
+			else:
+				tri_char_follows[last_trigram][trigram] = 1
+
+		if trigram in tri_chars:
+			tri_chars[trigram] = tri_chars[trigram] + 1
+			
+		else:
+			tri_chars[trigram] = 1
+
+		last_trigram = trigram
+
 # Read unigrams and theirs relations with other unigrams given a book text.
 # uni_words and uni_follows are mutated because they are passed by reference.
-def uni_reader(book_text: str, uni_words: dict, uni_follows: dict):
+def uni_reader(book_text: str, uni_words: dict, uni_follows: dict, uni_chars: dict, uni_char_follows: dict, bi_chars: dict, bi_char_follows: dict, tri_chars: dict, tri_char_follows: dict):
 	line_count = 0
 	new_unigrams = 0
 	known_unigrams = 0
@@ -99,6 +146,9 @@ def uni_reader(book_text: str, uni_words: dict, uni_follows: dict):
 		last_word = None
 		for word in array:
 			lower_word = clean_word(word)
+			uni_char_reader(lower_word, uni_chars, uni_char_follows)
+			bi_char_reader(lower_word, bi_chars, bi_char_follows)
+			tri_char_reader(lower_word, tri_chars, tri_char_follows)
 
 			if last_word != None:
 				if last_word not in uni_follows:
@@ -274,7 +324,7 @@ def unigram_char_init(db, uni_chars, uni_char_follows):
 				"count": value
 			})
 			inserted_nodes += 1
-			if(inserted_nodes % 1000 == 0):
+			if(inserted_nodes % 10 == 0):
 				print("Insertados " + str(inserted_nodes) + " nodos de caracteres - UNIGRAMAS")
 
 	# Add edges
@@ -369,7 +419,7 @@ def bigram_char_init(db, bi_chars, bi_char_follows):
 				"count": value
 			})
 			inserted_nodes += 1
-			if(inserted_nodes % 1000 == 0):
+			if(inserted_nodes % 10 == 0):
 				print("Insertados " + str(inserted_nodes) + " nodos de caracteres - BIGRAMAS")
 
 	# Add edges
@@ -494,11 +544,11 @@ def trigram_char_init(db, tri_chars, tri_char_follows):
 			tri_words_graph.create_edge_definition(TRI_CHAR_EDGE, [TRI_CHAR_NODE], [TRI_CHAR_NODE])
 
 # ---------------------------------------------------------- QUERIES DB RELATED FUNCTIONS ----------------------------------------------------------
-def find_ngram(db, ngram: str, size_ngram: int):
-	if size_ngram <= 0 or size_ngram > 3:
+def find_ngram(db, ngram: str, collection_name: str):
+	if collection_name not in graph_to_collection.values():
 		return None
 	
-	words_collection = db.collection(size_to_collection[size_ngram])
+	words_collection = db.collection(collection_name)
 	finded_word = None
 	cursor = words_collection.find({'name': ngram})
 	if not cursor.empty():
@@ -508,25 +558,42 @@ def find_ngram(db, ngram: str, size_ngram: int):
 
 # Give most likely path between two given words
 # origin and goal are _id fields of the respective words
-def path_given_two_words(db_aql, origin, goal):
+def path_given_two_unigrams(db_aql, origin, goal, graph):
 	query = """FOR v, e IN OUTBOUND SHORTEST_PATH '{}' TO '{}' 
-        GRAPH 'relatedWords' 
+        GRAPH '{}' 
         OPTIONS {{
             weightAttribute: 'inverse_count', 
             defaultWeight: 0 
         }}
         RETURN [v._key, v.name, e._key, e.from_name, e.to_name, e.count, e.inverse_count]"""
 	
-	cursor = db_aql.execute(query.format(origin, goal))
+	cursor = db_aql.execute(query.format(origin, goal, graph))
 	return [doc for doc in cursor]
 
+def path_end_words(db_aql, origin, graph):
+	condition = ""
+	if graph == BI_CHARS_GRAPH:
+		condition = "second"
+	elif graph == TRI_CHARS_GRAPH:
+		condition = "third"
+
+	query = """FOR v, e, p IN 1..10 OUTBOUND '{}' GRAPH '{}'
+      PRUNE v.{} == '</>'
+      OPTIONS {{ weightAttribute: 'inverse_count', defaultWeight: 0, order: 'weighted'}}
+      FILTER v.{} == '</>'
+      LIMIT 1
+      RETURN  {{nodes: p.vertices[*].name, edges: p.edges[*].to_name, inverse_count: p.edges[*].inverse_count}}"""
+	
+	cursor = db_aql.execute(query.format(origin, graph, condition, condition))
+	return cursor.next()
+
 # Give a ordered list of words that usually follow the given word
-def recommend_ngram_list(ngram_graph, ngram_hash: str, size_ngram: int) -> List[dict]:
-	if size_ngram <= 0 or size_ngram > 3:
+def recommend_ngram_list(ngram_graph, ngram_hash: str ) -> List[dict]:
+	if ngram_graph.name not in graph_to_option.keys():
 		return []
 
 	paths = ngram_graph.traverse(
-		start_vertex = size_to_collection[size_ngram] + "/" + ngram_hash,
+		start_vertex = graph_to_collection[ngram_graph.name] + "/" + ngram_hash,
 		direction = "outbound",
 		strategy = "bfs",
 		min_depth = 1,
@@ -545,9 +612,12 @@ def recommend_ngram_list(ngram_graph, ngram_hash: str, size_ngram: int) -> List[
 	for edge in edges], key = lambda x: x["inverse_count"]))
 
 # Give a random following word of a discrete distribution sample
-def random_word_sample(ngram_graph, ngram_hash: str, size_ngram: int) -> dict:
+def random_word_sample(ngram_graph, ngram_hash: str) -> str:
+	if ngram_graph.name not in graph_to_option.keys():
+		return ""
+	
 	paths = ngram_graph.traverse(
-		start_vertex = size_to_collection[size_ngram] + "/" + ngram_hash,
+		start_vertex = graph_to_collection[ngram_graph.name] + "/" + ngram_hash,
 		direction = "outbound",
 		strategy = "bfs",
 		min_depth = 1,
@@ -577,13 +647,13 @@ def unigram_recommend_list(db):
 	word = input("Introduce una palabra: ")
 	max_tam = int(input("Especifica el tamaño máximo de la lista a devolver: "))
 
-	finded = find_ngram(db, word, 1)
+	finded = find_ngram(db, word, UNI_WORD_NODE)
 	if finded is None:
 		print(word + " no se encuentra en el modelo de unigramas")
 	
 	else:
 		uni_graph = db.graph(UNI_WORDS_GRAPH)
-		suggestion_list = recommend_ngram_list(uni_graph, finded['_key'], 1)
+		suggestion_list = recommend_ngram_list(uni_graph, finded['_key'])
 
 		return_list = []
 		for suggestion in suggestion_list:
@@ -597,13 +667,13 @@ def bigram_recommend_list(db):
 	bigram = input("Introduce dos palabras separadas por un espacio: ")
 	max_tam = int(input("Especifica el tamaño máximo de la lista a devolver: "))
 
-	finded = find_ngram(db, bigram, 2)
+	finded = find_ngram(db, bigram, BI_WORD_NODE)
 	if finded is None:
 		print(bigram + " no se encuentra en el modelo de bigramas")
 	
 	else:
 		bi_graph = db.graph(BI_WORDS_GRAPH)
-		suggestion_list = recommend_ngram_list(bi_graph, finded['_key'], 2)
+		suggestion_list = recommend_ngram_list(bi_graph, finded['_key'])
 
 		return_list = []
 		for suggestion in suggestion_list:
@@ -617,13 +687,13 @@ def trigram_recommend_list(db):
 	trigram = input("Introduce tres palabras separadas por espacios: ")
 	max_tam = int(input("Especifica el tamaño máximo de la lista a devolver: "))
 
-	finded = find_ngram(db, trigram, 3)
+	finded = find_ngram(db, trigram, TRI_WORD_NODE)
 	if finded is None:
 		print(trigram + " no se encuentra en el modelo de trigramas")
 	
 	else:
 		tri_graph = db.graph(TRI_WORDS_GRAPH)
-		suggestion_list = recommend_ngram_list(tri_graph, finded['_key'], 3)
+		suggestion_list = recommend_ngram_list(tri_graph, finded['_key'])
 
 		return_list = []
 		for suggestion in suggestion_list:
@@ -635,35 +705,35 @@ def trigram_recommend_list(db):
 
 def unigram_suggestion(db):
 	word = input("Introduce una palabra: ")
-	finded = find_ngram(db, word, 1)
+	finded = find_ngram(db, word, UNI_WORD_NODE)
 	if finded is None:
 		print(word + " no se encuentra en el modelo de unigramas")
 
 	else:
 		uni_graph = db.graph(UNI_WORDS_GRAPH)
-		suggestion = random_word_sample(uni_graph, finded['_key'],1)
+		suggestion = random_word_sample(uni_graph, finded['_key'])
 		print("Te sugiero ante " + word + " la palabra " + suggestion)
 
 def bigram_suggestion(db):
 	bigram = input("Introduce dos palabras separadas por un espacio: ")
-	finded = find_ngram(db, bigram, 2)
+	finded = find_ngram(db, bigram, BI_WORD_NODE)
 	if finded is None:
 		print(bigram + " no se encuentra en el modelo de bigramas")
 
 	else:
 		bi_graph = db.graph(BI_WORDS_GRAPH)
-		suggestion = random_word_sample(bi_graph, finded['_key'], 2)
+		suggestion = random_word_sample(bi_graph, finded['_key'])
 		print("Te sugiero ante el bigrama: '" + bigram + "' la palabra: '" + suggestion.split(" ")[1] + "' porque el siguiente bigrama sugerido es: '" + suggestion + "'")
 
 def trigram_suggestion(db):
 	trigram = input("Introduce tres palabras separadas por un espacio: ")
-	finded = find_ngram(db, trigram, 3)
+	finded = find_ngram(db, trigram, TRI_WORD_NODE)
 	if finded is None:
 		print(trigram + " no se encuentra en el modelo de trigramas")
 
 	else:
 		tri_graph = db.graph(TRI_WORDS_GRAPH)
-		suggestion = random_word_sample(tri_graph, finded['_key'], 3)
+		suggestion = random_word_sample(tri_graph, finded['_key'])
 		print("Te sugiero ante el trigrama: '" + trigram + "' la palabra: '" + suggestion.split(" ")[2] + "' porque el siguiente trigrama sugerido es: '" + suggestion + "'")
 
 #Aux function to most_likey_path functions
@@ -678,7 +748,7 @@ def unigram_most_likey_path(db):
 	word = input("Introduce una palabra que inicie la frase: ")
 	max_tam = int(input("Especifica el tamaño máximo de la frase que quieres formar: "))
 
-	finded = find_ngram(db, word, 1)
+	finded = find_ngram(db, word, UNI_WORD_NODE)
 	if finded is None:
 		print(word + " no se encuentra en el modelo de unigramas")
 	
@@ -686,13 +756,13 @@ def unigram_most_likey_path(db):
 		used_words = [word]
 		uni_graph = db.graph(UNI_WORDS_GRAPH)
 		for i in range(max_tam - 1):
-			list = recommend_ngram_list(uni_graph, finded['_key'], 1)
+			list = recommend_ngram_list(uni_graph, finded['_key'])
 			next_word = give_new_first_ngram(list, used_words)
 			if next_word is None:
 				break
 			word = word + " " + next_word['word_name']
 			used_words.append(next_word['word_name'])
-			finded = find_ngram(db, next_word['word_name'], 1)
+			finded = find_ngram(db, next_word['word_name'], UNI_WORD_NODE)
 
 		print(word)
 
@@ -700,21 +770,21 @@ def bigram_most_likely_path(db):
 	bigram = input("Introduce dos palabras separadas por un espacio: ")
 	max_tam = int(input("Especifica el tamaño máximo de la frase que quieres formar: "))
 
-	finded = find_ngram(db, bigram, 2)
+	finded = find_ngram(db, bigram, BI_WORD_NODE)
 	if finded is None:
 		print(bigram + " no se encuentra en el modelo de bigramas")
 	
 	else:
 		bi_graph = db.graph(BI_WORDS_GRAPH)
 		used_bigram = [bigram]
-		for i in range(max_tam - 2):
-			list = recommend_ngram_list(bi_graph, finded['_key'], 2)
+		for i in range(max_tam - BI_SIZE):
+			list = recommend_ngram_list(bi_graph, finded['_key'])
 			next_word = give_new_first_ngram(list, used_bigram)
 			if next_word is None:
 				break
 			bigram = bigram + " " + next_word['word_name'].split(" ")[1]
 			used_bigram.append(next_word['word_name'])
-			finded = find_ngram(db, next_word['word_name'], 2)
+			finded = find_ngram(db, next_word['word_name'], BI_WORD_NODE)
 
 		print(bigram)
 
@@ -722,7 +792,7 @@ def trigram_most_likely_path(db):
 	trigram = input("Introduce tres palabras separadas por un espacio: ")
 	max_tam = int(input("Especifica el tamaño máximo de la frase que quieres formar: "))
 
-	finded = find_ngram(db, trigram, 3)
+	finded = find_ngram(db, trigram, TRI_WORD_NODE)
 	if finded is None:
 		print(trigram + " no se encuentra en el modelo de trigramas")
 	
@@ -730,25 +800,22 @@ def trigram_most_likely_path(db):
 		tri_graph = db.graph(TRI_WORDS_GRAPH)
 		used_trigram = [trigram]
 		for i in range(max_tam - 3):
-			list = recommend_ngram_list(tri_graph, finded['_key'], 3)
+			list = recommend_ngram_list(tri_graph, finded['_key'])
 			next_word = give_new_first_ngram(list, used_trigram)
 			if next_word is None:
 				break
 			trigram = trigram + " " + next_word['word_name'].split(" ")[2]
 			used_trigram.append(next_word['word_name'])
-			finded = find_ngram(db, next_word['word_name'], 3)
+			finded = find_ngram(db, next_word['word_name'], TRI_WORD_NODE)
 
 		print(trigram)
-
-
-
 
 def unigram_path_two_words(db):
 	print("Dame dos palabras y te dire el camino más probable entre las dos: ")
 	word1 = input("Primera: ")
-	origin = find_ngram(db, word1, 1)
+	origin = find_ngram(db, word1, UNI_WORD_NODE)
 	word2 = input("Segunda: ")
-	goal = find_ngram(db, word2, 1)
+	goal = find_ngram(db, word2, UNI_WORD_NODE)
 	if origin is None:
 		print(word1 + " no se encuentra en el modelo de unigramas")
 
@@ -756,12 +823,48 @@ def unigram_path_two_words(db):
 		print(word2 + " no se encuentra en el modelo de unigramas")
 
 	else:
-		path = path_given_two_words(db.aql, origin['_id'], goal['_id'])
+		path = path_given_two_unigrams(db.aql, origin['_id'], goal['_id'], UNI_WORDS_GRAPH)
 		phrase = ''
 		for doc in path:
 			phrase = phrase + " " + doc[1]
 		print(phrase)
 
+def autocomplete(db, uncompleted_word: str, size_ngram: int):
+	suggestion = ""
+	stripped_word = []
+	if(len(uncompleted_word) < size_ngram):
+		stripped_word.append(WORD_START_SYMBOL)
+	stripped_word.extend(uncompleted_word.strip())
+	size_word = len(stripped_word)
+
+	if size_ngram == 1 and size_word >= 1:
+		end_word = find_ngram(db, WORD_FINAL_SYMBOL, UNI_CHAR_NODE)
+		finded = find_ngram(db, ''.join(stripped_word[-1]), UNI_CHAR_NODE)
+		if finded != None:
+			path = path_given_two_unigrams(db.aql, finded['_id'], end_word['_id'], UNI_CHARS_GRAPH)
+			for doc in path:
+				suggestion += doc[1]
+	
+	elif size_ngram == BI_SIZE and size_word >= BI_SIZE:
+		
+		finded = find_ngram(db, ''.join(stripped_word[-BI_SIZE:]), BI_CHAR_NODE)
+		if finded != None:
+			suggestion += uncompleted_word
+			path = path_end_words(db.aql, finded['_id'], BI_CHARS_GRAPH)
+			for char in path['edges']:
+				suggestion += char[-1]
+
+	elif size_ngram == 3 and size_word >= 3:
+		finded = find_ngram(db, ''.join(stripped_word[-3:]), TRI_CHAR_NODE)
+		if finded != None:
+			suggestion += uncompleted_word
+			path = path_end_words(db.aql, finded['_id'], TRI_CHARS_GRAPH)
+			print(path)
+			for char in path['edges']:
+				suggestion += char[-1]
+
+	return suggestion.strip('</>')
+	
 def phrase_suggestions(db, phrase = None):
 	suggestions_dict = {
 		"unigram": "",
@@ -776,23 +879,60 @@ def phrase_suggestions(db, phrase = None):
 	phrase_len = len(word_array)
 
 	if phrase_len >= 1:
-		finded = find_ngram(db, word_array[-1], 1)
+		finded = find_ngram(db, word_array[-1], UNI_WORD_NODE)
 		if finded is not None:
-			list = recommend_ngram_list(db.graph(UNI_WORDS_GRAPH), finded['_key'], 1)
+			list = recommend_ngram_list(db.graph(UNI_WORDS_GRAPH), finded['_key'])
 			if list:
 				suggestions_dict["unigram"] = list[0]['word_name']
 
-	if phrase_len >= 2:
-		finded = find_ngram(db, word_array[-2] + ' ' + word_array[-1], 2)
+	if phrase_len >= BI_SIZE:
+		finded = find_ngram(db, word_array[-2] + ' ' + word_array[-1], BI_WORD_NODE)
 		if finded is not None:
-			list = recommend_ngram_list(db.graph(BI_WORDS_GRAPH), finded['_key'], 2)
+			list = recommend_ngram_list(db.graph(BI_WORDS_GRAPH), finded['_key'])
 			if list:
 				suggestions_dict["bigram"] = list[0]['word_name'].split(' ')[-1]
 
 	if phrase_len >= 3:
-		finded = find_ngram(db, word_array[-3] + ' ' + word_array[-2] + ' ' + word_array[-1], 3)
+		finded = find_ngram(db, word_array[-3] + ' ' + word_array[-2] + ' ' + word_array[-1], TRI_WORD_NODE)
 		if finded is not None:
-			list = recommend_ngram_list(db.graph(TRI_WORDS_GRAPH), finded['_key'], 3)
+			list = recommend_ngram_list(db.graph(TRI_WORDS_GRAPH), finded['_key'])
+			if list:
+				suggestions_dict["trigram"] = list[0]['word_name'].split(' ')[-1]
+
+	return suggestions_dict
+
+def autoword_suggestions(db, phrase = None):
+	suggestions_dict = {
+		"unigram": "",
+		"bigram": "",
+		"trigram": ""
+	}
+	
+	if phrase is None:
+		phrase = input("Palabra: ")
+
+	word_array = re.findall(r'\b\w+\b', phrase)
+	last_word = word_array[-1]
+	word_len = len(last_word)
+	
+	if word_len >= 1:
+		finded = find_ngram(db, word_array[-1], UNI_CHAR_NODE)
+		if finded is not None:
+			list = recommend_ngram_list(db.graph(UNI_WORDS_GRAPH), finded['_key'])
+			if list:
+				suggestions_dict["unigram"] = list[0]['word_name']
+
+	if word_len >= BI_SIZE:
+		finded = find_ngram(db, word_array[-2] + ' ' + word_array[-1], BI_CHAR_NODE)
+		if finded is not None:
+			list = recommend_ngram_list(db.graph(BI_WORDS_GRAPH), finded['_key'])
+			if list:
+				suggestions_dict["bigram"] = list[0]['word_name'].split(' ')[-1]
+
+	if word_len >= 3:
+		finded = find_ngram(db, word_array[-3] + ' ' + word_array[-2] + ' ' + word_array[-1], TRI_CHAR_NODE)
+		if finded is not None:
+			list = recommend_ngram_list(db.graph(TRI_WORDS_GRAPH), finded['_key'])
 			if list:
 				suggestions_dict["trigram"] = list[0]['word_name'].split(' ')[-1]
 
