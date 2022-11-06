@@ -20,8 +20,8 @@ BOOK_12 = os.getenv('BOOK_12')
 BOOK_13 = os.getenv('BOOK_13')
 BOOK_14 = os.getenv('BOOK_14')
 
-from src.constants import TOTAL_COLLECTIONS, UNI_WORDS_GRAPH, URL_ARANGO_DB, DB_NAME
-from src.functions import autocomplete, autoword_suggestions, bigram_char_init, bigram_word_init, phrase_suggestions, read_txt, trigram_char_init, trigram_word_init, unigram_char_init, unigram_word_init
+from src.constants import TOTAL_COLLECTIONS, URL_ARANGO_DB, DB_NAME
+from src.functions import  bigram_char_init, bigram_word_init, main_menu, read_txt, trigram_char_init, trigram_word_init, unigram_char_init, unigram_word_init
 
 # Initialize the client for ArangoDB.
 client = ArangoClient(hosts=URL_ARANGO_DB)
@@ -50,9 +50,6 @@ if len(db.collections()) < TOTAL_COLLECTIONS:
     trigram_word_init(db, tri_words, tri_follows)
     trigram_char_init(db, tri_chars, tri_char_follows)
 
-#main_menu(db)
-#print(phrase_suggestions(db))
-#print(autocomplete(db, "hac", 3))
-print(autoword_suggestions(db))
+main_menu(db)
 
 client.close()

@@ -643,98 +643,44 @@ def random_word_sample(ngram_graph, ngram_hash: str) -> str:
 	return int_to_words[following_words_sample.rvs(size=1)[0]]
 
 # ---------------------------------------------------------- FEATURE RELATED FUNCTIONS ----------------------------------------------------------
-def unigram_recommend_list(db):
-	word = input("Introduce una palabra: ")
+
+def display_recommend_list(db, str_graph: str, ask_input: str):
+	ngram = input(ask_input).strip()
 	max_tam = int(input("Especifica el tamaño máximo de la lista a devolver: "))
 
-	finded = find_ngram(db, word, UNI_WORD_NODE)
+	finded = find_ngram(db, ngram, graph_to_collection[str_graph])
 	if finded is None:
-		print(word + " no se encuentra en el modelo de unigramas")
-	
+		print(ngram + " no se encuentra en el modelo de " + str_graph)
+
 	else:
-		uni_graph = db.graph(UNI_WORDS_GRAPH)
-		suggestion_list = recommend_ngram_list(uni_graph, finded['_key'])
+		graph = db.graph(str_graph)
+		suggestion_list = recommend_ngram_list(graph, finded['_key'])
 
 		return_list = []
 		for suggestion in suggestion_list:
-			return_list.append((suggestion['word_name'], suggestion['count']))
-			if len(return_list) >= max_tam:
+			return_list.append([suggestion['word_name'], suggestion['count']])
+			if(len(return_list) >= max_tam):
 				break
-		
+
 		print(return_list)
 
-def bigram_recommend_list(db):
-	bigram = input("Introduce dos palabras separadas por un espacio: ")
-	max_tam = int(input("Especifica el tamaño máximo de la lista a devolver: "))
+def display_sample_suggestion(db, str_graph:str, ask_input: str):
+	ngram = input(ask_input).strip()
 
-	finded = find_ngram(db, bigram, BI_WORD_NODE)
+	finded = find_ngram(db, ngram, graph_to_collection[str_graph])
 	if finded is None:
-		print(bigram + " no se encuentra en el modelo de bigramas")
-	
-	else:
-		bi_graph = db.graph(BI_WORDS_GRAPH)
-		suggestion_list = recommend_ngram_list(bi_graph, finded['_key'])
-
-		return_list = []
-		for suggestion in suggestion_list:
-			return_list.append((suggestion['word_name'], suggestion['count']))
-			if len(return_list) >= max_tam:
-				break
-		
-		print(return_list)
-
-def trigram_recommend_list(db):
-	trigram = input("Introduce tres palabras separadas por espacios: ")
-	max_tam = int(input("Especifica el tamaño máximo de la lista a devolver: "))
-
-	finded = find_ngram(db, trigram, TRI_WORD_NODE)
-	if finded is None:
-		print(trigram + " no se encuentra en el modelo de trigramas")
-	
-	else:
-		tri_graph = db.graph(TRI_WORDS_GRAPH)
-		suggestion_list = recommend_ngram_list(tri_graph, finded['_key'])
-
-		return_list = []
-		for suggestion in suggestion_list:
-			return_list.append((suggestion['word_name'], suggestion['count']))
-			if len(return_list) >= max_tam:
-				break
-		
-		print(return_list)
-
-def unigram_suggestion(db):
-	word = input("Introduce una palabra: ")
-	finded = find_ngram(db, word, UNI_WORD_NODE)
-	if finded is None:
-		print(word + " no se encuentra en el modelo de unigramas")
+		print(ngram + " no se encuentra en el modelo de " + str_graph)
 
 	else:
-		uni_graph = db.graph(UNI_WORDS_GRAPH)
-		suggestion = random_word_sample(uni_graph, finded['_key'])
-		print("Te sugiero ante " + word + " la palabra " + suggestion)
-
-def bigram_suggestion(db):
-	bigram = input("Introduce dos palabras separadas por un espacio: ")
-	finded = find_ngram(db, bigram, BI_WORD_NODE)
-	if finded is None:
-		print(bigram + " no se encuentra en el modelo de bigramas")
-
-	else:
-		bi_graph = db.graph(BI_WORDS_GRAPH)
-		suggestion = random_word_sample(bi_graph, finded['_key'])
-		print("Te sugiero ante el bigrama: '" + bigram + "' la palabra: '" + suggestion.split(" ")[1] + "' porque el siguiente bigrama sugerido es: '" + suggestion + "'")
-
-def trigram_suggestion(db):
-	trigram = input("Introduce tres palabras separadas por un espacio: ")
-	finded = find_ngram(db, trigram, TRI_WORD_NODE)
-	if finded is None:
-		print(trigram + " no se encuentra en el modelo de trigramas")
-
-	else:
-		tri_graph = db.graph(TRI_WORDS_GRAPH)
-		suggestion = random_word_sample(tri_graph, finded['_key'])
-		print("Te sugiero ante el trigrama: '" + trigram + "' la palabra: '" + suggestion.split(" ")[2] + "' porque el siguiente trigrama sugerido es: '" + suggestion + "'")
+		graph = db.graph(str_graph)
+		suggestion = random_word_sample(graph, finded['_key'])
+		if str_graph in [UNI_CHARS_GRAPH, BI_CHARS_GRAPH, TRI_CHARS_GRAPH]:
+			if suggestion.find(WORD_FINAL_SYMBOL) == -1:
+				print("Ante el n-grama introducido: '" + ngram + "', mi sugerencia es: '" + suggestion[-1] + "' porque el siguiente ngrama sugerido es: '" + suggestion + "'")
+			else:
+				print("Ante el n-grama introducido: '" + ngram + "', mi sugerencia es que termines la palabra porque el siguiente ngrama sugerido es: '" + suggestion + "'")
+		else:
+			print("Ante el n-grama introducido: '" + ngram + "', mi sugerencia es: '" + suggestion.split(" ")[-1] + "' porque el siguiente ngrama sugerido es: '" + suggestion + "'")
 
 #Aux function to most_likey_path functions
 def give_new_first_ngram(list, used_ngrams):
@@ -744,71 +690,31 @@ def give_new_first_ngram(list, used_ngrams):
 
 	return None
 
-def unigram_most_likey_path(db):
-	word = input("Introduce una palabra que inicie la frase: ")
+def display_most_likely_phrase(db, str_graph: str, ask_input: str):
+	ngram = input(ask_input).strip()
 	max_tam = int(input("Especifica el tamaño máximo de la frase que quieres formar: "))
 
-	finded = find_ngram(db, word, UNI_WORD_NODE)
+	finded = find_ngram(db, ngram, graph_to_collection[str_graph])
 	if finded is None:
-		print(word + " no se encuentra en el modelo de unigramas")
-	
+		print("'" + ngram + "' no se encuentra en el modelo de " + str_graph)
+
 	else:
-		used_words = [word]
-		uni_graph = db.graph(UNI_WORDS_GRAPH)
-		for i in range(max_tam - 1):
-			list = recommend_ngram_list(uni_graph, finded['_key'])
-			next_word = give_new_first_ngram(list, used_words)
-			if next_word is None:
+		used_ngrams = [ngram]
+		graph = db.graph(str_graph)
+		for i in range (max_tam - graph_to_option[str_graph]):
+			list = recommend_ngram_list(graph, finded['_key'])
+			next_ngram = give_new_first_ngram(list, used_ngrams)
+			if next_ngram is None:
 				break
-			word = word + " " + next_word['word_name']
-			used_words.append(next_word['word_name'])
-			finded = find_ngram(db, next_word['word_name'], UNI_WORD_NODE)
+			ngram = ngram + " " + next_ngram['word_name'].split(" ")[-1]
+			used_ngrams.append(next_ngram['word_name'])
+			finded = find_ngram(db, next_ngram['word_name'], graph_to_collection[str_graph])
+		
+		print(ngram)
 
-		print(word)
-
-def bigram_most_likely_path(db):
-	bigram = input("Introduce dos palabras separadas por un espacio: ")
-	max_tam = int(input("Especifica el tamaño máximo de la frase que quieres formar: "))
-
-	finded = find_ngram(db, bigram, BI_WORD_NODE)
-	if finded is None:
-		print(bigram + " no se encuentra en el modelo de bigramas")
-	
-	else:
-		bi_graph = db.graph(BI_WORDS_GRAPH)
-		used_bigram = [bigram]
-		for i in range(max_tam - BI_SIZE):
-			list = recommend_ngram_list(bi_graph, finded['_key'])
-			next_word = give_new_first_ngram(list, used_bigram)
-			if next_word is None:
-				break
-			bigram = bigram + " " + next_word['word_name'].split(" ")[1]
-			used_bigram.append(next_word['word_name'])
-			finded = find_ngram(db, next_word['word_name'], BI_WORD_NODE)
-
-		print(bigram)
-
-def trigram_most_likely_path(db):
-	trigram = input("Introduce tres palabras separadas por un espacio: ")
-	max_tam = int(input("Especifica el tamaño máximo de la frase que quieres formar: "))
-
-	finded = find_ngram(db, trigram, TRI_WORD_NODE)
-	if finded is None:
-		print(trigram + " no se encuentra en el modelo de trigramas")
-	
-	else:
-		tri_graph = db.graph(TRI_WORDS_GRAPH)
-		used_trigram = [trigram]
-		for i in range(max_tam - 3):
-			list = recommend_ngram_list(tri_graph, finded['_key'])
-			next_word = give_new_first_ngram(list, used_trigram)
-			if next_word is None:
-				break
-			trigram = trigram + " " + next_word['word_name'].split(" ")[2]
-			used_trigram.append(next_word['word_name'])
-			finded = find_ngram(db, next_word['word_name'], TRI_WORD_NODE)
-
-		print(trigram)
+def display_autocomplete_word(db, str_graph: str, ask_input: str):
+	ngram = input(ask_input)
+	print("Se te sugiere: " + autocomplete(db, ngram, graph_to_option[str_graph]-3))
 
 def unigram_path_two_words(db):
 	print("Dame dos palabras y te dire el camino más probable entre las dos: ")
@@ -935,32 +841,125 @@ def option_display(options: list) -> int:
 	return int(input('Indique el modo: '))
 
 def main_menu(db):
-	print("Bienvenido a GPG, porfavor selecciona con que n-gramas quieres trabajar: ")
-	chosen = option_display(["Funcionalidades con Unigramas", "Funcionalidades con Bigramas", "Funcionalidades con Trigramas", "Salir"])
+	print("Bienvenido a GPG, porfavor selecciona con que modelo de n-gramas quieres trabajar: ")
+	chosen = option_display(["Modelos de Caracteres", "Modelos de Palabras", "Salir"])
 	match chosen:
 		case 1:
-			unigram_menu(db)
+			main_char_menu(db)
 		case 2:
-			bigram_menu(db)
+			main_word_menu(db)
 		case 3:
-			trigram_menu(db)
-		case 4:
 			exit()
 		case _:
-			print("Entrada no reconocida. Introduzca un valor del 1-4")
+			print("Entrada no reconocida. Introduzca un valor del 1-3")
 
-def unigram_menu(db):
-	print("---- Elige una de las funcionalidades disponibles con UNIGRAMAS ----")
+def main_char_menu(db):
+	print("Caracteres -- Porfavor selecciona con que n-gramas quieres trabajar: ")
+	chosen = option_display(["Funcionalidades con Unigramas", "Funcionalidades con Bigramas", "Funcionalidades con Trigramas", "Volver atrás", "Salir"])
+	match chosen:
+		case 1:
+			uni_char_menu(db)
+		case 2:
+			bi_char_menu(db)
+		case 3:
+			tri_char_menu(db)
+		case 4:
+			""
+		case 5:
+			exit()
+		case _:
+			print("Entrada no reconocida. Volviendo a menú principal...")
+	
+	main_menu(db)
+
+def main_word_menu(db):
+	print("Palabras -- Porfavor selecciona con que n-gramas quieres trabajar: ")
+	chosen = option_display(["Funcionalidades con Unigramas", "Funcionalidades con Bigramas", "Funcionalidades con Trigramas", "Volver atrás", "Salir"])
+	match chosen:
+		case 1:
+			uni_word_menu(db)
+		case 2:
+			bi_word_menu(db)
+		case 3:
+			tri_word_menu(db)
+		case 4:
+			""
+		case 5:
+			exit()
+		case _:
+			print("Entrada no reconocida. Volviendo a menú principal...")
+
+	main_menu(db)
+
+def uni_char_menu(db):
+	print("---- Caracteres -- Elige una de las funcionalidades disponibles con UNIGRAMAS ----")
+	chosen = option_display(["Lista ordenada según probabilidad","Sugiere siguiente caracter","Autocompleta la palabra","Volver atrás", "Salir"])
+	match chosen:
+		case 1:
+			display_recommend_list(db, UNI_CHARS_GRAPH, "Introduce un caracter: ")
+		case 2:
+			display_sample_suggestion(db, UNI_CHARS_GRAPH, "Introduce un caracter: ")
+		case 3:
+			display_autocomplete_word(db, UNI_CHARS_GRAPH, "Introduce un caracter: ")
+		case 4:
+			""
+		case 5:
+			exit()
+		case _:
+			print("Entrada no reconocida de entres las posibles volviendo al menú anterior...")
+	
+	main_char_menu(db)
+
+def bi_char_menu(db):
+	print("---- Caracteres -- Elige una de las funcionalidades disponibles con BIGRAMAS ----")
+	chosen = option_display(["Lista ordenada según probabilidad","Sugiere siguiente caracter","Autocompleta la palabra","Volver atrás", "Salir"])
+	match chosen:
+		case 1:
+			display_recommend_list(db, BI_CHARS_GRAPH, "Introduce dos caracteres: ")
+		case 2:
+			display_sample_suggestion(db, BI_CHARS_GRAPH, "Introduce dos caracteres: ")
+		case 3:
+			display_autocomplete_word(db, BI_CHARS_GRAPH, "Introduce dos caracteres: ")
+		case 4:
+			""
+		case 5:
+			exit()
+		case _:
+			print("Entrada no reconocida de entres las posibles volviendo al menú anterior...")
+	
+	main_char_menu(db)
+
+def tri_char_menu(db):
+	print("---- Caracteres -- Elige una de las funcionalidades disponibles con TRIGRAMAS ----")
+	chosen = option_display(["Lista ordenada según probabilidad","Sugiere siguiente caracter","Autocompleta la palabra","Volver atrás", "Salir"])
+	match chosen:
+		case 1:
+			display_recommend_list(db, TRI_CHARS_GRAPH, "Introduce tres caracteres: ")
+		case 2:
+			display_sample_suggestion(db, TRI_CHARS_GRAPH, "Introduce tres caracteres: ")
+		case 3:
+			display_autocomplete_word(db, TRI_CHARS_GRAPH, "Introduce tres caracteres: ")
+		case 4:
+			""
+		case 5:
+			exit()
+		case _:
+			print("Entrada no reconocida de entres las posibles volviendo al menú anterior...")
+	
+	main_char_menu(db)
+
+def uni_word_menu(db):
+	print("---- Palabras -- Elige una de las funcionalidades disponibles con UNIGRAMAS ----")
 	chosen = option_display(["Lista por probabilidades de aparición","Sugiere una palabra","Camino más probable entre dos palabras", "Camino más probable dado tamaño maximo", "Volver atrás", "Salir"])
 	match chosen:
 		case 1:
-			unigram_recommend_list(db)
+			display_recommend_list(db, UNI_WORDS_GRAPH, "Introduce una palabra: ")
 		case 2:
-			unigram_suggestion(db)
+			display_sample_suggestion(db, UNI_WORDS_GRAPH, "Introduce una palabra: ")
 		case 3:
 			unigram_path_two_words(db)
 		case 4:
-			unigram_most_likey_path(db)
+			display_most_likely_phrase(db, UNI_WORDS_GRAPH, "Introduce una palabra que inicie la frase: ")
 		case 5:
 			""
 		case 6:
@@ -968,19 +967,19 @@ def unigram_menu(db):
 		case _:
 			print("Entrada no reconocida de entres las posibles volviendo al menu principal...")
 	
-	main_menu(db)
+	main_word_menu(db)
 			
 
-def bigram_menu(db):
-	print("---- Elige una de las funcionalidades disponibles con BIGRAMAS ----")
+def bi_word_menu(db):
+	print("---- Palabras -- Elige una de las funcionalidades disponibles con BIGRAMAS ----")
 	chosen = option_display(["Lista por probabilidades de aparición","Sugiere una palabra dado un bigrama","Camino más probable dado tamaño maximo", "Volver atrás", "Salir"])
 	match chosen:
 		case 1:
-			bigram_recommend_list(db)
+			display_recommend_list(db, BI_WORDS_GRAPH, "Introduce dos palabras separadas por un espacio: ")
 		case 2:
-			bigram_suggestion(db)
+			display_sample_suggestion(db, BI_WORDS_GRAPH, "Introduce dos palabras separadas por un espacio: ")
 		case 3:
-			bigram_most_likely_path(db)
+			display_most_likely_phrase(db, BI_WORDS_GRAPH, "Introduce dos palabras separadas por un espacio: ")
 		case 4:
 			""
 		case 5:
@@ -988,18 +987,18 @@ def bigram_menu(db):
 		case _:
 			print("Entrada no reconocida de entres las posibles volviendo al menu principal...")
 
-	main_menu(db)
+	main_word_menu(db)
 
-def trigram_menu(db):
-	print("---- Elige una de las funcionalidades disponibles con TRIGRAMAS ----")
+def tri_word_menu(db):
+	print("---- Palabras -- Elige una de las funcionalidades disponibles con TRIGRAMAS ----")
 	chosen = option_display(["Lista por probabilidades de aparición","Sugiere una palabra dado un trigrama", "Camino más probable dado tamaño maximo", "Volver atrás", "Salir"])
 	match chosen:
 		case 1:
-			trigram_recommend_list(db)
+			display_recommend_list(db, TRI_WORDS_GRAPH, "Introduce tres palabras separadas por espacios: ")
 		case 2:
-			trigram_suggestion(db)
+			display_sample_suggestion(db, TRI_WORDS_GRAPH, "Introduce tres palabras separadas por espacios: ")
 		case 3:
-			trigram_most_likely_path(db)
+			display_most_likely_phrase(db, TRI_WORDS_GRAPH, "Introduce tres palabras separadas por espacios: ")
 		case 4:
 			""
 		case 5:
@@ -1007,4 +1006,4 @@ def trigram_menu(db):
 		case _:
 			print("Entrada no reconocida de entres las posibles volviendo al menu principal...")
 	
-	main_menu(db)
+	main_word_menu(db)
