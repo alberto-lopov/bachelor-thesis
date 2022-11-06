@@ -714,7 +714,21 @@ def display_most_likely_phrase(db, str_graph: str, ask_input: str):
 
 def display_autocomplete_word(db, str_graph: str, ask_input: str):
 	ngram = input(ask_input)
-	print("Se te sugiere: " + autocomplete(db, ngram, graph_to_option[str_graph]-3))
+
+	try_find = ngram
+	if len(ngram) == graph_to_option[str_graph]-4:
+		try_find = '<>' + ngram
+
+	finded = find_ngram(db, try_find, graph_to_collection[str_graph])
+	if finded is None:
+		print("No se encuentra el n-grama '" + ngram + "' en la colección de " + str_graph)
+		
+	else:
+		suggestion = autocomplete(db, ngram, graph_to_option[str_graph]-3)
+		if suggestion == "":
+			print("No se sugiere añadir nada más.")
+		else:
+			print("Se te sugiere: " + suggestion)
 
 def unigram_path_two_words(db):
 	print("Dame dos palabras y te dire el camino más probable entre las dos: ")
@@ -919,7 +933,7 @@ def bi_char_menu(db):
 		case 2:
 			display_sample_suggestion(db, BI_CHARS_GRAPH, "Introduce dos caracteres: ")
 		case 3:
-			display_autocomplete_word(db, BI_CHARS_GRAPH, "Introduce dos caracteres: ")
+			display_autocomplete_word(db, BI_CHARS_GRAPH, "Introduce dos caracteres. O un caracter para indicar inicio de palabra: ")
 		case 4:
 			main_char_menu(db)
 		case 5:
@@ -938,7 +952,7 @@ def tri_char_menu(db):
 		case 2:
 			display_sample_suggestion(db, TRI_CHARS_GRAPH, "Introduce tres caracteres: ")
 		case 3:
-			display_autocomplete_word(db, TRI_CHARS_GRAPH, "Introduce tres caracteres: ")
+			display_autocomplete_word(db, TRI_CHARS_GRAPH, "Introduce tres caracteres. O dos caracteres para indicar inicio de palabra: ")
 		case 4:
 			main_char_menu(db)
 		case 5:
