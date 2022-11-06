@@ -834,6 +834,7 @@ def autocomplete(db, uncompleted_word: str, size_ngram: int):
 	stripped_word = []
 	if(len(uncompleted_word) < size_ngram):
 		stripped_word.append(WORD_START_SYMBOL)
+
 	stripped_word.extend(uncompleted_word.strip())
 	size_word = len(stripped_word)
 
@@ -841,15 +842,15 @@ def autocomplete(db, uncompleted_word: str, size_ngram: int):
 		end_word = find_ngram(db, WORD_FINAL_SYMBOL, UNI_CHAR_NODE)
 		finded = find_ngram(db, ''.join(stripped_word[-1]), UNI_CHAR_NODE)
 		if finded != None:
+			suggestion += uncompleted_word + '-'
 			path = path_given_two_unigrams(db.aql, finded['_id'], end_word['_id'], UNI_CHARS_GRAPH)
-			for doc in path:
+			for doc in path[1:]:
 				suggestion += doc[1]
 	
 	elif size_ngram == BI_SIZE and size_word >= BI_SIZE:
-		
 		finded = find_ngram(db, ''.join(stripped_word[-BI_SIZE:]), BI_CHAR_NODE)
 		if finded != None:
-			suggestion += uncompleted_word
+			suggestion += uncompleted_word + '-'
 			path = path_end_words(db.aql, finded['_id'], BI_CHARS_GRAPH)
 			for char in path['edges']:
 				suggestion += char[-1]
@@ -857,13 +858,13 @@ def autocomplete(db, uncompleted_word: str, size_ngram: int):
 	elif size_ngram == 3 and size_word >= 3:
 		finded = find_ngram(db, ''.join(stripped_word[-3:]), TRI_CHAR_NODE)
 		if finded != None:
-			suggestion += uncompleted_word
+			suggestion += uncompleted_word + '-'
 			path = path_end_words(db.aql, finded['_id'], TRI_CHARS_GRAPH)
-			print(path)
 			for char in path['edges']:
 				suggestion += char[-1]
 
-	return suggestion.strip('</>')
+	clean_suggestion = suggestion.strip('</>')
+	return clean_suggestion if clean_suggestion != "" and clean_suggestion[-1] != '-' else ""
 	
 def phrase_suggestions(db, phrase = None):
 	suggestions_dict = {
@@ -913,28 +914,14 @@ def autoword_suggestions(db, phrase = None):
 
 	word_array = re.findall(r'\b\w+\b', phrase)
 	last_word = word_array[-1]
+
 	word_len = len(last_word)
-	
 	if word_len >= 1:
-		finded = find_ngram(db, word_array[-1], UNI_CHAR_NODE)
-		if finded is not None:
-			list = recommend_ngram_list(db.graph(UNI_WORDS_GRAPH), finded['_key'])
-			if list:
-				suggestions_dict["unigram"] = list[0]['word_name']
-
-	if word_len >= BI_SIZE:
-		finded = find_ngram(db, word_array[-2] + ' ' + word_array[-1], BI_CHAR_NODE)
-		if finded is not None:
-			list = recommend_ngram_list(db.graph(BI_WORDS_GRAPH), finded['_key'])
-			if list:
-				suggestions_dict["bigram"] = list[0]['word_name'].split(' ')[-1]
-
-	if word_len >= 3:
-		finded = find_ngram(db, word_array[-3] + ' ' + word_array[-2] + ' ' + word_array[-1], TRI_CHAR_NODE)
-		if finded is not None:
-			list = recommend_ngram_list(db.graph(TRI_WORDS_GRAPH), finded['_key'])
-			if list:
-				suggestions_dict["trigram"] = list[0]['word_name'].split(' ')[-1]
+		suggestions_dict["unigram"] = autocomplete(db, last_word, 1)
+		suggestions_dict["bigram"] = autocomplete(db, last_word, 2)
+		
+	if word_len >= 2:
+		suggestions_dict["trigram"] = autocomplete(db, last_word, 3)
 
 	return suggestions_dict
 

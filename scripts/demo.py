@@ -7,7 +7,7 @@ from tkinter import *
 from arango import ArangoClient
 
 from src.constants import DB_NAME, URL_ARANGO_DB
-from src.functions import phrase_suggestions
+from src.functions import autoword_suggestions, phrase_suggestions
 # Initialize the client for ArangoDB.
 client = ArangoClient(hosts=URL_ARANGO_DB)
 sys_db = client.db("_system", username="root")
@@ -41,37 +41,50 @@ def debounce(wait):
     return decorator
 
 # Function to update the list of options given
-def update(new_options):
-    option_frame.delete(0, END)
+def update_words(new_options):
+    option_word_frame.delete(0, END)
 
     used_options = []
     for option in new_options.values():
         if option not in used_options and option != '':
-            option_frame.insert(END, option)
+            option_word_frame.insert(END, option)
             used_options.append(option)
 
-# Event handler when selection a option
-def fillout(e):
+def update_chars(new_options):
+    option_char_frame.delete(0, END)
+
+    used_options = []
+    for option in new_options.values():
+        if option not in used_options and option != '':
+            option_char_frame.insert(END, option)
+            used_options.append(option)
+
+# Event handlers when selection a option
+def fillout_word(e):
     last_sentence = input_box.get()
     input_box.delete(0, END)
 
-    #Add space if needed for next word
-    delimiter = ''
-    if last_sentence[-1] != ' ':
-        delimiter = ' '
-        
-    input_box.insert(0, last_sentence + delimiter + option_frame.get(ANCHOR))
+    input_box.insert(0, last_sentence.strip() + " " + option_word_frame.get(ANCHOR))
+
+def fillout_char(e):
+    last_sentence = input_box.get()
+    input_box.delete(0, END)
+   
+    input_box.insert(0, last_sentence.strip() + (option_char_frame.get(ANCHOR)).split('-')[-1])
 
 #Event handler debounced 1 seconds that queries the DB.
 @debounce(1)
 def check(e):
     typed = input_box.get()
-    new_options = {}
+    new_word_options = {}
+    new_char_options = {}
 
     if typed != '':
-        new_options = phrase_suggestions(db, typed)
+        new_word_options = phrase_suggestions(db, typed)
+        new_char_options = autoword_suggestions(db, typed)
 
-    update(new_options)
+    update_words(new_word_options)
+    update_chars(new_char_options)
 
 # ---------------------------- Tkinter Widgets ----------------------------
 root = Tk()
@@ -84,10 +97,15 @@ input_title.pack(pady=20)
 input_box = Entry(root, font=("Roboto", 12), width=60)
 input_box.pack(pady = 10)
 
-option_frame = Listbox(root, width=50, height=4)
-option_frame.pack(pady=40)
+option_word_frame = Listbox(root, width=50, height=4)
+option_word_frame.pack(pady=40)
 
-option_frame.bind("<<ListboxSelect>>", fillout)
+option_char_frame = Listbox(root, width=50, height=4)
+option_char_frame.pack(pady=10)
+
+#Event binding
+option_word_frame.bind("<<ListboxSelect>>", fillout_word)
+option_char_frame.bind("<<ListboxSelect>>", fillout_char)
 input_box.bind("<KeyRelease>", check)
 
 root.mainloop()
