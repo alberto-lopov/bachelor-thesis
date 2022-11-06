@@ -64,14 +64,41 @@ def read_datasets(file_paths: list):
 
 def ngram_evaluation(n, train_sentences, test_sentences): 
 
-  tokenized_text = [list(map(str.lower, nltk.tokenize.word_tokenize(sent))) 
+  tokenized_text = [list(map(str.lower, nltk.tokenize.word_tokenize(sent, 'spanish'))) 
                   for sent in train_sentences]
 
   train_data, padded_vocab = padded_everygram_pipeline(n, tokenized_text)
   mle_prob = MLE(n)
   mle_prob.fit(train_data, padded_vocab)
 
-  tokenized_text = [list(map(str.lower, nltk.tokenize.word_tokenize(sent))) 
+  tokenized_text = [list(map(str.lower, nltk.tokenize.word_tokenize(sent, 'spanish'))) 
+                  for sent in test_sentences]
+
+  test_data, _ = padded_everygram_pipeline(n, tokenized_text)
+
+  count_not_inf = 0
+  sum_perplexity = 0
+  count_inf = 0
+  for sentence in test_data:
+    perplexity = mle_prob.perplexity(sentence)
+    if perplexity == float('inf'):
+      count_inf += 1
+    else:
+      count_not_inf += 1
+      sum_perplexity += perplexity
+
+  print("MLE Perplexity " + str(n) + "-gram: " + str(sum_perplexity / count_not_inf) + " -- Number of inf: " + str(count_inf) + " -- Total Number: " + str(count_inf + count_not_inf))
+
+def ngram_char_evaluation(n, train_sentences, test_sentences): 
+
+  tokenized_text = [list(map(str.lower, [char for char in sent])) 
+                  for sent in train_sentences]
+
+  train_data, padded_vocab = padded_everygram_pipeline(n, tokenized_text)
+  mle_prob = MLE(n)
+  mle_prob.fit(train_data, padded_vocab)
+
+  tokenized_text = [list(map(str.lower, [char for char in sent])) 
                   for sent in test_sentences]
 
   test_data, _ = padded_everygram_pipeline(n, tokenized_text)
@@ -91,14 +118,14 @@ def ngram_evaluation(n, train_sentences, test_sentences):
 
 def laplace_ngram_evaluation(n, train_sentences, test_sentences): 
 
-  tokenized_text = [list(map(str.lower, nltk.tokenize.word_tokenize(sent))) 
+  tokenized_text = [list(map(str.lower, nltk.tokenize.word_tokenize(sent, 'spanish'))) 
                   for sent in train_sentences]
 
   train_data, padded_vocab = padded_everygram_pipeline(n, tokenized_text)
-  mle_prob = Laplace(n)
-  mle_prob.fit(train_data, padded_vocab)
+  laplace_prob = Laplace(n)
+  laplace_prob.fit(train_data, padded_vocab)
 
-  tokenized_text = [list(map(str.lower, nltk.tokenize.word_tokenize(sent))) 
+  tokenized_text = [list(map(str.lower, nltk.tokenize.word_tokenize(sent, 'spanish'))) 
                   for sent in test_sentences]
 
   test_data, _ = padded_everygram_pipeline(n, tokenized_text)
@@ -106,7 +133,30 @@ def laplace_ngram_evaluation(n, train_sentences, test_sentences):
   count_not_inf = 0
   sum_perplexity = 0
   for sentence in test_data:
-    perplexity = mle_prob.perplexity(sentence)
+    perplexity = laplace_prob.perplexity(sentence)
+    count_not_inf += 1
+    sum_perplexity += perplexity
+
+  print("LAPLACE Perplexity " + str(n) + "-gram: " + str(sum_perplexity / count_not_inf) )
+
+def laplace_char_ngram_evaluation(n, train_sentences, test_sentences): 
+
+  tokenized_text = [list(map(str.lower, [char for char in sent])) 
+                  for sent in train_sentences]
+
+  train_data, padded_vocab = padded_everygram_pipeline(n, tokenized_text)
+  laplace_prob = Laplace(n)
+  laplace_prob.fit(train_data, padded_vocab)
+
+  tokenized_text = [list(map(str.lower, [char for char in sent])) 
+                  for sent in test_sentences]
+
+  test_data, _ = padded_everygram_pipeline(n, tokenized_text)
+
+  count_not_inf = 0
+  sum_perplexity = 0
+  for sentence in test_data:
+    perplexity = laplace_prob.perplexity(sentence)
     count_not_inf += 1
     sum_perplexity += perplexity
 
@@ -118,6 +168,12 @@ test_sentences = read_datasets([TEST_1, TEST_2, TEST_3])
 ngram_evaluation(1, train_sentences, test_sentences)
 ngram_evaluation(2, train_sentences, test_sentences)
 ngram_evaluation(3, train_sentences, test_sentences)
+ngram_char_evaluation(1, train_sentences, test_sentences)
+ngram_char_evaluation(2, train_sentences, test_sentences)
+ngram_char_evaluation(3, train_sentences, test_sentences)
 laplace_ngram_evaluation(1, train_sentences, test_sentences)
 laplace_ngram_evaluation(2, train_sentences, test_sentences)
 laplace_ngram_evaluation(3, train_sentences, test_sentences)
+laplace_char_ngram_evaluation(1, train_sentences, test_sentences)
+laplace_char_ngram_evaluation(2, train_sentences, test_sentences)
+laplace_char_ngram_evaluation(3, train_sentences, test_sentences)
