@@ -902,13 +902,13 @@ def uni_char_menu(db):
 		case 3:
 			display_autocomplete_word(db, UNI_CHARS_GRAPH, "Introduce un caracter: ")
 		case 4:
-			""
+			main_char_menu(db)
 		case 5:
 			exit()
 		case _:
-			print("Entrada no reconocida de entres las posibles volviendo al menú anterior...")
+			print("Entrada no reconocida.")
 	
-	main_char_menu(db)
+	uni_char_menu(db)
 
 def bi_char_menu(db):
 	print("---- Caracteres -- Elige una de las funcionalidades disponibles con BIGRAMAS ----")
@@ -921,13 +921,13 @@ def bi_char_menu(db):
 		case 3:
 			display_autocomplete_word(db, BI_CHARS_GRAPH, "Introduce dos caracteres: ")
 		case 4:
-			""
+			main_char_menu(db)
 		case 5:
 			exit()
 		case _:
-			print("Entrada no reconocida de entres las posibles volviendo al menú anterior...")
+			print("Entrada no reconocida.")
 	
-	main_char_menu(db)
+	bi_char_menu(db)
 
 def tri_char_menu(db):
 	print("---- Caracteres -- Elige una de las funcionalidades disponibles con TRIGRAMAS ----")
@@ -940,13 +940,13 @@ def tri_char_menu(db):
 		case 3:
 			display_autocomplete_word(db, TRI_CHARS_GRAPH, "Introduce tres caracteres: ")
 		case 4:
-			""
+			main_char_menu(db)
 		case 5:
 			exit()
 		case _:
-			print("Entrada no reconocida de entres las posibles volviendo al menú anterior...")
+			print("Entrada no reconocida.")
 	
-	main_char_menu(db)
+	tri_char_menu(db)
 
 def uni_word_menu(db):
 	print("---- Palabras -- Elige una de las funcionalidades disponibles con UNIGRAMAS ----")
@@ -961,13 +961,13 @@ def uni_word_menu(db):
 		case 4:
 			display_most_likely_phrase(db, UNI_WORDS_GRAPH, "Introduce una palabra que inicie la frase: ")
 		case 5:
-			""
+			main_word_menu(db)
 		case 6:
 			exit()
 		case _:
-			print("Entrada no reconocida de entres las posibles volviendo al menu principal...")
+			print("Entrada no reconocida.")
 	
-	main_word_menu(db)
+	uni_word_menu(db)
 			
 
 def bi_word_menu(db):
@@ -981,13 +981,13 @@ def bi_word_menu(db):
 		case 3:
 			display_most_likely_phrase(db, BI_WORDS_GRAPH, "Introduce dos palabras separadas por un espacio: ")
 		case 4:
-			""
+			main_word_menu(db)
 		case 5:
 			exit()
 		case _:
-			print("Entrada no reconocida de entres las posibles volviendo al menu principal...")
+			print("Entrada no reconocida.")
 
-	main_word_menu(db)
+	bi_word_menu(db)
 
 def tri_word_menu(db):
 	print("---- Palabras -- Elige una de las funcionalidades disponibles con TRIGRAMAS ----")
@@ -1000,10 +1000,10 @@ def tri_word_menu(db):
 		case 3:
 			display_most_likely_phrase(db, TRI_WORDS_GRAPH, "Introduce tres palabras separadas por espacios: ")
 		case 4:
-			""
+			main_word_menu(db)
 		case 5:
 			exit()
 		case _:
-			print("Entrada no reconocida de entres las posibles volviendo al menu principal...")
+			print("Entrada no reconocida.")
 	
-	main_word_menu(db)
+	tri_word_menu(db)
