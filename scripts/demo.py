@@ -12,7 +12,7 @@ from src.functions import autoword_suggestions, next_word_suggestion
 client = ArangoClient(hosts=URL_ARANGO_DB)
 sys_db = client.db("_system", username="root")
 db = client.db(DB_NAME, username="root")
-option_dict = {}
+last_typed = ''
 
 #Decorator that will debounce a function so that it is called after "wait" seconds
 #If it is called multiple times, will wait for the last call to be debounced and run only this one.
@@ -61,6 +61,7 @@ def update_chars(new_options):
 
 # Event handlers when selection a option
 def fillout_word(e):
+    
     last_sentence = input_box.get()
     input_box.delete(0, END)
 
@@ -75,7 +76,7 @@ def fillout_char(e):
 #Event handler debounced 1 seconds that queries the DB.
 @debounce(1)
 def check(e):
-    typed = input_box.get()
+    typed = (input_box.get()).strip()
     new_word_options = {}
     new_char_options = {}
 
@@ -89,19 +90,35 @@ def check(e):
 # ---------------------------- Tkinter Widgets ----------------------------
 root = Tk()
 root.title("Demo GPG")
-root.geometry("800x600")
+root.geometry("1024x768")
 
-input_title = Label(root, text = "Empieza a escribir... ", font=("Roboto", 12), fg = "grey")
+input_title = Label(root, text = "Empieza a escribir... ", font=("Roboto", 16), fg = "black")
 input_title.pack(pady=20)
 
-input_box = Entry(root, font=("Roboto", 12), width=60)
-input_box.pack(pady = 10)
+input_box = Entry(root, font=("Roboto", 14), width=60, borderwidth=3)
+input_box.pack(pady = 5)
 
-option_word_frame = Listbox(root, width=50, height=4)
-option_word_frame.pack(pady=40)
+word_frame_title = Label(root, text = "Siguiente palabra: ", font=("Roboto", 14), fg = "black")
+word_frame_title.pack(pady=20)
 
-option_char_frame = Listbox(root, width=50, height=4)
-option_char_frame.pack(pady=10)
+option_word_frame = Listbox(root, width=50, height=4,
+                    font=("Roboto", 14),
+                    selectforeground="black",
+                    selectbackground="#d3d3d3",
+                    selectborderwidth=3,
+                    takefocus= False)
+option_word_frame.pack(pady=5)
+
+char_frame_title = Label(root, text = "Autocompleta la palabra: ", font=("Roboto", 14), fg = "black")
+char_frame_title.pack(pady=20)
+
+option_char_frame = Listbox(root, width=50, height=4,
+                    font=("Roboto", 14),
+                    selectforeground="black",
+                    selectbackground="#d3d3d3",
+                    selectborderwidth=3,
+                    takefocus= False)
+option_char_frame.pack(pady=5)
 
 #Event binding
 option_word_frame.bind("<<ListboxSelect>>", fillout_word)
