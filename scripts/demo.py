@@ -67,11 +67,17 @@ def fillout_word(e):
 
     input_box.insert(0, last_sentence.strip() + " " + option_word_frame.get(ANCHOR))
 
+    update_words({})
+    update_chars({})
+
 def fillout_char(e):
     last_sentence = input_box.get()
     input_box.delete(0, END)
    
     input_box.insert(0, last_sentence.strip() + (option_char_frame.get(ANCHOR)).split('-')[-1])
+
+    update_words({})
+    update_chars({})
 
 #Event handler debounced 1 seconds that queries the DB.
 @debounce(1)

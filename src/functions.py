@@ -48,11 +48,16 @@ def read_txt(file_paths: list):
 	return uni_words, uni_follows, bi_words, bi_follows, tri_words, tri_follows, uni_chars, uni_char_follows, bi_chars, bi_char_follows, tri_chars, tri_char_follows
 
 def clean_word(word: str):
-	#Delete the only spelling mark left by regex matching and lower the word
+	# Delete the only spelling mark left by regex matching and lower the word
 	cleaned = (word.lower()).replace("_","")
-	#Correct old use of á preposition in books used
+	
+	# Correct old use of á, ó, ú preposition on used spanish books 
 	if cleaned == "á":
 		cleaned = "a"
+	elif cleaned == "ó":
+		cleaned = "o"
+	elif cleaned == "ú":
+		cleaned = "u"
 	
 	return cleaned
 
