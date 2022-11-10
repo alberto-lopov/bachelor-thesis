@@ -625,22 +625,24 @@ def random_word_sample(ngram_graph, ngram_hash: str) -> str:
 	)["paths"] # return lista de palabras conectadas, con longitud maxima de 1
 
 	edges = [path["edges"][0] for path in paths]
-
-	total_count = sum(edge["count"] for edge in edges)
-	words_to_int = {}
-	int_to_words = {}
-	int_words = []
-	word_chances = []
-	i = 0
-	for edge in edges:
-		words_to_int[edge["to_name"]] = i
-		int_to_words[i] = edge["to_name"]
-		int_words.append(i)
-		word_chances.append(edge["count"] / total_count)
-		i += 1
+	if edges:
+		total_count = sum(edge["count"] for edge in edges)
+		words_to_int = {}
+		int_to_words = {}
+		int_words = []
+		word_chances = []
+		i = 0
+		for edge in edges:
+			words_to_int[edge["to_name"]] = i
+			int_to_words[i] = edge["to_name"]
+			int_words.append(i)
+			word_chances.append(edge["count"] / total_count)
+			i += 1
+		
+		following_words_sample = rv_discrete(name='following_words', values=(int_words, word_chances))
+		return int_to_words[following_words_sample.rvs(size=1)[0]]
 	
-	following_words_sample = rv_discrete(name='following_words', values=(int_words, word_chances))
-	return int_to_words[following_words_sample.rvs(size=1)[0]]
+	return ""
 
 # ---------------------------------------------------------- FEATURE RELATED FUNCTIONS ----------------------------------------------------------
 
@@ -674,11 +676,13 @@ def display_sample_suggestion(db, str_graph:str, ask_input: str):
 	else:
 		graph = db.graph(str_graph)
 		suggestion = random_word_sample(graph, finded['_key'])
+		# If we are suggesting to char input
 		if str_graph in [UNI_CHARS_GRAPH, BI_CHARS_GRAPH, TRI_CHARS_GRAPH]:
 			if suggestion.find(WORD_FINAL_SYMBOL) == -1:
 				print("Ante el n-grama introducido: '" + ngram + "', mi sugerencia es: '" + suggestion[-1] + "' porque el siguiente ngrama sugerido es: '" + suggestion + "'")
 			else:
 				print("Ante el n-grama introducido: '" + ngram + "', mi sugerencia es que termines la palabra porque el siguiente ngrama sugerido es: '" + suggestion + "'")
+		#If we suggest to word input
 		else:
 			print("Ante el n-grama introducido: '" + ngram + "', mi sugerencia es: '" + suggestion.split(" ")[-1] + "' porque el siguiente ngrama sugerido es: '" + suggestion + "'")
 
@@ -784,9 +788,10 @@ def autocomplete(db, uncompleted_word: str, size_ngram: int):
 				suggestion += char[-1]
 
 	clean_suggestion = suggestion.strip('</>')
-	return clean_suggestion if clean_suggestion != "" and clean_suggestion[-1] != '-' else ""
+	# Return suggestion if last character is not "-" and we have that word on our dictionary
+	return clean_suggestion if clean_suggestion != "" and clean_suggestion[-1] != '-' and find_ngram(db, clean_suggestion.replace('-',''), UNI_WORD_NODE) != None else ""
 	
-def phrase_suggestions(db, phrase = None):
+def next_word_suggestion(db, phrase = None):
 	suggestions_dict = {
 		"unigram": "",
 		"bigram": "",
@@ -802,23 +807,23 @@ def phrase_suggestions(db, phrase = None):
 	if phrase_len >= 1:
 		finded = find_ngram(db, word_array[-1], UNI_WORD_NODE)
 		if finded is not None:
-			list = recommend_ngram_list(db.graph(UNI_WORDS_GRAPH), finded['_key'])
-			if list:
-				suggestions_dict["unigram"] = list[0]['word_name']
+			suggestion = random_word_sample(db.graph(UNI_WORDS_GRAPH), finded['_key'])
+			if suggestion:
+				suggestions_dict["unigram"] = suggestion.split(" ")[-1]
 
 	if phrase_len >= BI_SIZE:
 		finded = find_ngram(db, word_array[-2] + ' ' + word_array[-1], BI_WORD_NODE)
 		if finded is not None:
-			list = recommend_ngram_list(db.graph(BI_WORDS_GRAPH), finded['_key'])
-			if list:
-				suggestions_dict["bigram"] = list[0]['word_name'].split(' ')[-1]
+			suggestion = random_word_sample(db.graph(BI_WORDS_GRAPH), finded['_key'])
+			if suggestion:
+				suggestions_dict["bigram"] = suggestion.split(" ")[-1]
 
 	if phrase_len >= 3:
 		finded = find_ngram(db, word_array[-3] + ' ' + word_array[-2] + ' ' + word_array[-1], TRI_WORD_NODE)
 		if finded is not None:
-			list = recommend_ngram_list(db.graph(TRI_WORDS_GRAPH), finded['_key'])
-			if list:
-				suggestions_dict["trigram"] = list[0]['word_name'].split(' ')[-1]
+			suggestion = random_word_sample(db.graph(TRI_WORDS_GRAPH), finded['_key'])
+			if suggestion:
+				suggestions_dict["trigram"] = suggestion.split(" ")[-1]
 
 	return suggestions_dict
 

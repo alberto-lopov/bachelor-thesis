@@ -7,7 +7,7 @@ from tkinter import *
 from arango import ArangoClient
 
 from src.constants import DB_NAME, URL_ARANGO_DB
-from src.functions import autoword_suggestions, phrase_suggestions
+from src.functions import autoword_suggestions, next_word_suggestion
 # Initialize the client for ArangoDB.
 client = ArangoClient(hosts=URL_ARANGO_DB)
 sys_db = client.db("_system", username="root")
@@ -80,7 +80,7 @@ def check(e):
     new_char_options = {}
 
     if typed != '':
-        new_word_options = phrase_suggestions(db, typed)
+        new_word_options = next_word_suggestion(db, typed)
         new_char_options = autoword_suggestions(db, typed)
 
     update_words(new_word_options)
