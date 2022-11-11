@@ -38,12 +38,12 @@ def read_datasets(file_paths: list):
     raise Exception("The argument specified it is not a list of string")
 
   book = 1
+  data_set = []
   for path in file_paths:
     #open text file
     print("---- Inicio Libro: " + str(book) + " ----")
     file = open(path)
     book_text = file.read()
-    data_set = []
 
     raw_text = book_text.split(".")
     for sentence in raw_text:
@@ -54,7 +54,7 @@ def read_datasets(file_paths: list):
       
       #If we pass empty arrays to mle fit we will find division by zero and crash the program
       if cleaned_sentence != '':
-        data_set.append(cleaned_sentence[:-1])
+        data_set.append(cleaned_sentence.strip())
   
     file.close()
     print("---- FIN Libro: " + str(book) + " ----")
