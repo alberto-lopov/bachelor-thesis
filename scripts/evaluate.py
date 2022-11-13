@@ -30,7 +30,7 @@ TEST_3 = os.getenv('TEST_3')
 TEST_4 = os.getenv('TEST_4')
 TEST_5 = os.getenv('TEST_5')
 
-from src.functions import clean_word
+from src.functions.auxiliary import clean_word
 nltk.download('punkt')
 
 def read_datasets(file_paths: list):

@@ -7,7 +7,7 @@ from tkinter import *
 from arango import ArangoClient
 
 from src.constants import DB_NAME, URL_ARANGO_DB
-from src.functions import autoword_suggestions, next_word_suggestion
+from src.functions.features import next_word_suggestion, autoword_suggestions
 # Initialize the client for ArangoDB.
 client = ArangoClient(hosts=URL_ARANGO_DB)
 sys_db = client.db("_system", username="root")

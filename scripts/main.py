@@ -21,7 +21,9 @@ BOOK_13 = os.getenv('BOOK_13')
 BOOK_14 = os.getenv('BOOK_14')
 
 from src.constants import TOTAL_COLLECTIONS, URL_ARANGO_DB, DB_NAME
-from src.functions import  bigram_char_init, bigram_word_init, main_menu, read_txt, trigram_char_init, trigram_word_init, unigram_char_init, unigram_word_init
+from src.functions.database_interaction import  bigram_char_init, bigram_word_init, trigram_char_init, trigram_word_init, unigram_char_init, unigram_word_init
+from src.functions.features import main_menu
+from src.functions.reader import read_txt
 
 # Initialize the client for ArangoDB.
 client = ArangoClient(hosts=URL_ARANGO_DB)
