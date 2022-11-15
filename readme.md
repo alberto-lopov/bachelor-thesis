@@ -3,7 +3,7 @@ This project implements a n-gram language model on top of [ArangoDB](https://www
 
 This repository is a n-gram based language model. It is built using graphs as its data structure.
 
-This system, called GPG - Generative Pre-trained Graph, is composed by a word-language model and a char-level language model.
+This system, called GPG - Generative Pre-trained Graph, is composed by a word-level language model and a char-level language model.
 
 The purpose of this sistem is to provide suggestions to a user writing a text on spanish.
 
@@ -55,7 +55,7 @@ To execute the GUI in the script demo.py:
 
 1. Train the model, meaning that you will need to execute main.py in order to do this.
 
-2. Install tkinter.
+2. Install [tkinter](https://docs.python.org/es/3/library/tkinter.html).
 
 3. Run demo.py using python
 
@@ -72,6 +72,6 @@ TEST_2 = C:\Users\username\Desktop\TFG\bachelorThesis\books\unico_hijo.txt
 TEST_5 = C:\Users\username\Desktop\TFG\bachelorThesis\books\la_montalvez.txt
 ```
 
-2. Install ntlk.
+2. Install [ntlk](https://www.nltk.org/).
 
 3. Run evaluate.py using python
