@@ -77,20 +77,11 @@ def display_most_likely_phrase(db, str_graph: str, ask_input: str):
 def display_autocomplete_word(db, str_graph: str, ask_input: str):
 	ngram = input(ask_input)
 
-	try_find = ngram
-	if len(ngram) == GRAPH_TO_OPTION[str_graph]-4:
-		try_find = '<>' + ngram
-
-	finded = find_ngram(db, try_find, GRAPH_TO_COLLECTION[str_graph])
-	if finded is None:
-		print("No se encuentra el n-grama '" + ngram + "' en la colección de " + str_graph)
-		
+	suggestion = autocomplete(db, ngram, GRAPH_TO_OPTION[str_graph]-3)
+	if suggestion == "":
+		print("Ante la palabra: '" + ngram + "', No se sugiere añadir nada más.")
 	else:
-		suggestion = autocomplete(db, ngram, GRAPH_TO_OPTION[str_graph]-3)
-		if suggestion == "":
-			print("No se sugiere añadir nada más.")
-		else:
-			print("Se te sugiere: " + suggestion)
+		print("Para completar la palabra: '"+ ngram + "', Se te sugiere: '" + suggestion + "'")
 
 def unigram_path_two_words(db):
 	print("Dame dos palabras y te dire el camino más probable entre las dos: ")
